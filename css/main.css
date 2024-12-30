@@ -1234,4 +1234,55 @@ div.inner {
   bottom: 11px;
 }
 
+.footer {
+  padding: 58px 0;
+  background: #F5F5F8;
+}
+.footer .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .left .kogas-logo {
+  width: 100%;
+  max-width: 223px;
+}
+.footer .left .kogas-logo img {
+  width: 100%;
+  display: block;
+}
+.footer .left .text-box {
+  margin-top: 20px;
+}
+.footer .left .text-box p {
+  font-family: "Noto Sans KR", serif;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 26px;
+}
+.footer .right .basketball {
+  display: flex;
+  align-items: flex-end;
+  gap: 53px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #000;
+}
+.footer .right .basketball p {
+  font-family: "Noto Sans KR", serif;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 24px;
+}
+.footer .right .basketball .basketball-logo {
+  display: block;
+  width: 100%;
+  max-width: 68px;
+}
+.footer .right .bb-sns-group {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  margin-top: 17px;
+}
+
 /*# sourceMappingURL=main.css.map */
