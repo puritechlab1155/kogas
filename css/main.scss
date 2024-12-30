@@ -211,6 +211,13 @@ div.inner {
         display: block;
     }
 }
+@media (max-width: 767px) {
+    .header {
+        .nav {
+            display: none;
+        }
+    }
+}
 
 /* home */
 #home {
@@ -305,6 +312,52 @@ div.inner {
                     font-size: 16px;
                     line-height: 24px;
                     letter-spacing: -0.5px;
+                }
+            }
+        }
+    }
+    @media (max-width: 767px) {
+        .main-visual {
+            .content {
+                padding: 110px 0 62px;
+            }
+            .visual-title {
+                line-height: 45px;
+
+                .text01 {
+                    font-size: 28px;
+                }
+                .text02 {
+                    font-size: 37px;
+                }
+            }
+
+            .visual-img {
+                max-width: 282px;
+            }
+
+            .search-form {
+                height: 60px;
+            }
+            .form-control {
+                padding: 0 24px;
+                border: 2px solid #4627E2;
+
+                &::placeholder {
+                    font-family: "Noto Sans KR", serif;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: -0.5px;
+                }
+            }
+            .search-btn {
+                width: 40px;
+                height: 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
                 }
             }
         }
