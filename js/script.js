@@ -38,9 +38,38 @@ document.addEventListener('DOMContentLoaded', function() {
         var s3tabs = home.querySelectorAll('.section03 .tabs .tab');
         var s3tabSlides = home.querySelectorAll('.section03 .tab-slide-container .tab-slide');
 
-        // 중복 생성 방지를 위해 슬라이드 복제 여부를 확인하는 변수
+        // 슬라이드 복제 여부를 확인하는 변수
         var isSlideCloned = Array.from({ length: s3tabSlides.length }, () => false);
 
+        // 슬라이드 복제 함수
+        function cloneSlide(idx) {
+            const s3slideList = s3tabSlides[idx].querySelector('.slide-list');
+            const s3slideListClone = s3slideList.cloneNode(true);
+
+            const slideWrap = s3tabSlides[idx].querySelector('.slide-wrap');
+            slideWrap.appendChild(s3slideListClone);
+            slideWrap.querySelector('.slide-list').offsetWidth + 'px'; // 강제 리플로우
+
+            s3slideList.classList.add('original');
+            s3slideListClone.classList.add('clone');
+
+            isSlideCloned[idx] = true; // 슬라이드 복제 상태 저장
+        }
+
+        // 초기화 함수
+        function initializeSlide() {
+            // 처음 활성화된 탭 찾기
+            const initialActiveTabIndex = Array.from(s3tabSlides).findIndex(slide =>
+                slide.classList.contains('active')
+            );
+
+            // 활성화된 탭의 슬라이드 복제 및 애니메이션 시작
+            if (initialActiveTabIndex !== -1 && !isSlideCloned[initialActiveTabIndex]) {
+                cloneSlide(initialActiveTabIndex);
+            }
+        }
+
+        // 탭 클릭 이벤트
         s3tabs.forEach((tab, idx) => {
             tab.addEventListener('click', function () {
                 // 탭 활성화
@@ -53,19 +82,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 // 슬라이드 복제 (한 번만 실행)
                 if (!isSlideCloned[idx]) {
-                    const s3slideList = s3tabSlides[idx].querySelector('.slide-list');
-                    const s3slideListClone = s3slideList.cloneNode(true);
-
-                    const slideWrap = s3tabSlides[idx].querySelector('.slide-wrap');
-                    slideWrap.appendChild(s3slideListClone);
-                    slideWrap.querySelector('.slide-list').offsetWidth + 'px'; // 강제 리플로우
-
-                    s3slideList.classList.add('original');
-                    s3slideListClone.classList.add('clone');
-
-                    isSlideCloned[idx] = true; // 슬라이드 복제 상태 저장
+                    cloneSlide(idx);
                 }
             });
         });
+
+        // 초기화 실행
+        initializeSlide();
     }
 });
