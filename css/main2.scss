@@ -1,0 +1,272 @@
+@use 'common';
+@use 'font';
+
+.inner {
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/* header */
+.header {
+    background: #000;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+
+    .content {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .logo {
+        width: 100%;
+        max-width: 150px;
+        position: absolute;
+        left: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        img {
+            width: 100%;
+            display: block;
+        }
+    }
+
+    .nav {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding: 33px 30px;
+    }
+    .gnb {
+        display: flex;
+        gap: 80px;
+
+        .gnb-item {
+            width: 168px;
+            text-align: center;
+
+            > a {
+                font-family: "Angkor", serif;
+                font-size: 20px;
+                line-height: 24px;
+                color: #fff;
+            }
+        }
+    }
+
+    .lnb-wrap {
+        width: 100%;
+        display: flex;
+        position: absolute;
+        left: 0;
+        top: 100%;
+        justify-content: center;
+        background: #fff;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 500ms;
+
+        &:hover {
+            max-height: 500px;
+        }
+    }
+    .lnb-wrap.active {
+        max-height: 500px;
+    }
+    .lnb {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+        padding: 20px;
+
+        .lnb-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            text-align: center;
+            width: 100%;
+            max-width: 168px;
+
+            > a {
+                font-family: "Noto Sans KR", serif;
+                font-weight: 700;
+                font-size: 17px;
+                line-height: 24px;
+                color: #000;
+                transition: all 300ms;
+                box-sizing: border-box;
+                border-bottom: 1px solid transparent;
+                padding-bottom: 5px;
+                width: fit-content;
+                margin: 0 auto;
+
+                &:hover {
+                    color: #4B9BFF;
+                    border-bottom: 1px solid #4B9BFF;
+                }
+            }
+        }
+    }
+
+    .offcanvas-open {
+        width: 27px;
+        height: 22px;
+        position: absolute;
+        right: 30px;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1005;
+
+        span {
+            display: block;
+            width: 27px;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            right: 0;
+            transition: all 0.5s;
+        }
+        span:nth-child(1) {
+            top: 0;
+        }
+        span:nth-child(2) {
+            top: 50%;
+            width: 19px;
+        }
+        span:nth-child(3) {
+            top: 100%;
+        }
+    }
+    .offcanvas-open.active {
+        span {
+            background: #000;
+        }
+        span:nth-child(1) {
+            top: 50%;
+            transform: translateY(-50%) rotate(-45deg);
+        }
+        span:nth-child(2) {
+            display: none;
+        }
+        span:nth-child(3) {
+            top: 50%;
+            transform: translateY(-50%) rotate(45deg);
+        }
+    }
+
+    .offcanvas {
+        width: 100%;
+        max-width: 614px;
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        position: fixed;
+        z-index: 1003;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 0.5s;
+
+        height: 100%;
+        overflow: hidden;
+
+        .offcanvas-header {
+            padding: 20px 30px;
+            width: 100%;
+            flex-shrink: 0;
+
+            .vol-info {
+                font-family: "Poppins", serif;
+                font-weight: 500;
+                font-size: 35px;
+                color: #000;
+
+                span {
+                    font-weight: 100;
+                }
+            }
+        }
+        .offcanvas-body {
+            width: 100%;
+            flex-grow: 1;
+            padding: 70px 30px 46px;
+            display: flex;
+            flex-direction: column;
+            gap: 70px;
+            overflow-y: auto;
+        }
+        .offcanvas-menu {
+            padding-top: 10px;
+            border-top: 1px solid #000;
+            width: 100%;
+            max-width: 415px;
+
+            .menu-title {
+                font-family: "Poppins", serif;
+                font-weight: 500;
+                font-size: 30px;
+                color: #583ED0;
+            }
+            .menu-list {
+                margin-top: 40px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+                li {
+                    a {
+                        font-family: "Noto Sans KR", serif;
+                        font-weight: 400;
+                        font-size: 17px;
+                        line-height: 24px;
+
+                        span {
+                            font-weight: 700;
+                            font-size: 15px;
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
+        .prev-vol {
+            max-width: 133px;
+            padding: 10px 20px;
+            background: #000;
+            border-radius: 999px;
+
+            font-family: "Noto Sans KR", serif;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: -1px;
+            color: #fff;
+        }
+    }
+    .offcanvas.show {
+        transform: translateX(0);
+    }
+
+    .offcanvas-backdrop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 999;
+        background: rgba($color: #000000, $alpha: 0.5);
+        display: none;
+    }
+    .offcanvas-backdrop.show {
+        display: block;
+    }
+}
