@@ -933,7 +933,6 @@ em {
 #home .main-visual {
   position: sticky;
   top: 90px;
-  position: relative;
   width: 30%;
   height: fit-content;
 }
