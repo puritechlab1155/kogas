@@ -929,15 +929,13 @@ em {
 #home .main {
   width: 100%;
   display: flex;
-  overflow: visible;
-  position: relative;
 }
 #home .main-visual {
   position: sticky;
   top: 90px;
   position: relative;
   width: 30%;
-  height: calc(100vh - 90px);
+  height: fit-content;
 }
 #home .main-visual .content {
   width: 100%;
@@ -1053,6 +1051,12 @@ em {
 }
 #home .section01 .content .card03 .img-box {
   height: 372px;
+}
+#home .section02 {
+  background: #FFEE8B;
+}
+#home .section02 .content {
+  padding: 148px 0 83px;
 }
 
 /*# sourceMappingURL=main2.css.map */

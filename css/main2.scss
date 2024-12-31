@@ -275,15 +275,13 @@
     .main {
         width: 100%;
         display: flex;
-        overflow: visible;
-        position: relative;
     }
     .main-visual {
         position: sticky;
         top: 90px;
         position: relative;
         width: 30%;
-        height: calc(100vh - 90px);
+        height: fit-content;
 
         .content {
             width: 100%;
@@ -425,6 +423,14 @@
                     height: 372px;
                 }
             }
+        }
+    }
+
+    .section02 {
+        background: #FFEE8B;
+
+        .content {
+            padding: 148px 0 83px;
         }
     }
 }
