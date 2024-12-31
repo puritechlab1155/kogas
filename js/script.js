@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         // section03
         var s3tabs = home.querySelectorAll('.section03 .tabs .tab');
         var s3tabSlides = home.querySelectorAll('.section03 .tab-slide-container .tab-slide');
+        var s3swiperSlides = home.querySelectorAll('.section03 .swiper-slide-container .tab-slide');
 
         // 슬라이드 복제 여부를 확인하는 변수
         var isSlideCloned = Array.from({ length: s3tabSlides.length }, () => false);
@@ -79,6 +80,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 // 슬라이드 활성화
                 s3tabSlides.forEach(slide => slide.classList.remove('active'));
                 s3tabSlides[idx].classList.add('active');
+
+                // 모바일 슬라이드
+                s3swiperSlides.forEach(ms => ms.classList.remove('active'));
+                s3swiperSlides[idx].classList.add('active');
 
                 // 슬라이드 복제 (한 번만 실행)
                 if (!isSlideCloned[idx]) {

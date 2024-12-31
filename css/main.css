@@ -872,6 +872,8 @@ div.inner {
 #home .main-visual {
   background: #C6E8ED;
   height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 #home .main-visual .content {
   height: 100vh;
@@ -989,11 +991,22 @@ div.inner {
     width: 100%;
     height: 100%;
   }
+  #home .main-visual .tag-list {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 11px;
+    gap: 10px;
+  }
 }
 #home .section-title {
   font-family: "Poppins", serif;
   font-weight: 500;
   font-size: 58px;
+}
+@media (max-width: 767px) {
+  #home .section-title {
+    font-size: 28px;
+  }
 }
 #home .section01 {
   padding: 100px 0;
@@ -1069,6 +1082,38 @@ div.inner {
   display: block;
   width: 100%;
   height: 100%;
+}
+@media (max-width: 767px) {
+  #home .section01 {
+    padding: 60px 0;
+  }
+  #home .section01 .slide-container {
+    margin-top: 24px;
+  }
+  #home .section01 .slide-container .text-box {
+    left: 20px;
+    top: 24px;
+  }
+  #home .section01 .slide-container .text-box span {
+    font-size: 18px;
+  }
+  #home .section01 .slide-container .text-box p {
+    font-size: 24px;
+    margin-top: 8px;
+  }
+  #home .section01 .slide-container .slide-buttons {
+    width: fit-content;
+    left: 20px;
+    bottom: 11px;
+  }
+  #home .section01 .slide-container .play-button {
+    width: 24px;
+    height: 24px;
+  }
+  #home .section01 .slide-container .pause-button {
+    width: 24px;
+    height: 24px;
+  }
 }
 #home .section02 {
   background: #fff;
@@ -1155,6 +1200,38 @@ div.inner {
 }
 #home .section02 .tab-conts li.on {
   display: block;
+}
+@media (max-width: 767px) {
+  #home .section02 .content {
+    padding: 60px 0;
+  }
+  #home .section02 .title-area {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    overflow: hidden;
+  }
+  #home .section02 .tabs {
+    overflow: auto;
+  }
+  #home .section02 .tabs .tab {
+    flex-shrink: 0;
+  }
+  #home .section02 .tab-conts {
+    margin-top: 40px;
+  }
+  #home .section02 .tab-conts li .card {
+    max-width: 152px;
+  }
+  #home .section02 .tab-conts li .card .img-box {
+    height: 152px;
+  }
+  #home .section02 .tab-conts li .card-body .category {
+    font-size: 16px;
+  }
+  #home .section02 .tab-conts li .card-text {
+    font-size: 16px;
+  }
 }
 #home .section03 {
   background: #2B2B2B;
@@ -1258,6 +1335,57 @@ div.inner {
     transform: translateX(-200%);
   }
 }
+@media (max-width: 767px) {
+  #home .section03 {
+    padding: 60px 0 26px;
+  }
+  #home .section03 .title-area {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    overflow: hidden;
+  }
+  #home .section03 .tabs {
+    overflow: auto;
+  }
+  #home .section03 .tabs .tab {
+    flex-shrink: 0;
+  }
+  #home .section03 .content {
+    margin-top: 40px;
+    width: 100%;
+  }
+  #home .section03 .content .swiper-slide-container {
+    width: 100%;
+  }
+  #home .section03 .content .tab-slide {
+    position: relative;
+    padding-bottom: 54px;
+  }
+  #home .section03 .content .tab-slide .img-box {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    background: #B19B9B;
+    overflow: hidden;
+  }
+  #home .section03 .content .tab-slide .category {
+    position: absolute;
+    left: 20px;
+    bottom: 20px;
+    z-index: 55;
+    display: inline-block;
+    padding: 2px 16px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 999px;
+    font-family: "Noto Sans KR", serif;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
 #home .section04 {
   padding: 60px 0;
   background: #9CFD73;
@@ -1292,8 +1420,28 @@ div.inner {
   position: absolute;
   right: 14px;
   bottom: 11px;
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+#home .section04 .sns-thumb-list .sns-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+@media (max-width: 767px) {
+  #home .section04 .sns-thumb-list {
+    margin-top: 24px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  #home .section04 .sns-thumb-list li {
+    max-width: 47%;
+    height: 152px;
+  }
 }
 
+/* footer */
 .footer {
   padding: 58px 0;
   background: #F5F5F8;
@@ -1302,6 +1450,9 @@ div.inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.footer .left {
+  width: 100%;
 }
 .footer .left .kogas-logo {
   width: 100%;
@@ -1319,6 +1470,10 @@ div.inner {
   font-weight: 500;
   font-size: 15px;
   line-height: 26px;
+}
+.footer .right {
+  width: 100%;
+  max-width: 290px;
 }
 .footer .right .basketball {
   display: flex;
@@ -1343,6 +1498,33 @@ div.inner {
   align-items: center;
   gap: 13px;
   margin-top: 17px;
+}
+.footer .right .bb-sns-group li a {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+.footer .right .bb-sns-group li a img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding: 60px 0;
+  }
+  .footer .content {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .footer .right {
+    max-width: 100%;
+  }
+  .footer .right .basketball {
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
