@@ -1022,6 +1022,22 @@ div.inner {
   font-size: 30px;
   margin-top: 18px;
 }
+#home .section01 .slide-container .slide-flex {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 27px;
+}
+#home .section01 .slide-container .slide-flex .part01 {
+  width: 100%;
+  max-width: 789px;
+  height: 100%;
+}
+#home .section01 .slide-container .slide-flex .part02 {
+  flex: 1;
+  height: 100%;
+}
 #home .section01 .slide-container .slide-buttons {
   position: absolute;
   left: 52px;

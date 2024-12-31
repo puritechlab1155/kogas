@@ -401,6 +401,24 @@ div.inner {
                 }
             }
 
+            .slide-flex {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                justify-content: space-between;
+                gap: 27px;
+
+                .part01 {
+                    width: 100%;
+                    max-width: 789px;
+                    height: 100%;
+                }
+                .part02 {
+                    flex: 1;
+                    height: 100%;
+                }
+            }
+
             .slide-buttons {
                 position: absolute;
                 left: 52px;
