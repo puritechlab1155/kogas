@@ -8,7 +8,7 @@ var homeS1swiper = new Swiper(".s1-swiper", {
         clickable: true,
     },
     loop: true,
-    autoplay: true,
+    // autoplay: true,
 });
 
 const homes1playButton = document.querySelector('#home .s1-swiper .play-button-pc');
