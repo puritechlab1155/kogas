@@ -431,5 +431,14 @@
         .content {
             padding: 148px 0 83px;
         }
+
+        .section-title {
+            display: flex;
+            width: 100%;
+            max-width: 591px;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
     }
 }
