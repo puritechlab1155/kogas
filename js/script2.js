@@ -31,4 +31,21 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    var home = document.querySelector('#home');
+    if (home) {
+        /* section02 */
+        var s2tabs = home.querySelectorAll('.section02 .conts-wrap .tabs .tab');
+        var s2tabConts = home.querySelectorAll('.section02 .conts-wrap .tab-conts .cont');
+
+        s2tabs.forEach((tab, idx) => {
+            tab.addEventListener('click', function() {
+                s2tabs.forEach(t => t.classList.remove('on'));
+                tab.classList.add('on');
+
+                s2tabConts.forEach(cont => cont.classList.remove('on'));
+                s2tabConts[idx].classList.add('on');
+            });
+        });
+    }
 });
