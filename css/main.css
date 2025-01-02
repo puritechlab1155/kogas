@@ -970,6 +970,20 @@ div.inner {
   line-height: 24px;
   letter-spacing: -0.5px;
 }
+@media (min-width: 1024px) and (max-height: 600px) {
+  #home .main-visual .content {
+    padding: 70px 0 30px;
+  }
+  #home .main-visual .visual-title {
+    line-height: 60px;
+  }
+  #home .main-visual .visual-title .text01 {
+    font-size: 50px;
+  }
+  #home .main-visual .visual-title .text02 {
+    font-size: 60px;
+  }
+}
 @media (max-width: 767px) {
   #home .main-visual .content {
     padding: 110px 0 62px;
