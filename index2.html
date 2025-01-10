@@ -11,10 +11,79 @@
     <link rel="stylesheet" href="css/main.css">
 
     <style>
-        .header { background: #9CFD73; }
-
+        /* .header .on { background: #fff; color: #000;} */
         .main-visual { background: #fff; padding-top: 79px; }
-        .main-visual img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+        /* 비디오 컨테이너 */
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 1; /* 비디오가 텍스트 뒤에 오도록 설정 */
+            position: absolute;
+            top:0;
+        }
+
+        /* 이미지 컨테이너 */
+        .image-container {
+            position: absolute;
+            /* top: 50%; */
+            bottom: 0%;
+            left: 0%;
+            /* transform: scale(0.8); */
+            /* transform: translate(-50%, -50%); */
+            text-align: center;
+            z-index: 2;
+            transition: 0.2s ease-out;
+
+            width: calc(100% - var(--body-horizontal-margin)*2);
+        }
+        
+
+      
+
+        @media (max-width: 768px) {
+        /* .header {
+            padding: 0.5rem;
+        }
+        .main-visual {
+            padding-top: 60px;
+        } */
+        .image-container {
+            /* top: 70%; */
+            bottom: 0%;
+        }
+        .image-container img {
+            width: 70%; /* 모바일 크기 조정 */
+        }
+        }
+
+        @media (max-width: 480px) {
+        /* .header {
+            padding: 0.25rem;
+        }
+        .main-visual {
+            padding-top: 50px;
+        } */
+        .image-container {
+            /* top: 65%; */
+            bottom: 0%;
+        }
+        .image-container img {
+            width: 80%;
+        }
+    }
+
+
     </style>
 </head>
 <body>
@@ -28,6 +97,9 @@
 
                 <nav id="nav" class="nav">
                     <ul class="gnb">
+                        <li>
+                            
+                        </li>
                         <li>
                             <a href="#">KOGAS Theme</a>
                         </li>
@@ -163,8 +235,20 @@
 
         <main id="main" class="main">
             <div class="main-visual">
-                <img src="img/home/visual-img02.png" alt="">
-            </div><!-- //main-visual -->
+                
+            <!-- 영상부분 -->
+                <video id="background-video" class="video-container" autoplay muted loop>
+                    <source src="/img/home/visual-video.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!-- 스크롤 시 줄어드는 이미지 -->
+            <div class="image-container-box">
+            <div id="scroll-image" class="image-container">
+                <img id="" class="scroll-img" src="/img/home/visual-logo.png" alt="">
+            </div></div>
+            
+            <!-- //main-visual -->
 
             <div class="section01">
                 <div class="inner">
@@ -842,6 +926,29 @@
         </footer>
     </section>
 
+    <script>
+    window.addEventListener('scroll', function() {
+        var scrollPosition = window.scrollY; // 스크롤의 수직 위치
+        var scrollImage = document.getElementById('scroll-image');
+        var header = document.getElementById('header'); // 헤더 요소
+        var scrollHeight = document.body.scrollHeight; // 전체 문서 높이
+        var windowHeight = window.innerHeight; // 창 높이
+        var remainingScroll = scrollHeight - scrollPosition - windowHeight; // 남은 스크롤 높이
+
+        // 스크롤 위치에 비례하여 이미지 크기 변경
+        var scale = Math.max(1 - scrollPosition / 1000, 0.5); 
+        scrollImage.style.transform = `scale(${scale})`;
+
+
+        // 헤더 색상 변경
+        if (scrollPosition > 800) {
+            header.style.backgroundColor = 'rgba(156, 253, 115, 1)'; // 고정된 배경색
+        } else {
+            header.style.backgroundColor = 'transparent'; // 투명 배경
+        }
+    });
+    </script>
+    
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.31/fullpage.min.js" integrity="sha512-x5JY7KTULoGmcgxguKf5p4i3wfx7qXlY3OMjqez4Pj8BPoMn4krRQmwDtOwF81F+/9Be+jvhBsKOIaPPZmRelQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
