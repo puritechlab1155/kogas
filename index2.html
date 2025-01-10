@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한국가스공사 KOGAS 웹진</title>
-
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js"
+    integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc="
+    crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/swiper.css">
 
@@ -12,7 +14,9 @@
 
     <style>
         /* .header .on { background: #fff; color: #000;} */
-        .main-visual { background: #fff; padding-top: 79px; }
+        .main-visual { 
+            background: #fff; padding-top: 79px; 
+        }
 
         /* 비디오 컨테이너 */
         .video-container {
@@ -47,17 +51,13 @@
 
             width: calc(100% - var(--body-horizontal-margin)*2);
         }
-        
+        .scroll-img{
+            width: 100%; height: auto; object-fit: cover;
+        }
 
-      
 
         @media (max-width: 768px) {
-        /* .header {
-            padding: 0.5rem;
-        }
-        .main-visual {
-            padding-top: 60px;
-        } */
+
         .image-container {
             /* top: 70%; */
             bottom: 0%;
@@ -65,9 +65,25 @@
         .image-container img {
             width: 70%; /* 모바일 크기 조정 */
         }
+        #scroll-img{
+            width: 60% !important;
+        }
+        .header .nav {
+            display: none;
+        }
+        .header .gnb li {
+            /* display: flex; */
+            justify-content: center;
+            /* align-items: center; */
+            gap: 20px;
+        }
+        .image-container img {
+            width: 80%;
         }
 
-        @media (max-width: 480px) {
+    }
+
+    @media (max-width: 480px) {
         /* .header {
             padding: 0.25rem;
         }
@@ -81,6 +97,8 @@
         .image-container img {
             width: 80%;
         }
+   
+
     }
 
 
@@ -97,16 +115,16 @@
 
                 <nav id="nav" class="nav">
                     <ul class="gnb">
-                        <li>
-                            
+                        <li id="nav-img-on">
+                            <img src="/img/home/visual-nav-logo.png" alt="">
                         </li>
-                        <li>
+                        <li class="nav-gnb">
                             <a href="#">KOGAS Theme</a>
                         </li>
-                        <li>
+                        <li class="nav-gnb">
                             <a href="#">Better Energy</a>
                         </li>
-                        <li>
+                        <li class="nav-gnb">
                             <a href="#">Better Life</a>
                         </li>
                     </ul>
@@ -927,25 +945,43 @@
     </section>
 
     <script>
-    window.addEventListener('scroll', function() {
-        var scrollPosition = window.scrollY; // 스크롤의 수직 위치
+    document.addEventListener('DOMContentLoaded', function() {
         var scrollImage = document.getElementById('scroll-image');
-        var header = document.getElementById('header'); // 헤더 요소
-        var scrollHeight = document.body.scrollHeight; // 전체 문서 높이
-        var windowHeight = window.innerHeight; // 창 높이
-        var remainingScroll = scrollHeight - scrollPosition - windowHeight; // 남은 스크롤 높이
+        var header = document.getElementById('header');
+        var $logo = $('#nav-img-on');
+        var $navGnb = $('nav-gnb');
 
-        // 스크롤 위치에 비례하여 이미지 크기 변경
-        var scale = Math.max(1 - scrollPosition / 1000, 0.5); 
-        scrollImage.style.transform = `scale(${scale})`;
+        function handleScroll() {
+            var scrollPosition = window.scrollY;
 
+            // 이미지 크기 조정
+            if (scrollImage) {
+                var scale = Math.max(1 - scrollPosition / 1000, 0.5);
+                scrollImage.style.transform = `scale(${scale})`;
+            }
 
-        // 헤더 색상 변경
-        if (scrollPosition > 800) {
-            header.style.backgroundColor = 'rgba(156, 253, 115, 1)'; // 고정된 배경색
-        } else {
-            header.style.backgroundColor = 'transparent'; // 투명 배경
+            // 헤더 색상 및 이미지/네비게이션 항목 표시/숨기기
+            if (scrollPosition > 800) {
+                header.style.backgroundColor = '#fff';
+
+                $logo.css({ display: 'block' });
+
+                // 반응형에서만 적용
+                if (window.innerWidth <= 768) {
+                    $navGnb.css({ display: 'none' });
+                }
+            } else {
+                header.style.backgroundColor = 'transparent';
+                $logo.css({ display: 'none' });
+
+                // 반응형에서만 적용
+                if (window.innerWidth <= 768) {
+                    $navGnb.css({ display: 'none' });
+                }
+            }
         }
+
+        window.addEventListener('scroll', handleScroll);
     });
     </script>
     
