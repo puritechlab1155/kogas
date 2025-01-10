@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한국가스공사 KOGAS 웹진</title>
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullpage.js/dist/fullpage.min.css">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
@@ -14,7 +16,6 @@
 </head>
 <body>
     <section id="home">
-        hello world
         <header id="header" class="header">
             <div class="content">
                 <h1 class="logo">
@@ -187,7 +188,7 @@
 
         <main id="main" class="main">
             <div class="main-visual">
-                <div class="content">
+                <div class="content snowBox">
                     <img src="img2/main-visual-img.jpg" alt="" class="visual-img">
                     <lottie-player src="json/visual-lottie.json" background="transparent" speed="1" style="width: 180px; height: 245px; position: absolute; right: 25%; top: 23%; z-index: 5;" loop autoplay></lottie-player>
 
@@ -363,5 +364,10 @@
     <script src="js/script2.js"></script>
     <script src="js/gsap2.js"></script>
     <script src="js/swiper2.js"></script>
+
+    <!--눈 내리는 효과 플러그인 불러오기-->
+    <script tyle="text/javascript" src="js/snow.js"></script>
+    <script tyle="text/javascript" src="js/snowfall.jquery.js"></script>
+    <script tyle="text/javascript" src="js/snowfall.js"></script> 
 </body>
 </html>
