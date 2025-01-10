@@ -5,19 +5,195 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>한국가스공사 KOGAS 웹진</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
-    <link rel="stylesheet" href="css/swiper.css">
+    <!--제이쿼리 cdn 연결-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
+    <!--모션 플러그인 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!--css 연결-->
+    <link rel="stylesheet" href="css/swiper.css">
     <link rel="stylesheet" href="css/main.css">
 
     <style>
         .header { background: #fff; }
 
-        #home .main-visual { background: #D9FE68; padding-top: 172px; height: auto; }
-        #home .main-visual .content { padding: 0; position: relative; width: 100%; height: auto; }
-        #home .main-visual .content .img-box { width: 100%; max-width: 1295px; }
-        #home .main-visual .content .img-box img { width: 100%; display: block; }
-        #home .main-visual .content .visual-text { position: absolute; right: -34px; top: 40%; font-family: 'Pretendard-SemiBold'; font-size: 60px; line-height: 85px; }
+        #home .main-visual { 
+            width: 100%; 
+            height: 100%; 
+            background: #D9FE68; 
+            padding-top: 172px; 
+            height: auto; 
+            position: relative; /*D9FE68*/
+        }
+        #home .main-visual .content { 
+            padding: 0; 
+            width: 100%; 
+            height: auto; 
+            max-height: 900px;
+        }
+        #home .main-visual .content .img-box { 
+            width: 100%; 
+            max-width: 1295px; 
+        }
+        #home .main-visual .content .img-box .main-visual-img { 
+            width: 50%; 
+            position: relative; 
+            left: 10%; 
+            top: 2em; 
+            display: block;
+        }
+        #home .main-visual .content .img-box .main-visual-element{
+            width: 100%; 
+            height:100%;
+        }
+        #home .main-visual .content .img-box .main-visual-element .visual-element-container{ 
+            position: absolute;
+        }
+        #home .main-visual .content .img-box .main-visual-element .container01{
+            width: 25%; 
+            top: 14%; 
+            right: 25%; 
+            z-index: 20;
+        }
+        #home .main-visual .content .img-box .main-visual-element .container02{ 
+            width: 20%; 
+            bottom: 50%; 
+            right: 65%; 
+            z-index: 20;
+        }
+        #home .main-visual .content .img-box .main-visual-element .container03{ 
+            width: 9%; 
+            bottom: 58%; 
+            right: 15%; 
+            z-index: 20;
+        }
+        #home .main-visual .content .img-box .main-visual-element .container04{ 
+            width: 10%; 
+            bottom: 20%; 
+            right: 80%; 
+            z-index: 20;
+        }
+        #home .main-visual .content .img-box .main-visual-element .visual-element-container img{ 
+            width: 100%; 
+            opacity: 0; 
+            transition: opacity 0.1s ease-in-out;
+        }
+        #home .main-visual .content .img-box .main-visual-element .visual-element-container img.visible { 
+            opacity: 1; 
+        }
+        #home .main-visual .content .visual-text { 
+            position: absolute; 
+            left: 62%; 
+            bottom: 20%; 
+            font-family: 'Pretendard-SemiBold'; 
+            font-size: 3.75em;/*60px*/ 
+            line-height: 1.6em/*85px*/; 
+            z-index: 20;
+        }
+
+        @media (max-width: 1488px) {
+            #home .main-visual .content .visual-text{
+                /* top: 45%; */
+                left: 65%;
+                font-size: 3.12em !important;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container02{
+                right: 70%;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container03{
+                bottom: 52%;
+                right: 10%;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container04{
+                right: 83%;
+            }
+        }
+        @media (max-width: 1210px) {
+            #home .main-visual .content .visual-text{
+                font-size: 2.5em !important;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container01{
+                top: auto;
+                bottom: 70%;
+            }
+        }
+        @media (max-width: 1023px){
+            #home .main-visual .content .visual-text{
+                font-size: 2.0em !important;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container02{
+                bottom: 47%;
+            }
+        }
+        @media (max-width: 800px){
+            #home .main-visual .content .visual-text{
+                font-size: 1.6em !important;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container01{
+                top: auto;
+                bottom: 65%;
+            }
+        }
+        @media (max-width: 640px){
+            #home .main-visual .content .visual-text{
+                font-size: 1.3em !important;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container01{
+                bottom: 61%;
+            }
+        }
+        /*메인 비주얼 레이아웃 변경 포인트*/
+        @media (max-width: 539px){
+            /* #home .main-visual {
+                height: 100vh;
+            } */
+            #home .main-visual .content {
+                position: relative;
+            }
+            #home .main-visual .content .img-box .main-visual-img {
+                width: 100%;
+                position: static;
+            }
+            #home .main-visual .content .img-box .main-visual-element .mockup_outBox {
+                width: 85%;
+                margin: 0 auto;
+                margin-top: 10em;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container01 {
+                width: 42%;
+                bottom: 66%;
+                right: 0%;
+                z-index: 20;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container02 {
+                width: 36%;
+                bottom: 46%;
+                left: 0%;
+                z-index: 20;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container03 {
+                width: 22%;
+                bottom: 85%;
+                right: 17%;
+                z-index: 20;
+            }
+            #home .main-visual .content .img-box .main-visual-element .container04 {
+                width: 43%;
+                bottom: -12%;
+                left: -26.6%;
+                z-index: 10;
+            }
+            #home .main-visual .content .visual-text {
+                top: -2.3em;
+                left: 12%;
+                font-size: 1.8em !important;
+            }
+            #home .main-visual .content .visual-text .spaceNone{
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
@@ -168,13 +344,31 @@
             <div class="main-visual">
                 <div class="inner" style="max-width: 1335px;">
                     <div class="content">
-                        <div class="img-box"><img src="img/home/visual-img03.jpg" alt=""></div>
+                        <div class="img-box">
+                            <div class="main-visual-element">
+                                <div class="mockup_outBox">
+                                    <img class="main-visual-img mockup" src="img/home/visual-img03.jpg" alt="">
+                                </div>
+                                <div class="visual-element-container container01">
+                                    <img class="bubble01 animate__animated animate__bounce animate__swing animate__delay-0.9s" src="img/home/visual-bubble01.png" alt="">
+                                </div>
+                                <div class="visual-element-container container02">
+                                    <img class="bubble02 animate__animated animate__bounce animate__delay-0.9s" src="img/home/visual-bubble02.png" alt="">
+                                </div>
+                                <div class="visual-element-container container03">
+                                    <img class="firecracker01 animate__animated animate__bounce animate__bounceIn" src="img/home/visual-firecracker01.png" alt="">
+                                </div>
+                                <div class="visual-element-container container04">
+                                    <img class="firecracker02 animate__animated animate__bounce animate__bounceIn animate__slow" src="img/home/visual-firecracker02.png" alt="">
+                                </div>
+                            </div>
+                        </div>
 
                         <div class="visual-text">
                             하루 30분, <br>
                             휴대폰을 내려놓고 <br>
                             나를 들여다보는 <br>
-                            시간을 <br>
+                            시간을 <br class="spaceNone">
                             마련해보세요. 
                         </div>
                     </div>
@@ -875,5 +1069,42 @@
     <script src="js/script.js"></script>
     <script src="js/gsap.js"></script>
     <script src="js/swiper.js"></script>
+
+    <script>
+        
+        $(document).ready(function() {
+
+            // 페이지 로드 시 이미지 업데이트
+            updateImage();
+
+            function updateImage() {
+                let $visual03Mock = $('.mockup');
+                let $visualElment04 = $('.container04 > img');
+                const windowWidth = $(window).outerWidth();
+
+                if (windowWidth < 540) {
+                    $visual03Mock.attr('src', 'img/home/visual-img03-mock.png');
+                    //$visualElment04.attr('src', 'img/home/visual-firecracker02-mob.png');
+                } else {
+                    $visual03Mock.attr('src', 'img/home/visual-img03.jpg');
+                    //$visualElment04.attr('src', 'img/home/img/home/visual-firecracker02.png');
+                }
+            }
+
+            // 윈도우 크기 변경 시 이미지 업데이트
+            $(window).resize(function() {
+                updateImage();
+            });
+
+            //메인비주얼 나타남
+            const $images = $('.visual-element-container img');
+            
+            $images.each(function(index) {
+                // 첫 번째 이미지는 0.5초 후에 나타나고, 나머지는 1초 간격으로 나타남
+                const delayTime = index === 0 ? 500 : index * 800; 
+                $(this).delay(delayTime).fadeTo(150, 1); // 500ms 동안 서서히 나타나게 함
+            });
+        });
+    </script>
 </body>
 </html>
