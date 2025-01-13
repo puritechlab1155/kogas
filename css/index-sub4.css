@@ -5,32 +5,15 @@
 h3{ font-size: 40px; }
 .f_16{ font-size: 16px; }
 .f_17{ font-size: 17px; }
-
+.float_r{ float: right; }
+.br{ display: block; }
 .container {
         display: flex;
         flex-direction: column;
         height: 100%;
     }
 
-/* animista.css */
-.focus-in-expand {
-	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-}
-@keyframes focus-in-expand {
-  0% {
-    letter-spacing: -0.5em;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-filter: blur(0px);
-            filter: blur(0px);
-    opacity: 1;
-  }
-}
-
+/* animista.css 테스트 */
 .kenburns-right {
 	-webkit-animation: kenburns-right 2s ease-out both;
 	        animation: kenburns-right 2s ease-out both;
@@ -100,11 +83,11 @@ article .border{
         color: #7194EB;
         text-decoration: underline;
 }
-/* 탭 컨텐츠 */
+/* 1번째 탭 content */
 .content {
         flex: 1;
         display: none;
-        background-color: #f5f5f5;
+        background-color: #FEFDF2;
 }
 .content.active {
         display: flex;
@@ -115,11 +98,11 @@ article .border{
         width: 100%;
         height: auto;
 }
+/* right */
 .content.right{
         width: 100%;
         height: auto;
         padding: 50px 40px;
-        background: #FEFDF2;
 }
 .text-box{
         width: 60%;
@@ -150,3 +133,165 @@ article .border{
         vertical-align: text-bottom;
         padding-right: 15px;
 }
+.food_map{
+        position: relative;
+        max-width: 700px;
+        width: 100%;
+}
+.food_map .map{
+        width: 100%;
+}
+.food_map .gps{
+        position: absolute;
+        top: 58%;
+        left: 47%;
+}
+.food_map .food{
+        position: absolute;
+        top: 38%;
+        left: 27%;
+}
+/* gps 모션1 */
+.tracking-in-expand-fwd {
+	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+@keyframes tracking-in-expand-fwd {
+        0% {
+          letter-spacing: -0.5em;
+          -webkit-transform: translateZ(-700px);
+                  transform: translateZ(-700px);
+          opacity: 0;
+        }
+        40% {
+          opacity: 0.6;
+        }
+        100% {
+          -webkit-transform: translateZ(0);
+                  transform: translateZ(0);
+          opacity: 1;
+        }
+}
+
+/* gps 모션2 */
+.focus-in-expand {
+	-webkit-animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-expand 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes focus-in-expand {
+        0% {
+        letter-spacing: -0.5em;
+        -webkit-filter: blur(12px);
+                filter: blur(12px);
+        opacity: 0;
+        }
+        100% {
+        -webkit-filter: blur(0px);
+                filter: blur(0px);
+        opacity: 1;
+        }
+}
+/* gps 모션 끝 */
+
+/* 반응형 */
+@media (max-width: 1500px) {
+        main>img{
+                width: 50%;
+                margin-top: 150px;
+            
+        }
+        main p{
+                width: 70%;
+        }
+        .tabs{
+                width: 75%;
+        }
+        .img-box img{
+                max-width: 600px;
+        }
+        .content.right{
+                clear: both;
+        }
+        .text-box {
+                width: 100%;
+        }
+        .food_map .gps {
+                /* top: 59%;
+                left: 46%; */
+            }
+}
+@media (max-width: 991px) {
+        main>img{
+                width: 40%;
+                margin-top: 350px;
+            
+        }
+        main ul{
+                padding: 20px;
+                margin: 0;
+                text-align: center;
+        }
+        main p{
+                margin: auto;
+        }
+        .tabs{
+                width: 100% !important;
+        }
+        .img-box{
+                width: 300px;
+        }
+        .img-box img{
+                max-width: 500px;
+                width: 100%;
+        }
+        .text-box {
+                width: 80%;
+        }
+        
+}
+@media (max-width: 767px) {
+        span.m_br{display: block;}
+        main>img{
+                margin-top: 550px;
+            
+        }
+        main ul{
+                padding: 20px;
+                margin: 0;
+                text-align: center;
+        }
+        main p{
+                width: 100%;
+        }
+        .tab{
+                padding: 10px;
+        }
+        .tabs{
+                width: 100% !important;
+        }
+        .content{
+                display: block !important;
+        }
+        .img-box, .img-box img, .food_map .map{ 
+                width: 100%; 
+        }
+        .text-box {
+                width: 100%;
+        }
+        .food_map .gps {
+                top: 56%;
+                left: 47%;
+        }
+        .food_map .food {
+                top: 19%;
+                left: 18%;
+        }
+}
+
+
+
+/* 2번째 탭 content */
+/* 3번째 탭 content */
+/* 4번째 탭 content */
+/* 5번째 탭 content */
+/* 6번째 탭 content */
