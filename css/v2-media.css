@@ -417,6 +417,14 @@
     }
 
     @media (max-width: 534px) {
+      /*모바일 메뉴*/
+      .header .offcanvas .offcanvas-header .vol-info {
+        font-size: 28px;
+        margin-top: 10px;
+      }
+      .header .offcanvas .offcanvas-menu .menu-title {
+        font-size: 26px;
+      }
       #home .section-wrap .section-title {
         font-size: 36px;
       }
