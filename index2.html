@@ -995,6 +995,18 @@
         }
 
         window.addEventListener('scroll', handleScroll);
+
+
+        // 모바일 네비비게이션 닫기 버튼 컬러 변경
+        $('.offcanvas-open').click(function() {
+            $mobMenu.css({background : '#000' });
+            
+            if($(this).hasClass('active')){
+                $mobMenu.css({background : '#fff' });
+            }
+            
+        });
+        // fullPage.js
     });
     </script>
     
