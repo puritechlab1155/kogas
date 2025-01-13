@@ -336,6 +336,48 @@ br.pc_space{
 #main .section06 {
     background: #46E7E3;
 }
-#main .section06 .person01 .personImg {
-    border-radius: 0px;
+#main .profile_wrap .person01 .personImg {
+    border-radius: 0px !important;
+}
+#main .profile_wrap .person02 .personImg {
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+}
+#main .profile_wrap .person01 .person_introduct {
+    padding-top: 88px !important;
+}
+#main .profile_wrap .person02 .person_introduct {
+    padding-top: 48px !important;
+}
+
+/*section07*/
+#section07 {
+    width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background: #FAFCE7;
+}
+#section07 .applicat_wrap{
+    width: 100%;
+    max-width: 714px;
+    margin: 0 auto;
+    text-align: center;
+}
+#section07 .applicat_wrap .applicat_img img{
+    margin: 0 auto;
+}
+#section07 .applicat_wrap p{
+    padding-top: 51px;
+    font-family: 'GmarketSansMedium';
+    color: #0E2764;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 500;
+    word-spacing: -1px;
+}
+#section07 .applicat_wrap .applicatBtn{
+    width: auto;
+    padding-top: 43px;
+    border: none;
+    background: transparent;
 }
