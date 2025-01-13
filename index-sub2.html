@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kogas-sub2</title>
 
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index-sub2.css">
 
@@ -496,10 +498,10 @@
                     <div class="person person01">
                         <div class="imgBox">
                             <div class="personImg">
-                                <img src="img_sub2/person01.jpg" alt="이철희 과장">
+                                <img src="img_sub2/person03.jpg" alt="이철희 과장">
                             </div>
                             <div class="nameplate"> <!--background-->
-                                <img src="img_sub2/nameplate01.png" alt="이철희 과장 이름표">
+                                <img src="img_sub2/nameplate03.png" alt="이철희 과장 이름표">
                             </div>
                         </div>
                         <div class="person_introduct">
@@ -512,10 +514,10 @@
                     <div class="person person02">
                         <div class="imgBox">
                             <div class="personImg">
-                                <img src="img_sub2/person02.jpg" alt="김동희 대리">
+                                <img src="img_sub2/person04.jpg" alt="김동희 대리">
                             </div>
                             <div class="nameplate"> <!--background-->
-                                <img src="img_sub2/nameplate02.png" alt="김동희 대리 이름표">
+                                <img src="img_sub2/nameplate04.png" alt="김동희 대리 이름표">
                             </div>
                         </div>
                         <div class="person_introduct">
@@ -623,5 +625,39 @@
     </section>
 
     <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            let $IntroductBox = $('.Introduct_box');
+
+            function updateBackground() {
+                if($(window).innerWidth() < 824){
+                    $IntroductBox.css('background', 'none');
+                    $IntroductBox.css({
+                        'background' : 'url(../img_sub2/blue-textBox-mob.png)',
+                        'background-size' : '100% 100%',
+                        'background-repeat' : 'no-repeat',
+                        'background-position' : 'bottom center'
+                    });
+                } else {
+                    $IntroductBox.css({
+                        'background' : 'url(../img_sub2/blue-textBox.png)',
+                        'background-size' : '100%',
+                        'background-repeat' : 'no-repeat',
+                        'background-position' : 'center'
+                    });
+                }
+            }
+
+            // 초기 배경 설정
+            updateBackground();
+
+            // 창 크기 변경 시 배경 업데이트
+            $(window).resize(function() {
+                updateBackground();
+            });
+        });
+
+    </script>
 </body>
 </html>

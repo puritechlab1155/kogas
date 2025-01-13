@@ -171,10 +171,15 @@ br.pc_space{
     z-index: 2;
 }
 #section02 .image_wrap .ImgGroup .img03_Box{
-    width: 588px;
+    width: 45%;
     position: absolute;
     right: 0;
     top: 55px;
+    
+}
+#section02 .image_wrap .ImgGroup .img03_Box img{
+    width: 100%;
+    object-fit: cover;
 }
 #section02 .ImgGroup .Icon01{
     position: absolute;
@@ -238,6 +243,9 @@ br.pc_space{
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
+}
+#section04 .profile_wrap .person01 .imgBox .nameplate {
+    bottom: 14px;
 }
 #section04 .profile_wrap .person .person_introduct {
     box-sizing: border-box;
@@ -349,6 +357,9 @@ br.pc_space{
 #main .profile_wrap .person02 .person_introduct {
     padding-top: 48px !important;
 }
+#main .section06 .profile_wrap .person01 .imgBox .nameplate {
+    bottom: -40px !important;
+}
 
 /*section07*/
 #section07 {
@@ -380,4 +391,41 @@ br.pc_space{
     padding-top: 43px;
     border: none;
     background: transparent;
+}
+
+
+/*반응형*/
+@media (max-width: 1466px) {
+    #section02 .image_wrap {
+        background: lightblue;
+    }
+}
+@media (max-width: 1040px) {
+    /*section02*/
+    #section02{
+        padding-top: 150px;
+    }
+}
+@media (max-width: 824px) {
+    /*section02*/
+    #section02 .text_wrap .content {
+        padding: 0 20px;
+        padding-top: 100px;
+    }
+    #section02 .text_wrap .Introduct_box {
+        width: 50%;
+        min-width: 403px;
+        height: 520px;
+        margin: 0 auto;
+    }
+    #section02 .text_wrap .Introduct_box .Introduct_text {
+        text-align: left;
+    }
+    br.mob_space{
+        display: block;
+    }
+    span.mob_empty {
+        display: block;
+        margin-top: 62px;
+    }
 }
