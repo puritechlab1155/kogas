@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="css/main.css">
 
     <style>
-        /* .header .on { background: #fff; color: #000;} */
+        .header .offcanvas-open span{
+            background: #fff;
+        }
         .main-visual { 
             background: #fff; padding-top: 79px; 
         }
@@ -42,7 +44,7 @@
             position: absolute;
             /* top: 50%; */
             bottom: 0%;
-            left: 0%;
+            left: 2%;
             /* transform: scale(0.8); */
             /* transform: translate(-50%, -50%); */
             text-align: center;
@@ -112,20 +114,24 @@
                     <img src="img/kogas-webzine-logo.png" alt="한국가스공사 KOGAS 웹진">
                     <span class="blind">한국가스공사 KOGAS 웹진</span>
                 </h1>
+                
+                <div id="nav-img-on">
+                    <img src="img/visual-nav-logo.png" alt="">
+                </div>
 
                 <nav id="nav" class="nav">
                     <ul class="gnb">
-                        <li id="nav-img-on">
+                        <!-- <li id="nav-img-on">
                             <img src="img/visual-nav-logo.png" alt="">
+                        </li> -->
+                        <li class="nav-gnb">
+                            <a href="#" style="color: #fff;">KOGAS Theme</a>
                         </li>
                         <li class="nav-gnb">
-                            <a href="#">KOGAS Theme</a>
+                            <a href="#" style="color: #fff;">Better Energy</a>
                         </li>
                         <li class="nav-gnb">
-                            <a href="#">Better Energy</a>
-                        </li>
-                        <li class="nav-gnb">
-                            <a href="#">Better Life</a>
+                            <a href="#" style="color: #fff;">Better Life</a>
                         </li>
                     </ul>
                 </nav>
@@ -262,9 +268,10 @@
             
             <!-- 스크롤 시 줄어드는 이미지 -->
             <div class="image-container-box">
-            <div id="scroll-image" class="image-container">
-                <img id="" class="scroll-img" src="img/visual-logo.png" alt="">
-            </div></div>
+                <div id="scroll-image" class="image-container">
+                    <img id="" class="scroll-img" src="img/visual-logo-white.png" alt="">
+                </div>
+            </div>
             
             <!-- //main-visual -->
 
@@ -950,6 +957,8 @@
         var header = document.getElementById('header');
         var $logo = $('#nav-img-on');
         var $navGnb = $('nav-gnb');
+        var $navGnbList = $('.nav-gnb a');
+        var $mobMenu = $('.offcanvas-open span');
 
         function handleScroll() {
             var scrollPosition = window.scrollY;
@@ -965,6 +974,8 @@
                 header.style.backgroundColor = '#fff';
 
                 $logo.css({ display: 'block' });
+                $navGnbList.css({color : '#000' });
+                $mobMenu.css({background : '#000' });
 
                 // 반응형에서만 적용
                 if (window.innerWidth <= 768) {
@@ -973,6 +984,8 @@
             } else {
                 header.style.backgroundColor = 'transparent';
                 $logo.css({ display: 'none' });
+                $navGnbList.css({color : '#fff' });
+                $mobMenu.css({background : '#fff' });
 
                 // 반응형에서만 적용
                 if (window.innerWidth <= 768) {
@@ -982,6 +995,22 @@
         }
 
         window.addEventListener('scroll', handleScroll);
+
+
+        // 모바일 네비비게이션 닫기 버튼 컬러 변경
+        $('.offcanvas-open').click(function() {
+            $mobMenu.css({background : '#000' });
+
+            if($(this).hasClass('active')){
+                $mobMenu.css({background : '#fff' });
+            }
+
+            if($(window).scrollTop() > 800){
+                $mobMenu.css({background : '#000' });
+            }
+            
+        });
+        // fullPage.js
     });
     </script>
     

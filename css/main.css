@@ -734,13 +734,13 @@ div.inner {
 }
 
 /* nav 로고이미지 */
-.gnb #nav-img-on{
+#nav-img-on{
   display: none;
-
   padding-right: 200px;
   position: absolute;
-  top: 17px;
-  left: 44%;
+  top: 19px;
+  left: 50%;
+  transform: translateX(-20%);
 }
 
 

@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kogas-sub2</title>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/index-sub2.css">
+
+    <style>
+        /*section03 // rolling*/
+        #home .section03{
+            width: 100%;
+            margin-top: 150px;
+            padding: 50px 0;
+            background: #fff !important;
+            border-top: 1px solid #000;
+        }
+        #home .section03 .content {
+            margin-top: 0;
+        }
+        #home .section03 .slide-wrap .slide-list .img-box {
+            height: 120px !important;
+            padding: 10px 0;
+            box-sizing: border-box;
+            line-height: 120px;
+            border-radius: 20px;
+            background: #fff !important;
+            font-size: 60px;
+            text-align: center;
+        }
+        #home .section03 .slide-wrap .slide-list .box01{
+            width: 374px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .box02{
+            width: 383px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .box03{
+            width: 580px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .box04{
+            width: 487px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .img-box img{
+            vertical-align: middle;
+        }
+
+        /*section05 // rolling*/
+        #home .section05 .slide-wrap {
+            overflow: hidden; /* 슬라이드가 영역을 넘어가지 않도록 숨김 */
+            position: relative;
+        }
+
+        #home .section05 .slide-wrap .slide-list {
+            display: flex; /* 슬라이드를 가로로 나열 */
+            animation: 30s linear 0s infinite normal forwards running roll; /* 애니메이션 설정 */
+        }
+        #home .section05 .slide-wrap .slide-list.clone {
+            animation: 30s linear 0s infinite normal none running roll02;
+        }
+
+        @keyframes roll {
+            0% {
+                transform: translateX(0); /* 시작 위치 */
+            }
+            50% {
+                transform: translateX(-100%);
+            }
+            50.01% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0); /* 전체 슬라이드 너비만큼 이동 */
+            }
+        }
+        @keyframes roll02 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+        #home .section05 .slide-wrap .slide-list .box01{
+            width: 476px !important;
+        }
+        #home .section05 .slide-wrap .slide-list .box02{
+            width: 430px !important;
+        }
+        #home .section05 .slide-wrap .slide-list .box03{
+            width: 420px !important;
+        }
+        #home .section05 .slide-wrap .slide-list .img-box img{
+            vertical-align: middle;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="home">
+        <header id="header" class="header">
+            <div class="content">
+                <h1 class="logo">
+                    <img src="img/kogas-webzine-logo.png" alt="한국가스공사 KOGAS 웹진">
+                    <span class="blind">한국가스공사 KOGAS 웹진</span>
+                </h1>
+
+                <nav id="nav" class="nav">
+                    <ul class="gnb">
+                        <li>
+                            <a href="#">KOGAS Theme</a>
+                        </li>
+                        <li>
+                            <a href="#">Better Energy</a>
+                        </li>
+                        <li>
+                            <a href="#">Better Life</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="offcanvas-wrap">
+                    <button class="offcanvas-open">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <div class="offcanvas">
+                        <div class="offcanvas-header">
+                            <div class="vol-info">February 2025&nbsp;&nbsp;<span>|</span>&nbsp;&nbsp;VOL.74</div>
+                        </div>
+
+                        <div class="offcanvas-body">
+                            <div class="offcanvas-menu">
+                                <div class="menu-title">KOGAS THEME</div>
+
+                                <ul class="menu-list">
+                                    <li>
+                                        <a href="#">
+                                            <span>Discover</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>Infographic</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>KOGAS on the block</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!-- //offcanvas-menu -->
+
+                            <div class="offcanvas-menu">
+                                <div class="menu-title">Better Energy</div>
+
+                                <ul class="menu-list">
+                                    <li>
+                                        <a href="#">
+                                            <span>궁금한 이야기 G</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>제로 챌린지</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>오피니언</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>금쪽상담소</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>필봉계주</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!-- //offcanvas-menu -->
+
+                            <div class="offcanvas-menu">
+                                <div class="menu-title">Better Life</div>
+
+                                <ul class="menu-list">
+                                    <li>
+                                        <a href="#">
+                                            <span>테이스티 로드</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>에코 상점</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>컬쳐 큐레이션</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>뉴스 캘린더</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span>이벤트 보드</span>
+                                            자율주행 로봇의 미래를 그리다
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div><!-- //offcanvas-menu -->
+
+                            <a href="#" class="prev-vol">지난호 보기</a>
+                        </div>
+                    </div><!-- //offcanvas -->
+
+                    <div class="offcanvas-backdrop"></div>
+                </div>
+            </div>
+        </header>
+
+        <main id="main" class="main">
+            <!--banner // section01-->
+            <div class="bannerWrap">
+                <div class="banner_innerBox">
+                    <div class="banner_top">
+                        <img class="title_img" src="img_sub2/banner_title_img.png" alt="배너 타이틀 이미지">
+                        <div class="mainImg">
+                            <img src="img_sub2/banner_main.jpg" alt="배너 메인 이미지">
+                        </div>
+                        <img class="img_item1" src="img_sub2/banner_item1.png" alt="안전제일 말풍선">
+                        <div class="column_Name">코가스 온더 블럭</div>
+                    </div>
+
+                    <div class="banner_btom">
+                        <div class="text_container bannerText01">
+                            수도권 가스 공급의 심장,
+                            <span>
+                                <img src="img_sub2/banner_item2.png" alt="배너 하트모양 이미지">
+                            </span>
+                        </div>
+                        <div class="text_container bannerText02">
+                            <div class="positR_Box">
+                                <img class="arrowImg" src="img_sub2/banner_item3.png" alt="화살표 이미지">
+                                국내 LNG 발전량 <br>1/4를 담당하는
+                            </div>
+                        </div>
+                        <div class="text_container bannerText03">
+                            <div class="positBox">
+                                <img src="img_sub2/banner_item4.png" alt="다이아몬드 이미지">
+                                <span>인천지역본부</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--section02-->
+            <section id="section02">
+                <!--text box-->
+                <article class="text_wrap">
+                    <div class="Introduct_box"> <!--background-->
+                        <div class="Introduct_text">
+                            한국가스공사에서는 <br class="mob_space"> 어떤 사람들이 어떤 일을 하고 있을까? <br>
+                            <span class="mob_empty">
+                                KOGAS 온 더 블록이 <br class="mob_space"> 얄궂은 아이템부터 탐나는 선물을 <br class="mob_space">
+                                가득 안고 직접 현장을 찾았다. <br>
+                                업무 이야기는 물론 <br class="mob_space"> 사내 문화와 일상의 소소한 에피소드 등 <br class="mob_space">
+                                재미로 가득한 길거리 토크! <br>
+                                수도권 지역의 <br class="mob_space">
+                                안전한 천연가스 공급을 담당하고 있는 <br class="mob_space">
+                                인천지역본부부터 만나보자.
+                            </span>
+                        </div>
+                    </div>
+                    <div class="content">
+                        <p class="text text01">
+                            인천지역본부는 가스공사 공급본부 인원의 9% 남짓으로 많은 인원이라고 볼 수는 없지만 수도권 지역 천연가스 공급 업무를 담당하는 막중한 책임을 맡고 있다. 한국가스공사에서는 지난해 기준 약 3,300만 톤의 천연가스를 공급했는데, 이중 인천지역본부에서 공급한 양은 480만 톤으로 국내 천연가스 공급량의 15%를, 국내 LNG 발전량의 24%를 공급하고 있다. 특히 청라관리소는 세계 최대의 천연가스 공급 관리소로 시간당 최대 1,200Ton이라는 어마어마한 양을 공급할 수 있도록 설계되어 있다.
+                        </p>
+                        <p class="text text02">
+                            인천지역본부가 국내 LNG발전량의 1/4을 담당하는 것은 수도권인 인천지역 특성상 LNG발전소가 많이 모여 있기 때문이다. 한국서부발전, 한국중부발전, 한국남부발전, POSCO 에너지, 인천공항에너지, 인천종합에너지 등등 굉장히 많은 발전소가 있다. 게다가 294만 인천주민들이 사용하고 있는 도시가스까지! 천연가스 수요량이 많을 수밖에 없다. 
+                        </p>
+                        <p class="text text03">
+                            천연가스 공급을 위한 시스템을 완벽하게 구축하고 있는 인천지역본부는 정압관리소 11개, 무인관리소 7개와 주배관 길이 약 269.6Km를 운영함과 동시에 국내 최장 해저배관 약 22.75Km를 관리하고 있다. 이 중에는 엄청난 크기의 청라관리소와 서원창 관리소 등이 포함되어 있어 인천지역본부의 자랑이라고 할 수 있다. 특히 청라관리소는 세계 최대의 천연가스 공급 관리소로써, 시간당 최대 1,200Ton을 공급할 수 있도록 설계되어 있다. 매달도 아니고, 매일도 아닌 시간당 1,200Ton이라니 어마어마한 양이다. 
+                        </p>
+                    </div>
+                </article>
+
+                <!--img box-->
+                <article class="image_wrap">
+                    <div class="ImgGroup">
+                        <div class="img01_Box">
+                            <img src="img_sub2/article-img01.png" alt="안전관련 이미지-1">
+                        </div>
+                        <div class="img02_Box">
+                            <img src="img_sub2/article-img02.png" alt="안전관련 이미지-2">
+                        </div>
+                        <div class="img03_Box">
+                            <img src="img_sub2/article-img03.png" alt="안전관련 이미지-3">
+                        </div>
+                        <span class="Icon01">
+                            <img src="img_sub2/article_item1.png" alt="안전제일 말풍선-1">
+                        </span>
+                        <span class="Icon02">
+                            <img src="img_sub2/article_item2.png" alt="웃는 얼굴 이미지">
+                        </span>
+                        <span class="Icon03">
+                            <img src="img_sub2/article_item3.png" alt="안전제일 말풍선-2">
+                        </span>
+                    </div>
+                </article>
+            </section>
+
+            <!--section03 // rolling-->
+            <section class="section03">
+                <div class="content">
+                    <div class="tab-slide-container pc_display">
+                        <div class="tab-slide active">
+                            <div class="slide-wrap">
+                                <ul class="slide-list">
+                                    <li>
+                                        <div class="img-box box01">
+                                            #안전제일
+                                            <img src="img_sub2/rolling-item01.png" alt="안전제일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box02">
+                                            #테크니션
+                                            <img src="img_sub2/rolling-item02.png" alt="테크니션">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box03">
+                                            #공부가 제일 좋아?
+                                            <img src="img_sub2/rolling-item03.png" alt="공부가 제일 좋아?">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box04">
+                                            #간식마니아들
+                                            <img src="img_sub2/rolling-item04.png" alt="간식마니아들">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--section04-->
+            <section id="section04">
+                <!--프로필01-->
+                <article class="profile_wrap">
+                    <div class="person person01">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person01.jpg" alt="이철희 과장">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate01.png" alt="이철희 과장 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                관로보전부는 배관을 관리합니다. <br>
+                                도로 아래 있는 배관을 <br class="mob_space"> 가스 배관망 정보 시스템(KPIS)를 <br class="pc_space">
+                                활용해<br class="mob_space"> 7개 구간으로 나누어 관리하고 있습니다. <br>
+                                그 외에도 공사(배관구조 개선사업) 감독, <br class="mob_space">배관 설치, <br>
+                                결함 보수 등의 역할도 하고 있<br class="mob_space">습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="person person02">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person02.jpg" alt="김동희 대리">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate02.png" alt="김동희 대리 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                인천지역본부는 교통량이 많아 <br>
+                                야간공사를 많이 합니다. <br>
+                                또 다른 지역에 비해 배관이 오래되어 <br>
+                                공사 해야 할 부분이 많습니다.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="explanat">
+                        관로보전부는 지하, 지상의 천연가스 배관을 관리하고 유지 보수하는 역할을 합니다. 최종적으로 지하에 실처럼 얽힌 수많은 타 배관(상수도 배관 등)들로부터 우리 배관(천연가스 배관)이 영향받지 않도록 관리합니다. 관로보전부에는 관로개선과와 관로관리과가 있는데요. 관로개선과는 타 배관 공사로 인해 천연가스배관을 이동시켜야 할 경우, 배관이설공사를 총괄하는 일을 담당합니다. 관로관리과는 배관의 점용관리, 순찰, GIS(가스배관망 정보시스템)을 관리하고 있습니다.
+                    </p>
+                </article>
+                <!--퀴즈-->
+                <article class="quizeTime">
+                    <div class="quize_box">
+                        <img src="img_sub2/quizeBox.png" alt="퀴즈 박스">
+                        <p>예로부터 선조들은 이 동물의 당찬 울음소리가 잡귀를 <br>
+                            쫓아낸다고 여겨 새해가 되면 대문에 이 동물의 그림을 <br>
+                            붙이기도 했는데요, 이 동물은 무엇일까요?
+                        </p>
+                    </div>
+                    <div class="videoBox">
+                        <img src="img_sub2/videoImg01.jpg" alt="관로보전부 팀원들이 뽑은 선물">
+                    </div>
+                    <p class="check_Video">
+                            <span>정답과 관로보전부 팀원들이 뽑은 선물이 궁금하다면</span>
+                            <br>
+                            <span>영상을 끝까지 확인하세요!</span>
+                    </p>
+                </article>
+            </section>
+
+            <!--section05 // rolling-->
+            <section class="section03 section05">
+                <div class="content">
+                    <div class="tab-slide-container pc_display">
+                        <div class="tab-slide active">
+                            <div class="slide-wrap">
+                                <ul class="slide-list">
+                                    <li>
+                                        <div class="img-box box01">
+                                            #정확한 진단
+                                            <img src="img_sub2/rolling-item05.png" alt="안전제일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box02">
+                                            #빠른 판단
+                                            <img src="img_sub2/rolling-item06.jpg" alt="테크니션">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box03">
+                                            #협업의 왕
+                                            <img src="img_sub2/rolling-item07.png" alt="공부가 제일 좋아?">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="slide-list clone">
+                                    <li>
+                                        <div class="img-box box01">
+                                            #정확한 진단
+                                            <img src="img_sub2/rolling-item05.png" alt="안전제일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box02">
+                                            #빠른 판단
+                                            <img src="img_sub2/rolling-item06.jpg" alt="테크니션">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box03">
+                                            #협업의 왕
+                                            <img src="img_sub2/rolling-item07.png" alt="공부가 제일 좋아?">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--section06 // section04 같은 스타일-->
+            <section id="section04" class="section06">
+                <!--프로필01-->
+                <article class="profile_wrap">
+                    <div class="person person01">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person01.jpg" alt="이철희 과장">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate01.png" alt="이철희 과장 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                가장 행복할 때요? <br>
+                                불량이 없는 날?(일동 웃음)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="person person02">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person02.jpg" alt="김동희 대리">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate02.png" alt="김동희 대리 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                내 판단에 확신이 없을 때가 있잖아요, <br>
+                                그럴 때 선배님들이 계시다는 게 정말 큰 힘이 돼요
+                            </p>
+                        </div>
+                    </div>
+                    <p class="explanat">
+                        설비 불량이 발생하면 설비운영부에서 고장 알람 또는 점검을 통해 설비의 이상 유무를 확인합니다. 그리고 확인된 설비 고장사항에 대해서 설비보전부에 통보를 하게 됩니다. 그 후에 설비보전부에서는 어떠한 방법으로 이 문제를 조치할지 판단을 합니다. 수리를 해서 계속 사용할 것인지, 부품을 일부 구매하여 교체할 것인지, 노후화에 따라 지속적인 문제가 발생될 것이 예상되어서 설비 자체를 개선할 것인지 등등에 대해 각각의 상황을 고려해 판단을 하죠.
+                    </p>
+                </article>
+                <!--퀴즈-->
+                <article class="quizeTime">
+                    <div class="quize_box">
+                        <img src="img_sub2/quizeBox02.png" alt="퀴즈 박스">
+                        <p>
+                            이것은 ‘함께’라는 뜻의 프랑스어로 <br class="mob_space"> 조화롭게 어우러져 <br>
+                            화합을 이룬다는 뜻인데요. <br class="mob_space"> 원래 음악 용어이자 오늘날 <br>
+                            다양한 분야에서 균형과 조화를 <br class="mob_space"> 이룬다는 의미로 쓰이고 <br class="pc_space">
+                            있는 <br class="mob_space"> ‘이 단어’는 무엇일까요?
+                        </p>
+                    </div>
+                    <div class="videoBox">
+                        <img src="img_sub2/videoImg02.jpg" alt="관로보전부 팀원들이 뽑은 선물">
+                    </div>
+                    <p class="check_Video">
+                            <span>정답과 설비운영부 팀원들이 뽑은 선물이 궁금하다면</span>
+                            <br>
+                            <span>영상을 끝까지 확인하세요!</span>
+                    </p>
+                </article>
+            </section>
+
+            <!--section07-->
+            <section id="section07">
+                <article class="applicat_wrap">
+                    <div class="applicat_img">
+                        <img src="img_sub2/youQuiz-img.png" alt="신청하면 찾아가Dream">
+                    </div>
+                    <p>
+                        열심히 일하는 우리 부서 업무도 소개하고, <br>
+                        피곤한 하루 일과 중 재밌는 퀴즈와 수다로 선물도 받고!<br>
+                        신청하면 꿈은 이루어집니다!<br>
+                        &lt;KOGAS 온 더 블록&gt; 참여를 원하는 부, 처, 팀은 아래 버튼을 통해 신청해주세요.
+                    </p>
+                    <div class="applicatBtn">
+                        <button>
+                            <img src="img_sub2/applicatBtn.png" alt="신청하러가기">
+                        </button>
+                    </div>
+                </article>
+            </section>
+        </main>
+
+        <footer id="footer" class="footer">
+            <div class="inner">
+                <div class="content">
+                    <div class="left">
+                        <div class="kogas-logo"><img src="img/kogas-logo.png" alt="한국가스공사 KOGAS"></div>
+
+                        <div class="text-box pc_display">
+                            <p>41062 대구광역시 동구 첨단로 120&lpar;신서동 1141번지&rpar; 대표전화 : 053&rpar; 670-0114</p>
+                            <p>COPYRIGHT ⓒ2023 KOREA GAS CORPORATION ALL RIGHTS RESERVED</p>
+                        </div>
+
+                        <div class="text-box mobile_display">
+                            <p>
+                                41062<br>
+                                대구광역시 동구 첨단로 120&lpar;신서동 1141번지&rpar;<br>
+                                대표전화 : 053&rpar; 670-0114
+                            </p>
+                            <p>
+                                COPYRIGHT ⓒ2023 KOREA GAS <br>CORPORATION ALL RIGHTS RESERVED
+                            </p>
+                        </div>
+                    </div><!-- //left -->
+
+                    <div class="right">
+                        <div class="basketball">
+                            <p>
+                                한국가스공사 <br>
+                                페가수스 프로농구단 SNS
+                            </p>
+
+                            <img src="img/basketball-logo.png" class="basketball-logo" alt="한국가스공사 페가수스 프로농구단">
+                        </div>
+
+                        <ul class="bb-sns-group">
+                            <li>
+                                <a href="#" class="instagram"><img src="img/insta.png" alt="한국가스공사 페가수스 프로농구단 인스타그램 바로가기"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram"><img src="img/naver-blog.png" alt="한국가스공사 페가수스 프로농구단 네이버 블로그 바로가기"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="instagram"><img src="img/youtube.png" alt="한국가스공사 페가수스 프로농구단 유튜브 바로가기"></a>
+                            </li>
+                        </ul>
+                    </div><!-- //right -->
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
