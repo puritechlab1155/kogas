@@ -7,6 +7,96 @@
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index-sub2.css">
+
+    <style>
+        /*section03 // rolling*/
+        #home .section03{
+            width: 100%;
+            margin-top: 150px;
+            padding: 50px 0;
+            background: #fff !important;
+            border-top: 1px solid #000;
+        }
+        #home .section03 .content {
+            margin-top: 0;
+        }
+        #home .section03 .slide-wrap .slide-list .img-box {
+            height: 120px !important;
+            padding: 10px 0;
+            box-sizing: border-box;
+            line-height: 120px;
+            border-radius: 20px;
+            background: #fff !important;
+            font-size: 60px;
+            text-align: center;
+        }
+        #home .section03 .slide-wrap .slide-list .box01{
+            width: 374px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .box02{
+            width: 383px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .box03{
+            width: 580px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .box04{
+            width: 487px !important;
+        }
+        #home .section03 .slide-wrap .slide-list .img-box img{
+            vertical-align: middle;
+        }
+
+        /*section05 // rolling*/
+        #home .section05 .slide-wrap {
+            overflow: hidden; /* 슬라이드가 영역을 넘어가지 않도록 숨김 */
+            position: relative;
+        }
+
+        #home .section05 .slide-wrap .slide-list {
+            display: flex; /* 슬라이드를 가로로 나열 */
+            animation: 30s linear 0s infinite normal forwards running roll; /* 애니메이션 설정 */
+        }
+        #home .section05 .slide-wrap .slide-list.clone {
+            animation: 30s linear 0s infinite normal none running roll02;
+        }
+
+        @keyframes roll {
+            0% {
+                transform: translateX(0); /* 시작 위치 */
+            }
+            50% {
+                transform: translateX(-100%);
+            }
+            50.01% {
+                transform: translateX(100%);
+            }
+            100% {
+                transform: translateX(0); /* 전체 슬라이드 너비만큼 이동 */
+            }
+        }
+        @keyframes roll02 {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-200%);
+            }
+        }
+
+        #home .section05 .slide-wrap .slide-list .box01{
+            width: 476px !important;
+        }
+        #home .section05 .slide-wrap .slide-list .box02{
+            width: 430px !important;
+        }
+        #home .section05 .slide-wrap .slide-list .box03{
+            width: 420px !important;
+        }
+        #home .section05 .slide-wrap .slide-list .img-box img{
+            vertical-align: middle;
+        }
+
+    </style>
 </head>
 <body>
     <section id="home">
@@ -153,7 +243,7 @@
         </header>
 
         <main id="main" class="main">
-            <!--banner-->
+            <!--banner // section01-->
             <div class="bannerWrap">
                 <div class="banner_innerBox">
                     <div class="banner_top">
@@ -188,8 +278,8 @@
                 </div>
             </div>
 
-            <!--section01-->
-            <section id="section01">
+            <!--section02-->
+            <section id="section02">
                 <!--text box-->
                 <article class="text_wrap">
                     <div class="Introduct_box"> <!--background-->
@@ -244,10 +334,220 @@
                 </article>
             </section>
 
-            <!--rolling-->
-            <div class="rollingBanne">
+            <!--section03 // rolling-->
+            <section class="section03">
+                <div class="content">
+                    <div class="tab-slide-container pc_display">
+                        <div class="tab-slide active">
+                            <div class="slide-wrap">
+                                <ul class="slide-list">
+                                    <li>
+                                        <div class="img-box box01">
+                                            #안전제일
+                                            <img src="img_sub2/rolling-item01.png" alt="안전제일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box02">
+                                            #테크니션
+                                            <img src="img_sub2/rolling-item02.png" alt="테크니션">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box03">
+                                            #공부가 제일 좋아?
+                                            <img src="img_sub2/rolling-item03.png" alt="공부가 제일 좋아?">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box04">
+                                            #간식마니아들
+                                            <img src="img_sub2/rolling-item04.png" alt="간식마니아들">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-            </div>
+            <!--section04-->
+            <section id="section04">
+                <!--프로필01-->
+                <article class="profile_wrap">
+                    <div class="person person01">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person01.jpg" alt="이철희 과장">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate01.png" alt="이철희 과장 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                관로보전부는 배관을 관리합니다. <br>
+                                도로 아래 있는 배관을 <br class="mob_space"> 가스 배관망 정보 시스템(KPIS)를 <br class="pc_space">
+                                활용해<br class="mob_space"> 7개 구간으로 나누어 관리하고 있습니다. <br>
+                                그 외에도 공사(배관구조 개선사업) 감독, <br class="mob_space">배관 설치, <br>
+                                결함 보수 등의 역할도 하고 있<br class="mob_space">습니다.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="person person02">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person02.jpg" alt="김동희 대리">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate02.png" alt="김동희 대리 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                인천지역본부는 교통량이 많아 <br>
+                                야간공사를 많이 합니다. <br>
+                                또 다른 지역에 비해 배관이 오래되어 <br>
+                                공사 해야 할 부분이 많습니다.<br>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="explanat">
+                        관로보전부는 지하, 지상의 천연가스 배관을 관리하고 유지 보수하는 역할을 합니다. 최종적으로 지하에 실처럼 얽힌 수많은 타 배관(상수도 배관 등)들로부터 우리 배관(천연가스 배관)이 영향받지 않도록 관리합니다. 관로보전부에는 관로개선과와 관로관리과가 있는데요. 관로개선과는 타 배관 공사로 인해 천연가스배관을 이동시켜야 할 경우, 배관이설공사를 총괄하는 일을 담당합니다. 관로관리과는 배관의 점용관리, 순찰, GIS(가스배관망 정보시스템)을 관리하고 있습니다.
+                    </p>
+                </article>
+                <!--퀴즈-->
+                <article class="quizeTime">
+                    <div class="quize_box">
+                        <img src="img_sub2/quizeBox.png" alt="퀴즈 박스">
+                        <p>예로부터 선조들은 이 동물의 당찬 울음소리가 잡귀를 <br>
+                            쫓아낸다고 여겨 새해가 되면 대문에 이 동물의 그림을 <br>
+                            붙이기도 했는데요, 이 동물은 무엇일까요?
+                        </p>
+                    </div>
+                    <div class="videoBox">
+                        <img src="img_sub2/videoImg01.jpg" alt="관로보전부 팀원들이 뽑은 선물">
+                    </div>
+                    <p class="check_Video">
+                            <span>정답과 관로보전부 팀원들이 뽑은 선물이 궁금하다면</span>
+                            <br>
+                            <span>영상을 끝까지 확인하세요!</span>
+                    </p>
+                </article>
+            </section>
+
+            <!--section05 // rolling-->
+            <section class="section03 section05">
+                <div class="content">
+                    <div class="tab-slide-container pc_display">
+                        <div class="tab-slide active">
+                            <div class="slide-wrap">
+                                <ul class="slide-list">
+                                    <li>
+                                        <div class="img-box box01">
+                                            #정확한 진단
+                                            <img src="img_sub2/rolling-item05.png" alt="안전제일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box02">
+                                            #빠른 판단
+                                            <img src="img_sub2/rolling-item06.jpg" alt="테크니션">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box03">
+                                            #협업의 왕
+                                            <img src="img_sub2/rolling-item07.png" alt="공부가 제일 좋아?">
+                                        </div>
+                                    </li>
+                                </ul>
+                                <ul class="slide-list clone">
+                                    <li>
+                                        <div class="img-box box01">
+                                            #정확한 진단
+                                            <img src="img_sub2/rolling-item05.png" alt="안전제일">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box02">
+                                            #빠른 판단
+                                            <img src="img_sub2/rolling-item06.jpg" alt="테크니션">
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="img-box box03">
+                                            #협업의 왕
+                                            <img src="img_sub2/rolling-item07.png" alt="공부가 제일 좋아?">
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--section06 // section04 같은 스타일-->
+            <section id="section04" class="section06">
+                <!--프로필01-->
+                <article class="profile_wrap">
+                    <div class="person person01">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person01.jpg" alt="이철희 과장">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate01.png" alt="이철희 과장 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                가장 행복할 때요? <br>
+                                불량이 없는 날?(일동 웃음)
+                            </p>
+                        </div>
+                    </div>
+                    <div class="person person02">
+                        <div class="imgBox">
+                            <div class="personImg">
+                                <img src="img_sub2/person02.jpg" alt="김동희 대리">
+                            </div>
+                            <div class="nameplate"> <!--background-->
+                                <img src="img_sub2/nameplate02.png" alt="김동희 대리 이름표">
+                            </div>
+                        </div>
+                        <div class="person_introduct">
+                            <p>
+                                내 판단에 확신이 없을 때가 있잖아요, <br>
+                                그럴 때 선배님들이 계시다는 게 정말 큰 힘이 돼요
+                            </p>
+                        </div>
+                    </div>
+                    <p class="explanat">
+                        관로보전부는 지하, 지상의 천연가스 배관을 관리하고 유지 보수하는 역할을 합니다. 최종적으로 지하에 실처럼 얽힌 수많은 타 배관(상수도 배관 등)들로부터 우리 배관(천연가스 배관)이 영향받지 않도록 관리합니다. 관로보전부에는 관로개선과와 관로관리과가 있는데요. 관로개선과는 타 배관 공사로 인해 천연가스배관을 이동시켜야 할 경우, 배관이설공사를 총괄하는 일을 담당합니다. 관로관리과는 배관의 점용관리, 순찰, GIS(가스배관망 정보시스템)을 관리하고 있습니다.
+                    </p>
+                </article>
+                <!--퀴즈-->
+                <article class="quizeTime">
+                    <div class="quize_box">
+                        <img src="img_sub2/quizeBox.png" alt="퀴즈 박스">
+                        <p>예로부터 선조들은 이 동물의 당찬 울음소리가 잡귀를 <br>
+                            쫓아낸다고 여겨 새해가 되면 대문에 이 동물의 그림을 <br>
+                            붙이기도 했는데요, 이 동물은 무엇일까요?
+                        </p>
+                    </div>
+                    <div class="videoBox">
+                        <img src="img_sub2/videoImg01.jpg" alt="관로보전부 팀원들이 뽑은 선물">
+                    </div>
+                    <p class="check_Video">
+                            <span>정답과 관로보전부 팀원들이 뽑은 선물이 궁금하다면</span>
+                            <br>
+                            <span>영상을 끝까지 확인하세요!</span>
+                    </p>
+                </article>
+            </section>
         </main>
 
         <footer id="footer" class="footer">
