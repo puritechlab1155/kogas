@@ -204,7 +204,6 @@ br.pc_space{
     width: 100%;
     padding-top: 150px;
     padding-bottom: 150px;
-    background: #FFC675;
 }
 /*프로필01*/
 #section04 .profile_wrap{
@@ -397,7 +396,64 @@ br.pc_space{
 /*반응형*/
 @media (max-width: 1466px) {
     #section02 .image_wrap {
+        width: 100%;
+        max-width: 996px;
+        height: auto !important;
+        margin-top: 20px;
+        padding-top: 30px;
+        padding-bottom: 120px;
+        text-align: center;
         background: lightblue;
+    }
+    #section02 .image_wrap .ImgGroup .img01_Box {
+        width: 100%;
+        max-width: 588px;
+        height: 288px;
+        overflow: hidden;
+        margin: 0 auto;
+        margin-bottom: 30px;
+        position: relative;
+    }
+    #section02 .image_wrap .ImgGroup .img02_Box {
+        width: 100%;
+        max-width: 588px;
+        height: 288px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        top: 30px;
+        right: 0;
+        bottom: 0;
+    }
+    #section02 .image_wrap .ImgGroup .img03_Box {
+        width: 100%;
+        max-width: 588px;
+        height: 288px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+        top: 30px;
+    }
+    #section02 .image_wrap .ImgGroup .img01_Box img{
+        width: 100%;
+        object-fit: cover;
+    }
+    #section02 .image_wrap .ImgGroup .img02_Box img{
+        width: 100%;
+        object-fit: cover;
+    }
+    #section02 .image_wrap .ImgGroup .img03_Box img{
+        width: 100%;
+        object-fit: cover;
+    }
+    #section02 .ImgGroup .Icon01 {
+        left: auto;
+        right: 208px;
+        top: 0px;
+    }
+    #section02 .ImgGroup .Icon02 {
+        left: 200px;
+        top: 450px;
     }
 }
 @media (max-width: 1040px) {
