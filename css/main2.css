@@ -1093,6 +1093,7 @@ em {
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
+  text-align: center;
   color: #6C6B6B;
   cursor: pointer;
 }
