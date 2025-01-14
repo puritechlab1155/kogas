@@ -275,6 +275,10 @@ article .border{
         .img-box, .img-box img, .food_map .map{ 
                 width: 100%; 
         }
+        .img-box .float_r{
+                max-width: 300px;
+                padding: 15px 0 15px 15px;
+        }
         .text-box {
                 width: 100%;
         }
@@ -283,9 +287,19 @@ article .border{
                 left: 47%;
         }
         .food_map .food {
-                top: 19%;
-                left: 18%;
+                top: 26%;
+                left: 22%;
         }
+}
+@media (max-width: 576px) {
+        div.right{
+                margin-top: 350px;
+        }
+        .img-box .float_r {
+                max-width: 500px;
+                padding: 0;
+                margin-bottom: 20px;
+            }
 }
 
 
