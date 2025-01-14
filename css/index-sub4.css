@@ -84,22 +84,22 @@ article .border{
         text-decoration: underline;
 }
 /* 1번째 탭 content */
-.content {
+.tab-container .content {
         flex: 1;
         display: none;
         background-color: #FEFDF2;
 }
-.content.active {
+.tab-container .content.active {
         display: flex;
         justify-content: center;
         /* gap: 40px; */
 }
-.content.left{
+.tab-container .tab-container .content.left{
         width: 100%;
         height: auto;
 }
 /* right */
-.content.right{
+.tab-container .tab-container .content.right{
         width: 100%;
         height: auto;
         padding: 50px 40px;
@@ -209,7 +209,7 @@ article .border{
         .img-box img{
                 max-width: 600px;
         }
-        .content.right{
+        .tab-container .content.right{
                 clear: both;
         }
         .text-box {
@@ -269,8 +269,8 @@ article .border{
         .tabs{
                 width: 100% !important;
         }
-        .content{
-                display: block !important;
+        div.tab-container .content{
+                /* display: block !important; */
         }
         .img-box, .img-box img, .food_map .map{ 
                 width: 100%; 
@@ -292,14 +292,14 @@ article .border{
         }
 }
 @media (max-width: 576px) {
-        div.right{
-                margin-top: 350px;
+        .tab-container .content.active {
+                flex-wrap: wrap;
         }
         .img-box .float_r {
                 max-width: 500px;
                 padding: 0;
                 margin-bottom: 20px;
-            }
+        }
 }
 
 
