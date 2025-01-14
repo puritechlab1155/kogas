@@ -231,10 +231,12 @@ br.pc_space{
     position: relative;
 }
 .section04 .profile_wrap .person01 .imgBox{
-    width: 34.1%;
+    width: 360px;
+    height: 364px;
 }
 .section04 .profile_wrap .person02 .imgBox{
-    width: 46%;
+    width: 475px;
+    height: 364px;
 }
 .section04 .profile_wrap .person01 .imgBox .personImg{
     overflow: hidden;
@@ -249,7 +251,7 @@ br.pc_space{
     transform: translateX(-50%);
 }
 .section04 .profile_wrap .person01 .imgBox .nameplate {
-    bottom: 14px;
+    bottom: -10px;
 }
 .section04 .profile_wrap .person .person_introduct {
     box-sizing: border-box;
@@ -361,8 +363,8 @@ br.pc_space{
 #main .profile_wrap .person04 .person_introduct {
     padding-top: 52px !important;
 }
-#main .section06 .profile_wrap .person01 .imgBox .nameplate {
-    bottom: -40px !important;
+#main .section06 .profile_wrap .person03 .imgBox .nameplate{
+    bottom: -70px !important;
 }
 .section06 .profile_wrap .person02 .person_introduct{
     padding-top: 58px !important;
@@ -483,7 +485,30 @@ br.pc_space{
     .section04 .profile_wrap .person {
         display: block;
     }
-}
+    .section04 .profile_wrap .person01 .imgBox {
+        margin: 0 auto;
+    }
+    .section04 .profile_wrap .person01 .person_introduct {
+        margin: 0 auto;
+        padding-top: 40px;
+    }
+    .section04 .profile_wrap .person02 {
+        margin-top: 100px;
+    }
+    .section04 .profile_wrap .person02 .imgBox {
+        margin: 0 auto;
+    }
+    .section04 .profile_wrap .person02 .person_introduct {
+        margin: 0 auto;
+        margin-top: 40px !important;
+    }
+    .section04 .profile_wrap {
+        max-width: 800px;
+    }
+    .section04 .profile_wrap .person .person_introduct {
+        font-size: 22px;
+        line-height: 36px;
+    }
 @media (max-width: 1040px) {
     /*section02*/
     #section02{
@@ -515,4 +540,5 @@ br.pc_space{
         display: block;
         margin-top: 62px;
     }
+}
 }

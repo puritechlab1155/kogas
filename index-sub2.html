@@ -424,7 +424,7 @@
                 </article>
                 <!--퀴즈-->
                 <article class="quizeTime">
-                    <div class="quize_box">
+                    <div class="quize_box quize_box01">
                         <img src="img_sub2/quizeBox.png" alt="퀴즈 박스">
                         <p>예로부터 선조들은 이 동물의 당찬 울음소리가 잡귀를 <br>
                             쫓아낸다고 여겨 새해가 되면 대문에 이 동물의 그림을 <br>
@@ -495,7 +495,7 @@
             </section>
 
             <!--section06 // section04 같은 스타일-->
-            <section class="section04" class="section06">
+            <section class="section04 section06">
                 <!--프로필01-->
                 <article class="profile_wrap">
                     <div class="person person01 person03">
@@ -536,7 +536,7 @@
                 </article>
                 <!--퀴즈-->
                 <article class="quizeTime">
-                    <div class="quize_box">
+                    <div class="quize_box quize_box02">
                         <img src="img_sub2/quizeBox02.png" alt="퀴즈 박스">
                         <p>
                             이것은 ‘함께’라는 뜻의 프랑스어로 <br class="mob_space"> 조화롭게 어우러져 <br>
@@ -632,9 +632,12 @@
     <script>
         $(document).ready(function(){
             let $IntroductBox = $('.Introduct_box');
+            let $quizeBox01 = $('.quize_box01 img');
+            let $quizeBox02 = $('.quize_box02 img');
 
             function updateBackground() {
                 if($(window).innerWidth() < 824){
+                    //배경이미지 경로 변경
                     $IntroductBox.css('background', 'none');
                     $IntroductBox.css({
                         'background' : 'url(../img_sub2/blue-textBox-mob.png)',
@@ -642,6 +645,10 @@
                         'background-repeat' : 'no-repeat',
                         'background-position' : 'bottom center'
                     });
+
+                    //이미지 src 경로 변경
+                    $quizeBox01.attr('src', 'img_sub2/quizeBox-mob.png');
+                    $quizeBox02.attr('src', 'img_sub2/quizeBox02-mob.png');
                 } else {
                     $IntroductBox.css({
                         'background' : 'url(../img_sub2/blue-textBox.png)',
@@ -649,6 +656,8 @@
                         'background-repeat' : 'no-repeat',
                         'background-position' : 'center'
                     });
+                    $quizeBox01.attr('src', 'img_sub2/quizeBox.png');
+                    $quizeBox02.attr('src', 'img_sub2/quizeBox02.png');
                 }
             }
 
