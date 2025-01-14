@@ -94,12 +94,12 @@ article .border{
         justify-content: center;
         /* gap: 40px; */
 }
-.tab-container .tab-container .content.left{
+.tab-container .content.left{
         width: 100%;
         height: auto;
 }
 /* right */
-.tab-container .tab-container .content.right{
+.tab-container .content.right{
         width: 100%;
         height: auto;
         padding: 50px 40px;
@@ -151,6 +151,52 @@ article .border{
         top: 38%;
         left: 27%;
 }
+.food_map .gps_2{
+        position: absolute;
+        top: 63%;
+        left: 43%;
+}
+.food_map .gps_3{
+        position: absolute;
+        top: 46%;
+        left: 50%;
+}
+.food_map .food_3 {
+        position: absolute;
+        top: 7%;
+        left: 32%;
+}
+.food_map .gps_4 {
+        position: absolute;
+        top: 45%;
+        left: 70%;
+}
+.food_map .food_4 {
+        position: absolute;
+        top: 7%;
+        left: 32%;
+}
+.food_map .gps_5{
+        position: absolute;
+        top: 48%;
+        left: 61%;
+}
+.food_map .food_5 {
+        position: absolute;
+        top: 15%;
+        left: 40%;
+}
+.food_map .gps_6{
+        position: absolute;
+        top: 58%;
+        left: 57%;
+}
+.food_map .food_6 {
+        position: absolute;
+        top: 38%;
+        left: 37%;
+}
+
 /* gps 모션1 */
 .tracking-in-expand-fwd {
 	-webkit-animation: tracking-in-expand-fwd 0.8s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
@@ -224,6 +270,24 @@ article .border{
         article{
                 margin-top: 80px;
         }
+        .food_map .gps_4 {
+                top: 44%;
+                left: 70%;
+        }
+        .food_map .food {
+                top: 28%;
+        }
+
+            
+        .food_map .food_4 {
+                top: 5%;
+                left: 32%;
+        }
+        .food_map .food_6 {
+                top: 25%;
+                left: 32%;
+        }
+        
 }
 @media (max-width: 991px) {
         main>img{
@@ -251,6 +315,10 @@ article .border{
         }
         .text-box {
                 width: 80%;
+        }
+        .food_map .gps_4 {
+                top: 34%;
+                left: 70%;
         }
         
 }
