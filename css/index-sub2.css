@@ -258,6 +258,7 @@ br.pc_space{
     font-size: 28px;
     line-height: 45px;
     text-align: center;
+    position: relative;
 }
 .section04 .profile_wrap .person .person_introduct > p::before {
     content: "";
@@ -288,6 +289,14 @@ br.pc_space{
 .section04 .profile_wrap .person02 .person_introduct{
     width: calc(100% - 49.9%);
     padding-top: 38px;
+}
+.section04 .profile_wrap .person .person_introduct .starimg{
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.section04 .profile_wrap .person .person_introduct .starimg01 {
+    right: 180px;
 }
 .section04 .profile_wrap .explanat {
     margin-top: 114px;
@@ -516,6 +525,14 @@ br.pc_space{
         font-size: 22px;
         line-height: 36px;
     }
+    .section04 .profile_wrap .person .person_introduct .starimg01 {
+        top: 100px;
+        left: 72%;
+    }
+    .section04 .profile_wrap .person .person_introduct .starimg02 {
+        top: 260px;
+        left: -260px;
+    }
 }
 @media (max-width: 1040px) {
     /*section02*/
@@ -623,6 +640,11 @@ br.pc_space{
     }
     #main .banner_btom .bannerText02 .positR_Box {
         width: 294px;
+    }
+    #section02 .text_wrap .Introduct_box {
+        min-width: 340px;
+        transform: translateX(-10%);
+        margin-right: 30px;
     }
     .section04 .profile_wrap {
         max-width: auto !important;
