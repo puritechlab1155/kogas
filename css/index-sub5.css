@@ -11,3 +11,38 @@
 body {
     font-family: 'Pretendard';
 }
+
+/*main*/
+.bannerWrap {
+    width: 100%;
+    height: 800px;
+    box-sizing: border-box;
+    background: #FCC865;
+}
+.banner_innerBox {
+    width: 100%;
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: url(../img_sub5/banner-event.png) #FCC865;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+}
+.bn_textL, .bn_textR {
+    font-size: 45px;
+    line-height: 60px;
+    position: absolute;
+    bottom: 130px;
+}
+.bn_textL{
+    width: auto;
+    font-weight: 600;
+    left: 0;
+}
+.bn_textR {
+    width: auto;
+    text-align: right;
+    font-weight: 800;
+    right: 0;
+}
