@@ -344,10 +344,13 @@ br.pc_space{
     color: #0E2764;
 }
 .section04 .quizeTime .check_Video span{
-    display: inline-block;
-    padding: 0 4px;
-    margin-bottom: 6px;
     background: #FDD901;
+    display: inline-block;
+    margin-left: -4px;
+    padding: 0 4px;
+}
+.section04 .quizeTime .check_Video span:nth-child(1){
+    margin-bottom: 6px;
 }
 /*section06*/
 #main .section06 {
@@ -387,6 +390,7 @@ br.pc_space{
     text-align: center;
 }
 #section07 .applicat_wrap .applicat_img img{
+    width: 100%;
     margin: 0 auto;
 }
 #section07 .applicat_wrap p{
@@ -571,6 +575,15 @@ br.pc_space{
         line-height: 31px;
         padding-top: 48px;
     }
+    #home .section03 .slide-wrap .slide-list .img-box {
+        height: 120px !important;
+        padding: 10px 0;
+        box-sizing: border-box;
+        line-height: 120px;
+        border-radius: 20px;
+        background: #ccc !important;
+        font-size: 20px;
+    }
     .section04 .profile_wrap .person .person_introduct {
         font-size: 20px;
         line-height: 34px;
@@ -610,5 +623,45 @@ br.pc_space{
     }
     #main .banner_btom .bannerText02 .positR_Box {
         width: 294px;
+    }
+    .section04 .profile_wrap {
+        max-width: auto !important;
+    }
+    .section04 .profile_wrap .person02 .imgBox {
+        width: 320px;
+        height: 237px;
+    }
+    .section04 .profile_wrap .person01 .imgBox {
+        width: 320px;
+        height: 320px;
+    }
+    .section04 .profile_wrap .person02 .imgBox img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .section04 .profile_wrap .person01 .imgBox {
+        width: 320px;
+        height: 320px;
+    }
+    .section04 .profile_wrap .person01 .imgBox img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .section04 .profile_wrap .person01 .person_introduct {
+        width: 100%;
+    }
+    .section04 .profile_wrap .person02 .person_introduct {
+        width: 100%;
+    }
+    .section04 .quizeTime .check_Video span:nth-child(1){
+        margin-bottom: 0px;
+    }
+    .section04 .quizeTime .check_Video span:nth-child(2){
+        margin: 6px 0;
+    }
+    #main .section06 .profile_wrap .person03 .imgBox .nameplate {
+        bottom: -40px !important;
     }
 }

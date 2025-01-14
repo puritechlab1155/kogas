@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kogas-sub2</title>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index-sub2.css">
@@ -96,6 +96,50 @@
         }
         #home .section05 .slide-wrap .slide-list .img-box img{
             vertical-align: middle;
+        }
+
+        @media (max-width: 692px) {
+            #home .section03 {
+            padding: 0 0;
+        }
+            #home .section03 .content .tab-slide {
+            padding-bottom: 0;
+        }
+
+        #section02 .text_wrap .Introduct_box .Introduct_text {
+            font-size: 17px;
+            line-height: 31px;
+            padding-top: 48px;
+        }
+        #home .section03 .slide-wrap .slide-list .img-box {
+            height: auto !important;
+            padding: 0;
+            line-height: auto !important;
+            font-size: 20px;
+        }
+        #home .section03 .slide-wrap .slide-list li {
+            margin-right: 28px;
+        }
+        #home .section03 .slide-wrap .slide-list .box01 {
+            width: 228px !important;
+            box-sizing: border-box;
+        }
+        #home .section03 .slide-wrap .slide-list .box02 {
+            width: 228px !important;
+            box-sizing: border-box;
+        }
+        #home .section03 .slide-wrap .slide-list .box03 {
+            width: 228px !important;
+            box-sizing: border-box;
+        }
+        #home .section03 .slide-wrap .slide-list .box04 {
+            width: 228px !important;
+            box-sizing: border-box;
+        }
+        #home .section03 .slide-wrap .slide-list .img-box img {
+            transform: scale(0.5);
+            margin-left: -20px;
+        }
         }
 
     </style>
@@ -342,7 +386,7 @@
             <!--section03 // rolling-->
             <section class="section03 rollingBox">
                 <div class="content">
-                    <div class="tab-slide-container pc_display">
+                    <div class="tab-slide-container">
                         <div class="tab-slide active">
                             <div class="slide-wrap">
                                 <ul class="slide-list">
@@ -429,16 +473,22 @@
                 <article class="quizeTime">
                     <div class="quize_box quize_box01">
                         <img src="img_sub2/quizeBox.png" alt="퀴즈 박스">
-                        <p>예로부터 선조들은 이 동물의 당찬 울음소리가 잡귀를 <br>
-                            쫓아낸다고 여겨 새해가 되면 대문에 이 동물의 그림을 <br>
-                            붙이기도 했는데요, 이 동물은 무엇일까요?
+                        <p>
+                            예로부터 선조들은<br class="mob_space">  
+                            이 동물의 당찬 울음소리가<br class="mob_space"> 
+                            잡귀를 <br class="pc_space">
+                            쫓아낸다고 여겨<br class="mob_space">  
+                            새해가 되면 대문에 이 동물의<br class="mob_space">  
+                            그림을 <br class="pc_space">
+                            붙이기도 했는데요,<br class="mob_space">   이 동물은 무엇일까요?
                         </p>
                     </div>
                     <div class="videoBox">
                         <img src="img_sub2/videoImg01.jpg" alt="관로보전부 팀원들이 뽑은 선물">
                     </div>
                     <p class="check_Video">
-                            <span>정답과 관로보전부 팀원들이 뽑은 선물이 궁금하다면</span>
+                            <span>정답과 관로보전부 팀원들이<br class="mob_space"></span>
+                            <span>뽑은 선물이 궁금하다면</span>
                             <br>
                             <span>영상을 끝까지 확인하세요!</span>
                     </p>
@@ -448,7 +498,7 @@
             <!--section05 // rolling-->
             <section class="section03 section05 rollingBox">
                 <div class="content">
-                    <div class="tab-slide-container pc_display">
+                    <div class="tab-slide-container">
                         <div class="tab-slide active">
                             <div class="slide-wrap">
                                 <ul class="slide-list">
@@ -507,7 +557,7 @@
                                 <img src="img_sub2/person03.jpg" alt="김규철 과장">
                             </div>
                             <div class="nameplate"> <!--background-->
-                                <img src="img_sub2/nameplate03.png" alt="박진형 과장 이름표">
+                                <img src="img_sub2/nameplate03.png" alt="김규철 과장 이름표">
                             </div>
                         </div>
                         <div class="person_introduct person04">
@@ -517,13 +567,13 @@
                             </p>
                         </div>
                     </div>
-                    <div class="person person02">
+                    <div class="person person02 person04">
                         <div class="imgBox">
-                            <div class="personImg">
-                                <img src="img_sub2/person04.jpg" alt="김동희 대리">
+                            <div class="personImg" style="border-top-right-radius: 500px; border-bottom-right-radius: 500px;">
+                                <img src="img_sub2/person04.jpg" alt="박진형 대리">
                             </div>
                             <div class="nameplate"> <!--background-->
-                                <img src="img_sub2/nameplate04.png" alt="김동희 대리 이름표">
+                                <img src="img_sub2/nameplate04.png" alt="박진형 대리 이름표">
                             </div>
                         </div>
                         <div class="person_introduct">
@@ -552,7 +602,8 @@
                         <img src="img_sub2/videoImg02.jpg" alt="관로보전부 팀원들이 뽑은 선물">
                     </div>
                     <p class="check_Video">
-                            <span>정답과 설비운영부 팀원들이 뽑은 선물이 궁금하다면</span>
+                            <span>정답과 설비운영부 팀원들이<br class="mob_space"> </span>
+                            <span>뽑은 선물이 궁금하다면</span>
                             <br>
                             <span>영상을 끝까지 확인하세요!</span>
                     </p>
@@ -567,7 +618,8 @@
                     </div>
                     <p>
                         열심히 일하는 우리 부서 업무도 소개하고, <br>
-                        피곤한 하루 일과 중 재밌는 퀴즈와 수다로 선물도 받고!<br>
+                        피곤한 하루 일과 중 재밌는 퀴즈와 수다로<br class="mob_space"> 
+                        선물도 받고!<br class="pc_space">
                         신청하면 꿈은 이루어집니다!<br>
                         &lt;KOGAS 온 더 블록&gt; 참여를 원하는<br class="mob_space"> 부, 처, 팀은 아래 버튼을 통해 신청해주세요.
                     </p>
@@ -635,8 +687,8 @@
     <script>
         $(document).ready(function(){
             let $IntroductBox = $('.Introduct_box');
-            let $quizeBox01 = $('.quize_box01 img');
-            let $quizeBox02 = $('.quize_box02 img');
+            let $quizeBox01 = $('.quize_box01 > img');
+            let $quizeBox02 = $('.quize_box02 > img');
 
             function updateBackground() {
                 if($(window).innerWidth() <= 824){
