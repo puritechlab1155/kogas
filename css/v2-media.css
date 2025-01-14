@@ -412,7 +412,8 @@
         object-fit: cover;
       }
       .section04 .content_wrap ul li span {
-        left: 185px;
+        left: auto;
+        right: 10px;
       }
     }
 
@@ -427,6 +428,16 @@
       }
       #home .section-wrap .section-title {
         font-size: 36px;
+      }
+    }
+    @media (max-width: 480px) {
+      .section04 .content_wrap ul li {
+        height: 184px;
+      }
+    }
+    @media (max-width: 421px) {
+      #home .section-wrap .section-title {
+        font-size: 30px;
       }
     }
 

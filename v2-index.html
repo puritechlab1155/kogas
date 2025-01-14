@@ -15,6 +15,19 @@
 
     <link rel="stylesheet" href="css/main2.css">
     <link rel="stylesheet" href="css/v2-media.css">
+
+    <style>
+        @media (max-width: 1697px) {
+            .musicplay {
+                right: 35% !important;
+            }
+        }
+        @media (max-width: 440px) {
+            .musicplay {
+                right: 15% !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <section id="home">
@@ -192,7 +205,7 @@
             <div class="main-visual">
                 <div class="content snowBox">
                     <img src="img2/main-visual-img.jpg" alt="" class="visual-img">
-                    <lottie-player src="json/visual-lottie.json" background="transparent" speed="1" style="width: 180px; height: 245px; position: absolute; right: 25%; top: 23%; z-index: 5;" loop autoplay></lottie-player>
+                    <lottie-player class="musicplay" src="json/visual-lottie.json" background="transparent" speed="1" style="width: 180px; height: 245px; position: absolute; right: 25%; top: 23%; z-index: 5;" loop autoplay></lottie-player>
 
                     <div class="text-box">
                         <div class="date">February 2025&nbsp;&nbsp;</div>
