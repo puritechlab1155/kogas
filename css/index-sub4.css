@@ -220,6 +220,11 @@ article .border{
                 left: 46%; */
             }
 }
+@media (max-width: 1110px) {
+        article{
+                margin-top: 80px;
+        }
+}
 @media (max-width: 991px) {
         main>img{
                 width: 40%;
@@ -259,9 +264,13 @@ article .border{
                 padding: 20px;
                 margin: 0;
                 text-align: center;
+                margin-top: 50px;
         }
         main p{
-                width: 100%;
+                width: 70%;
+        }
+        article{
+                margin-top: 150px;
         }
         .tab{
                 padding: 10px;
