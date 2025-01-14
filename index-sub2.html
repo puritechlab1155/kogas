@@ -5,8 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kogas-sub2</title>
 
+     <!--제이쿼리 cdn 연결-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
+    <!--애니메이션 플러그인 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!--css 연결-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index-sub2.css">
 
@@ -693,6 +698,26 @@
     <script>
         
         $(document).ready(function(){
+
+            $(window).scroll(function() {
+                let scrollTop = $(this).scrollTop();
+
+                console.log(scrollTop);
+
+                // 스크롤 위치가 1300px 이상일 때
+                if (scrollTop >= 1300) {
+                    // 각 아이콘에 대해 애니메이션 클래스를 추가
+                    $('.Icon01').addClass('animate__animated animate__swing animate__delay-0.9s');
+                    $('.Icon02').addClass('animate__animated animate__bounce animate__delay-0.5s');
+                    $('.Icon03').addClass('animate__animated animate__rubberBand');
+                } else {
+                    // 스크롤 위치가 1300px 이하일 때 애니메이션 클래스 제거
+                    $('.Icon01').removeClass('animate__animated animate__swing animate__delay-0.9s');
+                    $('.Icon02').removeClass('animate__animated animate__bounce animate__delay-0.5s');
+                    $('.Icon03').removeClass('animate__animated animate__rubberBand');
+                }
+            });
+
             //배경이미지 경로 변경
             function updateBackground() {
                 let $IntroductBox = $('.Introduct_box');
