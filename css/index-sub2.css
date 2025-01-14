@@ -199,60 +199,65 @@ br.pc_space{
     bottom: 10px;
     z-index: 4;
 }
+#section02 .ImgGroup .Icon04{
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 4;
+}
 /*section04*/
-#section04 {
+.section04 {
     width: 100%;
     padding-top: 150px;
     padding-bottom: 150px;
 }
 /*프로필01*/
-#section04 .profile_wrap{
+.section04 .profile_wrap{
     width: 100%;
     max-width: 1056px;
     margin: 0 auto;
 }
-#section04 .profile_wrap .person{
+.section04 .profile_wrap .person{
     display: flex;
     justify-content: space-between;
 }
-#section04 .profile_wrap .person02{
+.section04 .profile_wrap .person02{
     flex-direction: row-reverse;
     margin-top: 77px;
 }
-#section04 .profile_wrap .person .imgBox{
+.section04 .profile_wrap .person .imgBox{
     text-align: center;
     position: relative;
 }
-#section04 .profile_wrap .person01 .imgBox{
+.section04 .profile_wrap .person01 .imgBox{
     width: 34.1%;
 }
-#section04 .profile_wrap .person02 .imgBox{
+.section04 .profile_wrap .person02 .imgBox{
     width: 46%;
 }
-#section04 .profile_wrap .person01 .imgBox .personImg{
-    border-radius: 50%;
+.section04 .profile_wrap .person01 .imgBox .personImg{
     overflow: hidden;
 }
-#section04 .profile_wrap .person02 .imgBox .personImg{
-    border-radius: 500px;
+.section04 .profile_wrap .person02 .imgBox .personImg{
     overflow: hidden;
 }
-#section04 .profile_wrap .person .imgBox .nameplate {
+.section04 .profile_wrap .person .imgBox .nameplate {
     position: absolute;
     bottom: -40px;
     left: 50%;
     transform: translateX(-50%);
 }
-#section04 .profile_wrap .person01 .imgBox .nameplate {
+.section04 .profile_wrap .person01 .imgBox .nameplate {
     bottom: 14px;
 }
-#section04 .profile_wrap .person .person_introduct {
+.section04 .profile_wrap .person .person_introduct {
     box-sizing: border-box;
     font-size: 28px;
     line-height: 45px;
     text-align: center;
 }
-#section04 .profile_wrap .person .person_introduct > p::before {
+.section04 .profile_wrap .person .person_introduct > p::before {
     content: "";
     display: block;
     width: 26px;
@@ -263,7 +268,7 @@ br.pc_space{
     background-size: contain;
     background-position: center;
 }
-#section04 .profile_wrap .person .person_introduct > p::after {
+.section04 .profile_wrap .person .person_introduct > p::after {
     content: "";
     display: block;
     width: 26px;
@@ -274,37 +279,37 @@ br.pc_space{
     background-size: contain;
     background-position: center;
 }
-#section04 .profile_wrap .person01 .person_introduct{
+.section04 .profile_wrap .person01 .person_introduct{
     width: calc(100% - 38%);
     padding-top: 16px;
 }
-#section04 .profile_wrap .person02 .person_introduct{
+.section04 .profile_wrap .person02 .person_introduct{
     width: calc(100% - 49.9%);
     padding-top: 38px;
 }
-#section04 .profile_wrap .explanat {
+.section04 .profile_wrap .explanat {
     margin-top: 114px;
     font-size: 19px;
     line-height: 33px;
     font-weight: 500;
 }
 /*퀴즈*/
-#section04 .quizeTime {
+.section04 .quizeTime {
     width: 100%;
     padding-top: 150px;
     text-align: center;
     max-width: 792px;
     margin: 0 auto;
 }
-#section04 .quizeTime .quize_box{
+.section04 .quizeTime .quize_box{
     width: 100%;
     overflow: hidden;
     position: relative;
 }
-#section04 .quizeTime .quize_box img{
+.section04 .quizeTime .quize_box img{
     width: 100%;
 }
-#section04 .quizeTime .quize_box p{
+.section04 .quizeTime .quize_box p{
     width: 100%;
     font-family: 'GmarketSansMedium';
     position: absolute;
@@ -317,14 +322,14 @@ br.pc_space{
     font-weight: 500;
     word-spacing: -1px;
 }
-#section04 .quizeTime .videoBox{
+.section04 .quizeTime .videoBox{
     width: 100%;
     padding-top: 60px;
     overflow: hidden;
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
 }
-#section04 .quizeTime .check_Video{
+.section04 .quizeTime .check_Video{
     font-family: 'GmarketSansMedium';
     width: 100%;
     padding-top: 60px;
@@ -333,7 +338,7 @@ br.pc_space{
     word-spacing: -1px;
     color: #0E2764;
 }
-#section04 .quizeTime .check_Video span{
+.section04 .quizeTime .check_Video span{
     display: inline-block;
     padding: 0 4px;
     margin-bottom: 6px;
@@ -350,14 +355,17 @@ br.pc_space{
     border-top-left-radius: 0px !important;
     border-bottom-left-radius: 0px !important;
 }
-#main .profile_wrap .person01 .person_introduct {
+#main .profile_wrap .person03 .person_introduct {
     padding-top: 88px !important;
 }
-#main .profile_wrap .person02 .person_introduct {
-    padding-top: 48px !important;
+#main .profile_wrap .person04 .person_introduct {
+    padding-top: 52px !important;
 }
 #main .section06 .profile_wrap .person01 .imgBox .nameplate {
     bottom: -40px !important;
+}
+.section06 .profile_wrap .person02 .person_introduct{
+    padding-top: 58px !important;
 }
 
 /*section07*/
@@ -393,17 +401,21 @@ br.pc_space{
 }
 
 
+
+
+
+
+
 /*반응형*/
 @media (max-width: 1466px) {
     #section02 .image_wrap {
         width: 100%;
-        max-width: 996px;
+        max-width: 588px;
         height: auto !important;
         margin-top: 20px;
-        padding-top: 30px;
+        padding-top: 77px;
         padding-bottom: 120px;
         text-align: center;
-        background: lightblue;
     }
     #section02 .image_wrap .ImgGroup .img01_Box {
         width: 100%;
@@ -411,16 +423,15 @@ br.pc_space{
         height: 288px;
         overflow: hidden;
         margin: 0 auto;
-        margin-bottom: 30px;
-        position: relative;
+        position: static;
     }
     #section02 .image_wrap .ImgGroup .img02_Box {
         width: 100%;
         max-width: 588px;
         height: 288px;
         overflow: hidden;
-        margin: 0 auto;
-        position: relative;
+        margin: 56px auto;
+        position: static;
         top: 30px;
         right: 0;
         bottom: 0;
@@ -431,7 +442,7 @@ br.pc_space{
         height: 288px;
         overflow: hidden;
         margin: 0 auto;
-        position: relative;
+        position: static;
         top: 30px;
     }
     #section02 .image_wrap .ImgGroup .img01_Box img{
@@ -447,19 +458,39 @@ br.pc_space{
         object-fit: cover;
     }
     #section02 .ImgGroup .Icon01 {
+        transform: scale(0.8);
         left: auto;
-        right: 208px;
-        top: 0px;
+        right: -16px;
+        top: -10px;
     }
     #section02 .ImgGroup .Icon02 {
-        left: 200px;
-        top: 450px;
+        left: 0;
+        top: 330px;
+    }
+    #section02 .ImgGroup .Icon03 {
+        transform: scale(0.8);
+        right: -18px;
+        bottom: 300px;
+    }
+    #section02 .ImgGroup .Icon04{
+        display: block;
+        left: 50%;
+        bottom: 30px;
+        transform: translateX(-50%);
+    }
+}
+@media (max-width: 1068px) {
+    .section04 .profile_wrap .person {
+        display: block;
     }
 }
 @media (max-width: 1040px) {
     /*section02*/
     #section02{
         padding-top: 150px;
+    }
+    #section02 .text_wrap .content .text {
+        max-width: 800px;
     }
 }
 @media (max-width: 824px) {
