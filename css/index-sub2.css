@@ -643,8 +643,11 @@ br.pc_space{
     }
     #section02 .text_wrap .Introduct_box {
         min-width: 340px;
-        transform: translateX(-10%);
+        margin-left: -30px;
         margin-right: 30px;
+    }
+    #section02 .text_wrap .content {
+        padding-top: 44px;
     }
     .section04 .profile_wrap {
         max-width: auto !important;
