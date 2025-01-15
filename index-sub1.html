@@ -5,9 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kogas-sub1</title>
 
-    <!-- Snap.svg 라이브러리 연결 -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
-
     <!-- jQuery CDN 연결 -->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
@@ -288,11 +285,13 @@
                                 <li class="colorBox">
                                     “E-Fuel”이 <br>
                                     뭔가요?
+                                    <span class="beforHover"></span>
                                 </li>
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image01.jpg" alt="puzzle-img01">
+                                    <span class="beforHover"></span>
                                 </li>
-                                <li class="textBox"> <!--absolut-->
+                                <li class="textBox" style="border-right: none;"> <!--absolut-->
                                     Electricity-based Fuel의 줄임말인 E-Fuel은 
                                     그린 수소로부터 합성된 탄소중립연료를 뜻한다. 대기 중에서 포집한 탄소와 그린 수소를 활용해 
                                     탄화수소를 만들어 내는데, 연소할 때 이산화탄소가 발생하기는 하지만 탄소 포집 기술을 통해서 
@@ -306,8 +305,9 @@
                                     “E-Fuel”이라고 <br>
                                     하고, 어떤 특징이 <br>
                                     있나요?
+                                    <span class="beforHover"></span>
                                 </li>
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image02.jpg" alt="puzzle-img02">
                                 </li>
                                 <li class="textBox"> <!--absolut-->
@@ -318,8 +318,9 @@
                             </ul>
                             <!--박스03 >> 좌측 긴 박스-->
                             <ul class="outBox03 outBox">
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image03.jpg" alt="puzzle-img03">
+                                    <span class="beforHover"></span>
                                 </li>
                             </ul>
                             <!--박스04 >> 중간 3칸 박스-->
@@ -328,11 +329,13 @@
                                     왜 E-Fuel이 <br>
                                     탄소중립에 <br>
                                     효과적인가요?
+                                    <span class="beforHover"></span>
                                 </li>
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image04.jpg" alt="puzzle-img04">
+                                    <span class="beforHover"></span>
                                 </li>
-                                <li class="textBox"> <!--absolut-->
+                                <li class="textBox" style="border-top: none; border-bottom: none;"> <!--absolut-->
                                     기존 내연기관 인프라를 활용하면서도 탄소중립을 달성할 수 있는 수단이기 때문이다. 
                                     내연기관 차량은 물론, 화석연료 운송 및 보관시설 등 기존의 인프라를 활용할 수 있습니다. 
                                     때문에 전기차 캐즘(일시적 수요 부진)과 같은 이유로 전기차의 보급이 빠르게 이루어지지 않더라도 
@@ -341,14 +344,16 @@
                             </ul>
                             <!--박스05 >> 우측 중간 1칸 박스-->
                             <ul class="outBox05 outBox">
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image05.jpg" alt="puzzle-img05">
+                                    <span class="beforHover"></span>
                                 </li>
                             </ul>
                             <!--박스06 >> 하단 1칸 박스-->
                             <ul class="outBox06 outBox">
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image06.jpg" alt="puzzle-img06">
+                                    <span class="beforHover"></span>
                                 </li>
                             </ul>
                             <!--박스07 >> 하단 3칸 박스-->
@@ -357,9 +362,11 @@
                                     특히 e-메탄 활용 <br>
                                     가능성을 높이 보는 <br>
                                     이유는 무엇인가요?
+                                    <span class="beforHover"></span>
                                 </li>
-                                <li>
+                                <li class="imgBox">
                                     <img src="img_sub1/box-image07.jpg" alt="puzzle-img07">
+                                    <span class="beforHover"></span>
                                 </li>
                                 <li class="textBox"> <!--absolut-->
                                     e-메탄은 화학적으로 기존 천연가스(CH4)와 동일하므로 LNG운반선과 운송시설, 배관, 
@@ -423,5 +430,24 @@
     </section>
 
     <script src="js/script.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            let $beforHover = $('.colorBox .beforHover');
+    
+            $beforHover.hover(
+                function() {
+                    // 마우스를 올렸을 때
+                    $(this).closest('.colorBox').siblings('.textBox').removeClass('noneBox');
+                    $(this).closest('.colorBox').siblings('.textBox').addClass('showBox');
+                },
+                function() {
+                    // 마우스를 뗐을 때
+                    $(this).closest('.colorBox').siblings('.textBox').removeClass('showBox'); // 기본 오퍼시티 값으로 변경
+                    $(this).closest('.colorBox').siblings('.textBox').addClass('noneBox'); // 기본 오퍼시티 값으로 변경
+                }
+            );
+        });
+    </script>
 </body>
 </html>

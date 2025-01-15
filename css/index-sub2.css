@@ -120,7 +120,7 @@ br.pc_space{
     width: 792px;
     height: 200px;
     margin: 0 auto;
-    background: url(../img_sub2/blue-textBox.png);
+    background: url(img_sub2/blue-textBox.png);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -267,7 +267,7 @@ br.pc_space{
     height: 23px;
     margin: 0 auto;
     margin-bottom: 30px;
-    background: url(../img_sub2/quotes-left.svg) no-repeat;
+    background: url(img_sub2/quotes-left.svg) no-repeat;
     background-size: contain;
     background-position: center;
 }
@@ -278,7 +278,7 @@ br.pc_space{
     height: 23px;
     margin: 0 auto;
     margin-top: 30px;
-    background: url(../img_sub2/quotes-right.svg) no-repeat;
+    background: url(img_sub2/quotes-right.svg) no-repeat;
     background-size: contain;
     background-position: center;
 }
