@@ -3,33 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>kogas_sub3</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
-    
+    <title>kogas-sub1</title>
+
+    <!-- Snap.svg 라이브러리 연결 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg-min.js"></script>
+
+    <!-- jQuery CDN 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+
+    <!--css 연결-->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/index-sub3.css">
+    <link rel="stylesheet" href="css/index-sub1.css">
 
-    <!-- AOS cdn -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-
-       
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            line-height: 1.7;
-        }
-        ul{ list-style:none; }
-        html, body { height: 100%; font-family: 'Pretendard'; } 
-
-    </style>
 </head>
 <body>
-    <section id="home" class="container">
+    <section id="home">
         <header id="header" class="header">
             <div class="content">
                 <h1 class="logo">
@@ -50,7 +38,6 @@
                         </li>
                     </ul>
                 </nav>
-
 
                 <div class="offcanvas-wrap">
                     <button class="offcanvas-open">
@@ -173,85 +160,71 @@
             </div>
         </header>
 
-        <main>
-            <!-- 상단부분 -->
-            <div class="image-container">
-                <img src="img_sub3/main-visual.jpg" alt="배경 이미지">
-                <ul class="text-overlay">
-                    <li>궁금한 이야기 G</li>
-                    <h2>탄소중립연료 ‘e-메탄’<br>
-                        도시가스 원료 주성분 메탄 제조 기술로<br>
-                        기대되는 높은 경제성</h2>
-                </ul>
-            </div>  
-            <!-- 내용시작 -->
-            <section id="section_01">
-                <ul class="f_blue">
-                    <li>탄소중립연료인 e-메탄은 천연가스를 대체하기 위한 주요 방안으로 
-                        일본과 유럽 등에서 수요가 증가할 것으로 예상된다. 
-                        이를 위해 현재 일본을 비롯한 여러 국가들이 e-메탄 기술개발 및 
-                        국제 e-메탄 공급망 구축을 위한 실증사업을 가속화하고 있다. 
-                        국내에서도 도시가스 부문의 탄소중립 실현을 위한 다양한 방안 중 하나로 
-                        e-메탄을 활용할 계획이다. 앞으로 높아질 청정수소 해외 의존도를 고려할 때 
-                        e-메탄 형태로 도입해 활용하는 것은 가스 탈탄소화의 또 다른 한 축이 될 수 있을 것이다. </li>
-                    <li>글. 배건우 한국환경경제학회</li>
-                    <img class="mt_50" src="img_sub3/arrow.png" alt="아래화살표">
-                </ul>
-            </section>
-                <div class="flex_box mt_50">
-                    <ul class="float_l"> 
-                        <h3 class="sub_title">탄소중립연료 e-메탄의 
-                            놀라운 경제성</h3>
-                    </ul>
-                    <ul class="flex_r">
-                        <li>
-                            재생에너지와 탄소중립에 대한 글로벌 관심이 높아지면서 탄소중립연료인 e-메탄(또는 e-NG) 관련 기술이 주목받고 있다. e-메탄은 탄소중립메탄, 그린메탄 또는 e-천연가스(e-NG) 라고 불리기도 한다. e-메탄 생산 기술인 메타네이션은 그린수소와 CO₂를 촉매를 통해 반응시켜 도시가스 원료의 주성분인 메탄을 제조하는 기술로 이렇게 생산된 e-메탄은 연소시키면 CO₂를 배출하지만 회수한 CO₂를 원료로 사용하기 때문에 CO₂배출량은 Net-Zero가 돼 탄소중립연료라고 할 수 있다. e-메탄 장점은 기존 천연가스 인프라 활용이 가능하기 때문에 경제성이 높고 CO₂를 유효하게 활용할 수 있으며 재생에너지 잉여전력을 저장하는 것이 가능하다는 것이다.
-e-메탄은 기존 천연가스 배관망에 메탄으로 공급할 수 있을 뿐만 아니라 육해상 연료와 수소 수송 운반체로 활용 가능하기 때문에 최근 관심이 더욱 증대되고 있다.
-지난 3월에는 미쓰비시, 토탈에너지스 등을 포함한 8개 기업이 세계적인 e-메탄 보급 확대를 목표로 하는 e-NG 연합을 창설했다. 창설멤버는 일본 미쓰비시, 도쿄가스, 오사카가스, 도호가스, 프랑스 엔지, 토탈에너지스, 미국 셈프라, 벨기에 테스(TES, Tree Energy Solutions) 등 8개사다.
-이들은 e-NG가 재생 가능한 수소 개발을 가속화함으로써 에너지 전환에 의미있는 기여를 할 수 있다고 밝혔다. 또한 e-NG 연합은 e-NG에 대한 인식을 제고하고 글로벌 거래를 촉진하며 관련 규정을 표준화하고 협력을 강화하는 글로벌 플랫폼이 될 것이라고 표명했다.
-현재 여러 국가에서 다수의 기업들이 e-메탄 기술개발과 상용화를 위한 사업성 검토 등 e-메탄을 생산하고 활용하기 위한 다양한 공동 연구와 실증사업을 추진하고 있다. 특히 일본은 e-메탄 제조를 위한 자국 내 실증 프로젝트 외에도 다양한 LNG 수출국과 함께 e-메탄 공급망 개발의 타당성조사를 공동으로 추진하는 등 e-메탄 분야를 선도하고 있다.
-                        </li>
-                        <ul class="graph_box mt_48">
-                            <h4>수소운반체별 호주에서 독일로 운송 시의 경제성분석</h4>
-                            <img src="img_sub3/graph_01.png" alt="수소운반체별 호주에서 독일로 운송 시의 경제성분석 그래프">
-                            <!-- 이미지왼쪽 글씨는 ::after 로 넣어보기 -->
-                            <div class="graph">
-                                <h5 class="mt_30 f_15">Cost Componentsm Considered</h5> 
-                                <div class="graph_txt">
-                                    <ul class="float_l">
-                                        <li class="f_14"><div class="graph_color"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_02"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_03"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_04"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_05"></div>000</li>
-                                    </ul> 
-                                    <ul class="flex_r">
-                                        <li class="f_14"><div class="graph_color color_box_06"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_07"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_08"></div>000</li>
-                                        <li class="f_14"><div class="graph_color color_box_09"></div>000</li>
-                                    </ul>
-                                </div>
-                                <p class="source">자료 : UNSW-Deloitte, The Case for an Australian Hydrogen Export Market to Germany: State of Play Version 1.0, 2021. 9</p>
-                            </div>
-                            
+        <main id="main" class="main">
+            <!--배너 >> 애니메이션-->
+            <div class="banner">
+                <div class="bn_inner">
 
-                        </ul>
-                    </ul>
                 </div>
-
-            <section id="section_02">
+            </div>
+            <!--내용-->
+            <section class="detail_content">
+                <!--세계 에너지원의 변화-->
+                <article class="detail01">
+                    <div class="deteil01_wrap">
+                        <!--텍스트 영역-->
+                        <div class="txt_area">
+                            <h3>
+                                세계 에너지원의 <br> 변화
+                            </h3>
+                            <p>
+                                국제에너지기구(IEA)는 에너지 효율 향상, 
+                                재생에너지로의 전환이 2021~2030년 사이 1차 에너지 공급량을 10% 감소 시킬 것으로 내다봤다. 
+                                또 신재생에너지와 원자력이 화석연료를 대체해 현재 80%인 화석연료를 
+                                2050년에 20%로 감소할 것이라고 전망하고 있다.
+                            </p>
+                        </div>
+                        <!--그래프 영역-->
+                        <div class="graph_area"> <!--background >> 표 이미지 들어감-->
+                            <div class="graph_wrap">
+                                <svg class="graph01" width="1153" height="332" viewBox="0 0 1153 332" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M62.4674 101.457L116.326 92.7519H173.749L232.076 76.428L261.465 72.1951L289.524 92.7519L318.913 72.1951C318.913 72.1951 345.616 73.3456 371.893 74.4961C398.17 75.6466 499.213 122.252 530.384 143.048C561.555 163.843 607.859 181.166 640.36 202.743C672.862 224.298 775.711 258.965 826.458 278.979C877.205 298.993 953.777 306.308 981.836 312.473C1006.81 317.965 1126.9 329.231 1153 331.641V65.2922H1090.36L871.834 72.1951C871.834 72.1951 818.226 71.1749 800.532 68.787C782.838 66.3992 670.678 64.0114 597.72 49.6629C524.787 35.3144 450.724 14.3017 450.724 14.3017C450.724 14.3017 383.865 -2.91222 347.95 0.430709C312.036 3.77364 315.349 4.2512 311.484 8.07168L289.925 25.2856L261.741 8.07168L232.452 13.8024L180.501 31.4939L139.065 37.7022L114.745 36.2695L0 61.7973V110.639L62.4674 101.457Z" 
+                                    fill="#68F394"/>
+                                </svg>
+                                <svg class="graph02" width="1153" height="306" viewBox="0 0 1153 306" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M981.836 240.474C953.777 234.309 877.205 226.993 826.458 206.979C775.711 186.965 672.862 152.298 640.36 130.743C607.859 109.188 561.555 91.8436 530.384 71.048C499.213 50.2524 398.17 3.66849 371.893 2.49629C345.616 1.3458 318.913 0.195312 318.913 0.195312L289.524 20.7521L261.465 0.195312L232.076 4.42824L173.749 20.7521H116.326L62.4674 29.4568L0 38.639V59.6951L39.3778 52.4665L65.9309 47.5824C65.9309 47.5824 95.4956 40.8314 136.204 40.8314C176.912 40.8314 186.825 35.5999 186.825 35.5999C196.613 33.299 261.615 20.7521 261.615 20.7521L289.223 41.7648L317.708 20.7521L328.4 20.9692C375.583 17.8868 461.064 47.9297 539.419 104.152C583.966 136.127 657.602 173.311 723.985 203.723C774.33 226.798 820.51 245.966 846.611 255.994C907.171 279.243 1146.68 305.921 1146.68 305.921H1153V259.641C1126.9 257.232 1006.81 245.944 981.836 240.474Z" 
+                                    fill="#03C340"/>
+                                </svg>
+                                <svg class="graph03" width="1153" height="315" viewBox="0 0 1153 315" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1146.68 285.921C1146.68 285.921 907.146 259.243 846.611 235.994C820.484 225.965 774.33 206.798 723.985 183.723C657.602 153.311 583.992 116.105 539.419 84.1515C461.064 27.9295 375.583 -2.11341 328.4 0.969031L317.708 0.751953L289.223 21.7646L261.615 0.751953C261.615 0.751953 196.613 13.2988 186.825 15.5998C186.825 15.5998 176.912 20.8312 136.204 20.8312C95.4956 20.8312 65.9309 27.5822 65.9309 27.5822L39.3778 32.4663L0 39.6949V121.835L32.2251 115.779L73.0335 112.979L117.481 108.095C117.481 108.095 159.494 108.095 166.772 110.2C174.051 112.306 180.099 108.464 198.295 107.053C216.465 105.663 261.314 102.516 261.314 102.516L288.796 119.99C288.796 119.99 292.033 116.495 302.926 111.959C313.843 107.422 316.252 104.621 357.061 105.316C371.015 105.555 391.494 110.982 412.401 117.993C452.607 131.517 494.369 150.967 494.369 150.967C640.787 225.075 756.888 248.91 810.245 264.887C889.979 288.765 1046.29 303.265 1046.29 303.265L1153 314.271V285.943H1146.68V285.921Z" 
+                                    fill="#02A7C4"/>
+                                </svg>
+                                <svg class="graph04" width="1153" height="240" viewBox="0 0 1153 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1046.29 201.243C1046.29 201.243 890.004 186.743 810.245 162.865C756.888 146.888 640.762 123.054 494.369 48.9449C494.369 48.9449 452.607 29.4951 412.401 15.9715C391.494 8.9383 371.015 3.53317 357.061 3.29439C316.252 2.59975 313.843 5.39999 302.926 9.93682C292.008 14.4736 288.796 17.9685 288.796 17.9685L261.314 0.494141C261.314 0.494141 216.465 3.64171 198.295 5.03098C180.124 6.42025 174.051 10.2624 166.772 8.17853C159.494 6.07292 117.481 6.07292 117.481 6.07292L73.0335 10.9571L32.2251 13.7573L0 19.8137V140.376L21.8849 138.379C21.8849 138.379 77.4004 133.799 90.6267 134.103C103.853 134.407 133.593 132.648 146.795 136.664C160.021 140.658 191.744 139.53 202.31 138.943C212.876 138.379 259.808 133.799 274.34 137.229C288.871 140.658 294.167 137.793 309.376 134.949C324.585 132.106 377.44 137.229 393.979 140.094C410.518 142.959 519.541 172.677 576.713 186.96C633.885 201.243 863.878 231.547 863.878 231.547L1152.97 239.405V212.206L1046.26 201.2L1046.29 201.243Z" 
+                                    fill="#656AFB"/>
+                                </svg>
+                                <svg class="graph05" width="1153" height="118" viewBox="0 0 1153 118" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M863.878 97.5689C863.878 97.5689 633.885 67.2655 576.713 52.9821C519.541 38.6986 410.493 8.95963 393.979 6.11597C377.465 3.27231 324.585 -1.89402 309.376 0.971348C294.167 3.83671 288.896 6.68038 274.34 3.25062C259.808 -0.179133 212.876 4.4011 202.31 4.96549C191.744 5.52988 160.021 6.68036 146.795 2.68621C133.568 -1.30794 103.828 0.450373 90.6267 0.124764C77.4004 -0.179139 21.8849 4.40111 21.8849 4.40111L0 6.39818V117.019H1152.97V105.449L863.878 97.5906V97.5689Z" 
+                                    fill="#4627E2"/>
+                                </svg>
+                                <div class="graphName">
+                                    <div class="name01">Historical</div>
+                                    <div class="name02">Scenario</div>
+                                    <div class="name03">Nuclear</div>
+                                    <div class="name04">Natural gas</div>
+                                    <div class="name05">Oil</div>
+                                    <div class="name06">Coal</div>
+                                    <div class="name07">Renewables</div>
+                                </div>
+                                <svg class="dashLine" width="3" height="512" viewBox="0 0 3 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <line x1="1.5" y1="0.5" x2="1.50002" y2="511.5" stroke="black" stroke-width="3" stroke-dasharray="6 6"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+                <!--탄소 사회에서 수소사회로-->
             </section>
-
-
-            <section id="section_03">
-            </section>
-        
-        
-        
-        
-        
-        
         </main>
 
         <footer id="footer" class="footer">
@@ -305,7 +278,5 @@ e-메탄은 기존 천연가스 배관망에 메탄으로 공급할 수 있을 �
     </section>
 
     <script src="js/script.js"></script>
-    <script>AOS.init();</script>
-
 </body>
 </html>

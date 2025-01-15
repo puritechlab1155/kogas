@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.f_poppins{
+    font-family: "Poppins", serif !important;
+}
+.f_14{font-size: 14px;}
+.f_15{font-size: 15px;}
+.f_blue{color: #4627E2;}
+h2{font-size: 50px; font-weight: 500;}
+h3{font-size: 28px;}
+h4{font-size: 17px; font-weight: 500;}
+h5{font-size: 25px; font-weight: 500; font-family: "Poppins", serif !important;}
+.mt_50{margin-top: 50px;}
+.mt_48{margin-top: 48px;}
+.mt_30{margin-top: 30px;}
+
+/* 상단이미지 */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px; 
+    height: 100%;
+}
+.image-container img {
+    width: 100%;
+}
+.image-container ul{
+    text-align: center;
+}
+.image-container .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* section_01 */
+#section_01 .f_blue{
+    width: 30%;
+    margin: 100px auto;
+    text-align: center;
+}
+#section_01 .f_blue li{ font-weight: 400;}
+#section_01 .f_blue li:nth-child(2){
+    font-size: 17px;
+    font-weight: 300;
+    padding-top: 16px;
+}
+.sub_title{
+    color: #4627E2;
+    font-weight: 500;
+}
+
+.graph_box h4{
+    font-size: 17px;
+    width: 100%;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid #000;
+    /* box-shadow: ; */
+}
+.graph_box h4 img{
+    margin-top: 16px;
+    max-width: 960px;
+    width: 100%;
+}
+/* div.graph_color 색상 */
+#section_01 .graph_box div.graph_color{
+    width: 14px;
+    height: 14px;
+    background: #68F394;
+}
+.color_box_02{
+    background: #000 !important;
+}
+.color_box_03{
+    background: #FCC8A5 !important;
+}
+.color_box_04{
+    background: #A0B984 !important;
+}
+.color_box_05{
+    background: #4627E2 !important;
+}
+.color_box_06{
+    background: #595757 !important;
+}
+.color_box_07{
+    background: #FCC865 !important;
+}
+.color_box_08{
+    background: #B5B6B6 !important;
+}
+.color_box_09{
+    background: #898989 !important;
+}
+/* 여기까지 div.graph_color 색상 */
+
+.source{
+    font-size: 14px;
+    width: 100%;
+    background: #EFEFEF;
+    padding: 10px 20px;
+    border-radius: 50px;
+}
