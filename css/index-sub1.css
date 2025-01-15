@@ -140,6 +140,9 @@ svg.dashLine {
 }
 
 /*탄소 사회에서 수소사회로*/
+.detail02_wrap {
+    padding-top: 400px;
+}
 .detail02_wrap > h3 {
     font-size: 36px;
     line-height: 44px;
@@ -260,5 +263,104 @@ svg.dashLine {
 }
 
 /*탄소중립연료 E-Fuel 수송용 연료의 미래*/
+.detail03_wrap {
+    padding-top: 400px;
+}
+.detail03_wrap > h3 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    color: #4627E2;
+}
+.puzzleBox_wrap {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 35px;
+}
 
+/*각각의 outBox 박스 너비 지정*/
+.puzzleBox_wrap .outBox {
+    height: 250px;
+    overflow: hidden;
+    float: left;
+    position: relative;
+}
+.puzzleBox_wrap .outBox01 {
+    width: 50%;
+}
+.puzzleBox_wrap .outBox02 {
+    width: 50%;
+}
+.puzzleBox_wrap .outBox03 {
+    width: calc(100% / 4);
+    height: 500px;
+}
+.puzzleBox_wrap .outBox04 {
+    width: calc(100% / 2);
+}
+.puzzleBox_wrap .outBox07 {
+    width: calc(100% /2);
+}
+/*outBox 안 li 너비*/
+.outBox::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.outBox01 li,  .outBox02 li, .outBox04 li, .outBox07 li{
+    width: calc(100% / 2);
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+/*텍스트 컬러 박스*/
+.outBox .colorBox {
+    position: relative;
+    padding: 30px;
+    font-size: 28px;
+    line-height: 40px;
+    font-weight: 600;
+}
+.colorBox::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 3px solid #fff;
+    position: absolute;
+    top: 0;
+    left: -3px;
+}
+.outBox01 .colorBox, .outBox04 .colorBox {
+    background: #68F394;
+}
+.outBox02 .colorBox, .outBox07 .colorBox {
+    background: #03C340;
+    color: #fff;
+}
+
+/*호버 텍스트 박스*/
+li.textBox {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    position: absolute;
+    /* z-index: -1; */
+    background: #4627E2;
+    color: #fff;
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 500;
+    display: none;
+}
+li.colorBox:hover .textBox {
+    display: block;
+}
 
