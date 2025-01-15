@@ -217,8 +217,9 @@
                                     <div class="list_text_container">
                                         <span class="oder_count">2</span>
                                         <span>
-                                            해당 이벤트에 필요한 사연과 <br>
-                                            선정 시 선물 받을 정보를 입력한다.
+                                            해당 이벤트에 필요한<br class="mob_space"> 
+                                            사연과 <br class="pc_space">
+                                            선정 시 선물 받을 <br class="mob_space"> 정보를 입력한다.
                                         </span>
                                     </div>
                                 </li>
@@ -269,7 +270,10 @@
                                     <img src="img_sub5/block02-bg.jpg" alt="친환경 DIY 키트 신청해 만드는 재미, 쓰는 재미 누리기"><!--absloute-->
                                     <div class="title_container"><!--absloute-->
                                         <span>제로DIY</span>
-                                        <p>친환경 DIY 키트 신청해 만드는 재미, 쓰는 재미 누리기</p>
+                                        <p>
+                                            친환경 DIY 키트 신청해<br class="mob_space">
+                                            만드는 재미, 쓰는 재미 누리기
+                                        </p>
                                     </div>
                                 </div>
                                 <div class="progress_wrap">
@@ -468,9 +472,10 @@
                             </div>
                         </div>
                     </article>
+                    <!--동의 부분-->
                     <div class="agree_container">
                         <label>
-                            <input type="radio" name="agree" value="male" />
+                            <input class="radio" type="radio" name="agree" value="male" />
                             <span>상품 발송을 위한 개인정보 제공에 동의합니다.</span>
                         </label>
                     </div>
@@ -535,6 +540,7 @@
 
     <script>
         $(document).ready(function() {
+            //노드 저장
             let $contentBox = $('.content_img_wrap');
             let $progressBox = $('.progress_wrap');
             let $writeItem = $('.write_item');
@@ -544,11 +550,11 @@
             $writeItem.eq(0).addClass('writrShow');
 
             $contentBox.click(function() {
-                focus($(this)); // 클릭한 contentBox를 인자로 전달
+                focus($(this)); //기능 호춯
             });
 
+            //기능 설정
             function focus(element) {
-                // 모든 contentBox에서 포커스 해제
                 $contentBox.removeClass('focusBorder');
                 $progressBox.find('.level')
                     .removeClass('focus_Bgcolor')
@@ -556,7 +562,6 @@
                 $progressBox.find('.progress')
                     .removeClass('focus_color');
 
-                // 클릭한 contentBox에 포커스 추가
                 element.addClass('focusBorder');
                 element.siblings('.progress_wrap').find('.level')
                     .removeClass('nonfoucus_bg')
@@ -564,12 +569,15 @@
                 element.siblings('.progress_wrap').find('.progress')
                     .addClass('focus_color');
 
-                // 모든 작성 항목 숨기기 및 클릭한 항목 표시
-                $writeItem.addClass('writeNone'); // 모든 항목 숨기기
-                let index = $contentBox.index(element); // 클릭한 요소의 인덱스 가져오기
+                $writeItem.addClass('writeNone'); 
+
+                let index = $contentBox.index(element);
+
                 $writeItem.removeClass('writrShow');
-                $writeItem.eq(index).removeClass('writeNone').addClass('writrShow'); // 해당 인덱스의 항목만 표시
+                $writeItem.eq(index).removeClass('writeNone').addClass('writrShow'); 
             }
+
+            //라디오 버튼 토글 구현
         });
     </script>
 </body>

@@ -20,6 +20,9 @@ button {
 input {
     font-family: 'Pretendard';
 }
+br.mob_space {
+    display: none;
+}
 
 /*main*/
 /*배너*/
@@ -373,6 +376,7 @@ input::placeholder {
     font-weight: bold;
     color: #000; 
 }
+/*동의 부분*/
 .agree_container {
     padding-top: 48px;
     text-align: center;
@@ -393,4 +397,87 @@ input::placeholder {
 }
 .participant_write_wrap .applyBtn {
     text-align: center;
+}
+
+
+
+/*반응형*/
+@media (max-width: 1268px) {
+    .bannerWrap {
+        height: 640px;
+    }
+    .banner_innerBox {
+        max-width: 1000px;
+    }
+    .bn_textL, .bn_textR {
+        font-size: 34px;
+        bottom: 54px;
+    }
+    section.puzzle_wrap {
+        height: auto;
+    }
+    .puzzle_contetns {
+        max-width: 800px;
+        padding: 0 60px;
+        padding-bottom: 60px;
+    }
+    .puzzle_contetns .puzzle_box {
+        width: 100%;
+        height: auto;
+    }
+
+    .event_participate_inner {
+        max-width: 800px;
+    }
+    .oder_list_container ul.listBox {
+        justify-content:flex-start;
+        gap: 24px;
+    }
+    ul.listBox li {
+        width: calc(100% / 3.2);
+    }
+    ul.listBox li .list_text_container .oder_count {
+        font-size: 38px;
+        margin-right: 16px;
+    }
+    ul.listBox li .list_text_container span {
+        font-size: 16px;
+        line-height: 27px;
+    }
+    br.mob_space{
+        display: block;
+    }
+    br.pc_space {
+        display: none !important;;
+    }
+    .oder_list_container .caption {
+        font-size: 15px;
+    }
+    .tab_content .contentBox {
+        width: 48%;
+    }
+    .tab_content .contentBox .title_container > p {
+        font-size: 15px;
+        line-height: 27px;
+    }
+    .content02 .title_container{
+        bottom: 8px !important;
+    }
+    .tab_content .contentBox .progress_wrap > ul {
+        font-size: 15px;
+    }
+    .progress_wrap ul li.level {
+        font-size: 14px;
+    }
+    input::placeholder {
+        font-size: 13px;
+        font-weight: bold;
+        color: #000; 
+    }
+    .applyBtn > button {
+        font-size: 28px;
+    }
+}
+@media (max-width: 836px) {
+    
 }
