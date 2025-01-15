@@ -28,7 +28,7 @@ section.detail_content {
     margin: 0 auto;
 }
 /*세계 에너지원의 변화*/
-article.detail01, article.detail02 {
+article.detail01, article.detail02, article.detail03 {
     width: 100%;
 }
 .deteil01_wrap,.detail02_wrap{
@@ -258,5 +258,7 @@ svg.dashLine {
     left: 50%;
     transform: translateX(-50%);
 }
+
+/*탄소중립연료 E-Fuel 수송용 연료의 미래*/
 
 
