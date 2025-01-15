@@ -12,7 +12,7 @@ li {
     list-style: none;
 }
 body {
-    font-family: 'Pretendard', sans-serif;
+    font-family: 'Pretendard-Regular';
 }
 /*main*/
 /*배너*/
@@ -28,7 +28,7 @@ section.detail_content {
     margin: 0 auto;
 }
 /*세계 에너지원의 변화*/
-article.detail01, article.detail02, article.detail03 {
+article.detail01, article.detail02 {
     width: 100%;
 }
 .deteil01_wrap,.detail02_wrap{
@@ -43,7 +43,7 @@ article.detail01, article.detail02, article.detail03 {
     float: left;
     font-size: 36px;
     line-height: 44px;
-    font-weight: 600;
+    font-weight: 700;
     color: #4627E2;
 }
 .deteil01_wrap > .txt_area p {
@@ -137,16 +137,17 @@ svg.graph05 {
 svg.dashLine {
     position: absolute;
     left: 407px;
+    bottom: 32px;
 }
 
 /*탄소 사회에서 수소사회로*/
 .detail02_wrap {
-    padding-top: 400px;
+    padding-top: 320px;
 }
 .detail02_wrap > h3 {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 600;
+    font-weight: 700;
     color: #4627E2;
 }
 .detail02_wrap > h3 > span {
@@ -263,19 +264,22 @@ svg.dashLine {
 }
 
 /*탄소중립연료 E-Fuel 수송용 연료의 미래*/
+article.detail03 {
+    width: calc(100% + 12px);
+    box-sizing: border-box;
+}
 .detail03_wrap {
-    padding-top: 400px;
+    padding-top: 320px;
 }
 .detail03_wrap > h3 {
     font-size: 36px;
     line-height: 44px;
-    font-weight: 600;
+    font-weight: 700;
     color: #4627E2;
 }
 .puzzleBox_wrap {
     width: 100%;
     overflow: hidden;
-    box-sizing: border-box;
     margin-top: 35px;
 }
 
@@ -289,31 +293,25 @@ svg.dashLine {
 }
 .puzzleBox_wrap .outBox01 {
     width: 50%;
-    box-sizing: border-box;
 }
 .puzzleBox_wrap .outBox02 {
     width: 50%;
-    box-sizing: border-box;
 }
 .puzzleBox_wrap .outBox03 {
     width: calc(100% / 4);
     height: 500px;
-    box-sizing: border-box;
 }
 .puzzleBox_wrap .outBox04 {
     width: calc(100% / 2);
-    box-sizing: border-box;
 }
 .puzzleBox_wrap .outBox07 {
     width: calc(100% /2);
-    box-sizing: border-box;
 }
 /*outBox 안 li 너비*/
 .outBox01 li,  .outBox02 li, .outBox04 li, .outBox07 li{
     width: calc(100% / 2);
     height: 100%;
     float: left;
-    box-sizing: border-box;
 }
 
 /*텍스트 컬러 박스*/
@@ -323,28 +321,8 @@ svg.dashLine {
     line-height: 40px;
     font-weight: 600;
     box-sizing: border-box;
+    border: 3px solid #fff;
 }
-/* .colorBox::before {
-    content: '';
-    display: block;
-    width: 3px;
-    height: 100%;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-.colorBox::after {
-    content: '';
-    display: block;
-    width: 3px;
-    height: 100%;
-    background: #fff;
-    position: absolute;
-    top: 0;
-    right: -3px;
-    z-index: 10;
-} */
 .outBox01 .colorBox, .outBox04 .colorBox {
     background: #68F394;
 }
@@ -365,31 +343,78 @@ li.textBox {
     line-height: 32px;
     font-weight: 500;
     box-sizing: border-box;
-    border: 3px solid #fff;
     z-index: 20;
+    border: 3px solid #fff;
+    border-bottom: none;
     cursor: pointer;
+    opacity: 0; 
+    visibility: hidden;
+    transition: opacity 0.2s;
 }
-.noneBox {
-    opacity: 0;
-}
-.showBox {
-    opacity: 1;
-}
-.colorBox  .imgBox{
+
+.imgBox{
     position: relative;
+    transition: opacity 0.2s;
 }
 /*호버 전 박스*/
 .beforHover {
     display: block;
     width: 100%;
     height: 100%;
-    background: #24242417;
+    background: #24242413;
     position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     cursor: pointer;
-    z-index: 1;
+    z-index: 20;
+}
+.imgBox:hover .beforHover{
+    opacity: 0;
 }
 
+
+/*반응형*/
+@media (max-width: 1254px) {
+    section.detail_content {
+        max-width: 948px;
+    }
+    .graph_wrap > svg {
+        width: 96%;
+    }
+    svg.graph01 {
+        bottom: 75px;
+    }
+    svg.graph02 {
+        bottom: 42px;
+    }
+    svg.graph03 {
+        bottom: 20px;
+    }
+    svg.graph04 {
+        bottom: 10px;
+    }
+    svg.graph05 {
+        bottom: 15px;
+    }
+    svg.dashLine {
+        height: 90%;
+        position: absolute;
+        bottom: 30px;
+        left: -50px;
+    }
+    .puzzleBox_wrap .outBox03 {
+        display: none;
+    }
+    .puzzleBox_wrap .outBox05 {
+        display: none;
+    }
+    .puzzleBox_wrap .outBox06 {
+        display: none;
+    }
+    .outBox .colorBox {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
