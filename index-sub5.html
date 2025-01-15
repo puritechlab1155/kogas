@@ -8,6 +8,9 @@
     <!--제이쿼리 cdn 연결-->
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 
+    <!--애니메이션 플러그인 연결-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!--css 연결-->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index-sub5.css">
@@ -579,7 +582,20 @@
                 $writeItem.eq(index).removeClass('writeNone').addClass('writrShow'); 
             }
 
-            //라디오 버튼 토글 구현
+            //스크롤시 애니메이션
+            $(window).scroll(function() {
+            let scrollTop = $(this).scrollTop();
+
+            console.log(scrollTop);
+
+            if (scrollTop > 0) {
+                // 각 아이콘에 대해 애니메이션 클래스를 추가
+                $('.title_img').addClass('animate__animated animate__jackInTheBox animate__delay-0.8s');
+            } else {
+                // 스크롤 위치가 1300px 이하일 때 애니메이션 클래스 제거
+                $('.title_img').removeClass('animate__animated animate__jackInTheBox animate__delay-0.8s');
+            }
+        });
         });
     </script>
 </body>
