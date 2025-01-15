@@ -25,6 +25,7 @@
             padding: 0;
             box-sizing: border-box;
             line-height: 1.7;
+            font-family: 'Pretendard';
         }
         ul{ list-style:none; }
         html, body { height: 100%; /* font-family: Arial, sans-serif; */ } 
@@ -230,7 +231,7 @@
                         <div class="food_map">
                             <img class="map" src="img_sub4/4-1-map.jpg" alt="지도 이미지">
                             <img class="gps focus-in-expand" data-aos="zoom-in" data-aos-delay="1500" src="img_sub4/4-1-gps.jpg" alt="gps 이미지">
-                            <img class="food" data-aos="fade-up-left" src="img_sub4/4-1-food.png" alt="음식 이미지">
+                            <img class="food" data-aos="fade-up-left" data-aos-delay="1000" src="img_sub4/4-1-food.png" alt="음식 이미지">
                         </div>
                     </div>
                 </div>
@@ -259,7 +260,7 @@
                         <div class="food_map">
                             <img class="map" src="img_sub4/4-1-map.jpg" alt="지도 이미지">
                             <img class="gps_2 focus-in-expand" data-aos="zoom-in" data-aos-delay="1500" src="img_sub4/4-1-gps.jpg" alt="gps 이미지">
-                            <img class="food" data-aos="fade-up-left" src="img_sub4/4-2-food.png" alt="음식 이미지">
+                            <img class="food" data-aos="fade-up-left" data-aos-delay="1000" src="img_sub4/4-2-food.png" alt="음식 이미지">
                         </div>
                     </div>
                 </div>
@@ -427,6 +428,7 @@
     </section>
 
     <script>
+        // 탭기능
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.content');
 
@@ -439,7 +441,16 @@
                 document.getElementById(`content-${tab.dataset.tab}`).classList.add('active');
             });
         });
+
+        // 탭 전환 후 AOS 다시 초기화
+        document.querySelectorAll('.tab').forEach(button => {
+            button.addEventListener('click', function() {
+                // 탭 내용이 변경된 이후 AOS 새로고침
+                AOS.refresh();
+            });
+        });
     </script>
+    
 
     <script src="js/script.js"></script>
     <script>AOS.init();</script>
