@@ -84,8 +84,8 @@ section.puzzle_wrap{
     text-align: center;
     position: absolute;
     top: -130px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 22%;
+    /* transform: translateX(-50%); */
 }
 .puzzle_contetns .title_img img{
     width: 100%;
@@ -598,6 +598,7 @@ input::placeholder {
     .puzzle_contetns .title_img {
         width: 70%;
         top: -51px;
+        left: 16%;
     }
     .puzzle_contetns .quize_title {
         padding-top: 38px;
