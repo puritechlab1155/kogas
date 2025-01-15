@@ -1,0 +1,47 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+.f_poppins{
+    font-family: "Poppins", serif !important;
+}
+h2{font-size: 50px; font-weight: 500;}
+h3{font-size: 28px;}
+.f_blue{color: #4627E2;}
+
+/* 상단이미지 */
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 1920px; 
+    height: 100%;
+}
+.image-container img {
+    width: 100%;
+}
+.image-container ul{
+    text-align: center;
+}
+.image-container .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+/* section_01 */
+#section_01 .f_blue{
+    width: 30%;
+    margin: 50px auto;
+    text-align: center;
+}
+#section_01 .f_blue li{}
+#section_01 .f_blue li:nth-child(2){
+    font-size: 17px;
+    font-weight: 300;
+    padding-top: 16px;
+}
