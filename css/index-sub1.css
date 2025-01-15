@@ -27,10 +27,11 @@ section.detail_content {
     max-width: 1200px;
     margin: 0 auto;
 }
-article.detail01 {
+/*세계 에너지원의 변화*/
+article.detail01, article.detail02 {
     width: 100%;
 }
-.deteil01_wrap {
+.deteil01_wrap,.detail02_wrap{
     padding-top: 120px;
 }
 .deteil01_wrap > .txt_area {
@@ -137,3 +138,125 @@ svg.dashLine {
     position: absolute;
     left: 407px;
 }
+
+/*탄소 사회에서 수소사회로*/
+.detail02_wrap > h3 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 600;
+    color: #4627E2;
+}
+.detail02_wrap > h3 > span {
+    display: block;
+    font-size: 24px;
+    color: #000;
+    line-height: 44px;
+}
+/*이미지 부분*/
+.detail02_wrap .img_wrap {
+    width: 100%;
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    gap: 14px;
+}
+.detail02_wrap .img_wrap > .Co2 {
+    width: calc(100% / 3 - 14px);
+    height: 501px;
+    box-sizing: border-box;
+    position: relative;
+}
+.Co2.grayCo2::after, .blueCo2::after {
+    display: block;
+    content: '';
+    width: 3px;
+    height: 100%;
+    border-left: 3px dotted #E2E2E2;
+    position: absolute;
+    top: 0;
+    right: -11px;
+}
+.img_wrap > .Co2 .img_title {
+    width: fit-content;
+    margin: 0 auto;
+    background: #ccc;
+    padding: 4px 16px;
+    border-radius: 14px;
+    color: #fff;
+    font-weight: 600;
+}
+.img_wrap > .Co2 .img_title.gray {
+    background: #677381;
+}
+.img_wrap > .Co2 .img_title.bule {
+    background: #02A7C4;
+}
+.img_wrap > .Co2 .img_title.green {
+    background: #68F394;
+    color: #000;
+}
+.img_wrap > .Co2 > img {
+    width: 100%;
+    object-fit: contain;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+}
+.img_wrap > .Co2 .arrowBox {
+    width: fit-content;
+    text-align: center;
+    position: absolute;
+    bottom: 180px;
+}
+.img_wrap > .Co2 .arrowBox.arrow01 {
+    left: 0;
+}
+.img_wrap > .blueCo2 .arrowBox.arrow01 {
+    left: -14px;
+}
+.img_wrap > .greenCo2 .arrowBox.arrow01 {
+    left: -14px;
+}
+
+.img_wrap > .Co2 .arrowBox.arrow02 {
+    right: 0;
+}
+.img_wrap > .grayCo2 .arrowBox.arrow02 {
+    right: 14px;
+}
+.img_wrap > .blueCo2 .arrowBox.arrow02 {
+    right: 14px;
+}
+
+.img_wrap > .Co2 .arrowBox.arrow03 {
+    bottom: 250px;
+}
+.img_wrap > .greenCo2 .arrowBox.arrow03 {
+    left: -14px;
+}
+.img_wrap > .Co2 .arrowBox img { 
+    width: 100%;
+}
+.img_wrap > .Co2 .arrowBox > span{
+    display: block;
+    margin-bottom: 2px;
+    color: #677381;
+}
+.img_wrap > .Co2 .finishTxt {
+    width: fit-content;
+    padding: 6px 20px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 17px;
+    font-size: 17px;
+    font-weight: 700;
+    box-shadow: 2px 2px 4px #00000061;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
