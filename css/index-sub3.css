@@ -15,9 +15,15 @@ h2{font-size: 50px; font-weight: 500;}
 h3{font-size: 28px;}
 h4{font-size: 17px; font-weight: 500;}
 h5{font-size: 25px; font-weight: 500; font-family: "Poppins", serif !important;}
+.mt_100{margin-top: 100px;}
 .mt_50{margin-top: 50px;}
 .mt_48{margin-top: 48px;}
 .mt_30{margin-top: 30px;}
+.pb_100{padding-bottom: 100px;}
+span.br{
+    display: block;
+}
+
 
 /* 상단이미지 */
 .image-container {
@@ -41,13 +47,32 @@ h5{font-size: 25px; font-weight: 500; font-family: "Poppins", serif !important;}
 }
 
 /* section_01 */
-#section_01 .f_blue{
-    width: 30%;
+.sub3_contain{
+    width: 100%;
+    max-width: 1240px;
+    padding: 0 20px;
+    margin: 0 auto; 
+}
+.flex_box{
+    display: flex;
+    justify-content: space-around;
+    gap: 100px;
+}
+.flex_box .flex_l{
+    width: 24%;
+}
+.flex_box .flex_r{
+    width: 70%;
+}
+.section_01 .f_blue{
+    width: 90%;
     margin: 100px auto;
     text-align: center;
 }
-#section_01 .f_blue li{ font-weight: 400;}
-#section_01 .f_blue li:nth-child(2){
+.section_01 .f_blue li:nth-child(1){
+    font-weight: 500;
+}
+.section_01 .f_blue li:nth-child(2){
     font-size: 17px;
     font-weight: 300;
     padding-top: 16px;
@@ -56,26 +81,77 @@ h5{font-size: 25px; font-weight: 500; font-family: "Poppins", serif !important;}
     color: #4627E2;
     font-weight: 500;
 }
+/* 별모양 애니메이션 */
+.jello-horizontal{
+    -webkit-animation:jello-horizontal .9s infinite; 
+    animation:jello-horizontal .9s infinite;
+}
+@keyframes jello-horizontal {
+    0% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+    30% {
+      -webkit-transform: scale3d(1.25, 0.75, 1);
+              transform: scale3d(1.25, 0.75, 1);
+    }
+    40% {
+      -webkit-transform: scale3d(0.75, 1.25, 1);
+              transform: scale3d(0.75, 1.25, 1);
+    }
+    50% {
+      -webkit-transform: scale3d(1.15, 0.85, 1);
+              transform: scale3d(1.15, 0.85, 1);
+    }
+    65% {
+      -webkit-transform: scale3d(0.95, 1.05, 1);
+              transform: scale3d(0.95, 1.05, 1);
+    }
+    75% {
+      -webkit-transform: scale3d(1.05, 0.95, 1);
+              transform: scale3d(1.05, 0.95, 1);
+    }
+    100% {
+      -webkit-transform: scale3d(1, 1, 1);
+              transform: scale3d(1, 1, 1);
+    }
+  }
+/* 여기까지 별모양 애니메이션 */
 
 .graph_box h4{
     font-size: 17px;
-    width: 100%;
+    width: 391px;
     background: #fff;
     padding: 10px 20px;
     border-radius: 50px;
     border: 1px solid #000;
-    /* box-shadow: ; */
+    height: 36px;
+    line-height: 1;
+    box-shadow: 1px 7px 15px gray;
 }
 .graph_box h4 img{
     margin-top: 16px;
     max-width: 960px;
     width: 100%;
 }
+.graph_txt{
+    margin-top: 11px;
+}
+.graph_txt ul{
+    width: 50% !important;
+}
+.graph_txt ul li{
+    /* display: inline-flex; */
+    line-height: 1.9;
+}
 /* div.graph_color 색상 */
-#section_01 .graph_box div.graph_color{
+.section_01 .graph_box div.graph_color{
     width: 14px;
     height: 14px;
     background: #68F394;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: text-bottom;
 }
 .color_box_02{
     background: #000 !important;
@@ -102,11 +178,130 @@ h5{font-size: 25px; font-weight: 500; font-family: "Poppins", serif !important;}
     background: #898989 !important;
 }
 /* 여기까지 div.graph_color 색상 */
-
 .source{
     font-size: 14px;
-    width: 100%;
+    width: 792px;
+    height: 37px;
     background: #EFEFEF;
     padding: 10px 20px;
     border-radius: 50px;
+    margin-top: 24px;
+}
+
+/* section_02 */
+#section_02{
+    background: #FCC865;
+}
+#section_02 .sub3_contain{
+    padding-top: 100px;
+}
+/* 2번째 그래프 */
+.graph_02_box{
+    position: relative;
+    width: auto;
+    height: auto;
+}
+.graph_bg{
+    width: 100%;
+}
+
+.graph_ani img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.graph_ani img:nth-child(1){
+    top: 107px;
+    left: 83px;
+}
+
+.graph_ani img:nth-child(2){
+    top: 153px;
+    left: 200px;
+}
+
+.graph_ani img:nth-child(3){
+    top: 49px;
+    left: 321px
+}
+
+.graph_ani img:nth-child(4){
+    top: 213px;
+    left: 451px;
+}
+
+.graph_ani img:nth-child(5){
+    top: 200px;
+    left: 570px;
+}
+
+.graph_ani img:nth-child(6){
+    top: 170px;
+    left: 693px;
+}
+/* 2번쨰 그래프 끝 */
+#section_02 .graph_box h4{
+    width: 191px;
+}
+
+
+/* section_03 */
+#section_03 .flex_l img{
+    padding-left: 130px;
+}
+/* 곡선화살표 애니메이션 */
+.fade-in-left {
+	-webkit-animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+	        animation: fade-in-left 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite both;
+}
+@keyframes fade-in-left {
+    0% {
+      -webkit-transform: translateX(-50px);
+              transform: translateX(-50px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0);
+              transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+/* 여기까지 곡선화살표 애니메이션 */
+
+/* 반응형 */
+@media (max-width: 1300px) {
+    span.br{display: inline;}
+    h3{text-align: center; padding-bottom: 20px;}
+    .sub3_contain {
+        width: 100%;
+        max-width: 900px;
+        padding: 0 50px;
+        margin: 0 auto;
+    }
+    .flex_box{
+        flex-direction: column;
+        gap: 0;
+    }
+    .flex_box .flex_l, .flex_box .flex_r{
+        width: 100%;
+    }
+    /* 별모양 애니 위치수정 */
+    .jello-horizontal
+}
+@media (max-width: 991px) {
+    /* .flex_box{
+        flex-direction: column;
+    } */
+    
+}
+
+@media (max-width: 767px) {
+
+}
+@media (max-width: 575px) {
+
 }
