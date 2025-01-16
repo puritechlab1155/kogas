@@ -266,11 +266,11 @@ svg.dashLine {
 /*탄소중립연료 E-Fuel 수송용 연료의 미래*/
 article.detail03 {
     width: calc(100% + 12px);
-    padding-bottom: 220px;
     box-sizing: border-box;
 }
 .detail03_wrap {
     padding-top: 320px;
+    padding-bottom: 220px;
 }
 .detail03_wrap > h3 {
     font-size: 36px;
@@ -426,6 +426,16 @@ li.textBox {
     .deteil01_wrap > .txt_area h3 {
         width: 100%;
         float: none;
+        font-size: 30px;
+    }
+    .detail02_wrap > h3 {
+        font-size: 30px;
+    }
+    .detail02_wrap > h3 > span {
+        font-size: 22px;
+    }
+    .detail03_wrap > h3 {
+        font-size: 30px;
     }
     .deteil01_wrap > .txt_area h3 br.pc_space{
         display: none;
@@ -489,13 +499,18 @@ li.textBox {
         display: block;
         padding-top: 0px;
     }
+    .img_wrap > .Co2 .img_title {
+        position: relative;
+        top: 15px;
+    }
     .detail02_wrap .img_wrap > .Co2 {
         width: 100%;
-        height: 323px;
+        height: 364px;
         margin-top: 42px;
     }
     .img_wrap > .Co2 > img {
-        width: 40%;
+        width: 16em;
+        min-width: 256px;
     }
     .img_wrap .arrowBox {
         width: 63px !important;
@@ -505,20 +520,20 @@ li.textBox {
         bottom: 101px;
     }
     .img_wrap > .Co2 .arrowBox.arrow01 {
-        left: 150px;
+        left: 24%;
     }
     .img_wrap > .grayCo2 .arrowBox.arrow02 {
-        right: 154px;
+        right: 24%;
     }
     .img_wrap > .blueCo2 .arrowBox.arrow02 {
-        right: 154px;
+        right: 25%;
     }
     .img_wrap > .greenCo2 .arrowBox.arrow02 {
-        right: 143px;
+        right: 26%;
     }
     .img_wrap > .Co2 .arrowBox.arrow03 {
         width: 100px !important;
-        left: 149px;
+        left: 24%;
         bottom: 156px;
     }
     .img_wrap > .Co2 .finishTxt {
@@ -526,7 +541,211 @@ li.textBox {
         font-size: 14px;
         bottom: 5px;
     }
+    .Co2.grayCo2::after, .blueCo2::after {
+        content: none;
+    }
+    .detail03_wrap {
+        padding-top: 150px;
+        padding-bottom: 150px;
+    }
+    .puzzleBox_wrap .outBox {
+        width: 100%;
+        float: none;
+    }
+}
+@media (max-width: 648px) {
+    section.detail_content {
+        max-width: 600px;
+        padding: 0 20px;
+        box-sizing: border-box;
+    } 
+    .deteil01_wrap > .txt_area h3 {
+        font-size: 26px;
+    }
+    .detail02_wrap > h3 {
+        font-size: 26px;
+    }
+    .detail02_wrap > h3 > span {
+        font-size: 18px;
+        line-height: 34px;
+    }
+    .detail03_wrap > h3 {
+        font-size: 26px;
+    }
+    .graph_area {
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    svg.graph05 {
+        bottom: -11px;
+    }
     svg.dashLine {
-        display: none;
+        left: -42px;
+    }
+    .img_wrap .arrowBox {
+        width: 50px !important;
+    }
+    article.detail03 {
+        width: 100%;
+    }
+    .puzzleBox_wrap .outBox {
+        height: 196px;
+    }
+    .outBox .colorBox {
+        font-size: 18px;
+        line-height: 30px;
+    }
+    .imgBox {
+        border: none !important;;
+        border-top: 3px solid #fff !important;
+        border-right: 3px solid #fff !important;
+    }
+    .imgBox img {
+        width: 100%;
+        height: 100%;
+    }
+    li.textBox {
+        border-right: 3px solid #fff !important;
+        font-size: 16px;
+        line-height: 28px;
+    }    
+    svg.graph01 {
+        bottom: -45px;
+    }
+    svg.graph02 {
+        bottom: -54px;
+    }
+    svg.graph03 {
+        bottom: -67px;
+    }
+    svg.graph04 {
+        bottom: -54px;
+    }
+    svg.graph05 {
+        bottom: -21px;
+    }
+    .graphName > div {
+        left: 133px;
+    }
+    .graphName .name02 {
+        left: 243px;
+    }
+    .graphName .name03 {
+        top: 170px;
+    }
+    .graphName .name04 {
+        top: 199px;
+    }
+    .graphName .name05 {
+        top: 241px;
+    }
+    .graphName .name06 {
+        top: 290px;
+    }
+    .graphName .name07 {
+        top: 209px;
+    }
+    svg.dashLine {
+        bottom: 14px;
+        left: -10px;
+    }
+}
+@media (max-width: 491px) {
+    section.detail_content {
+        padding: 0 10px;
+    }
+    .deteil01_wrap > .txt_area h3 {
+        font-size: 22px;
+    }
+    .detail02_wrap > h3 {
+        font-size: 22px;
+    }
+    .detail02_wrap > h3 > span {
+        font-size: 15px;
+        line-height: 19px;
+    }
+    .detail03_wrap > h3 {
+        font-size: 22px;
+        line-height: 34px;
+    }
+    .deteil01_wrap > .txt_area p {
+        padding-top: 9px;
+        font-size: 16px;
+        line-height: 30px;
+    }
+    .graph_area {
+        max-width: 400px;
+        height: 254px;
+    }
+    svg.graph01 {
+        bottom: -65px;
+    }
+    svg.graph02 {
+        bottom: -70px;
+    }
+    svg.graph03 {
+        bottom: -82px;
+    }
+    svg.graph04 {
+        bottom: -65px;
+    }
+    svg.graph05 {
+        bottom: -28px;
+    }
+    .graphName > div {
+        font-size: 9px;
+        left: 110px;
+    }
+    .graphName .name02 {
+        left: 198px;
+    }
+    .graphName .name03 {
+        top: 118px;
+        left: 113px;
+    }
+    .graphName .name04 {
+        top: 144px;
+        left: 107px;
+    }
+    .graphName .name05 {
+        top: 178px;
+        left: 126px;
+    }
+    .graphName .name06 {
+        top: 215px;
+        left: 122px;
+    }
+    .graphName .name07 {
+        top: 145px;
+    }
+    svg.dashLine {
+        bottom: 14px;
+        left: -10px;
+    }
+    .detail02_wrap .img_wrap > .Co2 {
+        max-width: 390px;
+        min-width: 390px;
+        margin: 0 auto;
+        margin-top: 42px;
+    }
+    .img_wrap > .Co2 .arrowBox.arrow01 {
+        left: 60px;
+    }
+    .img_wrap > .grayCo2 .arrowBox.arrow02 {
+        right: 60px;
+    }
+    .img_wrap > .blueCo2 .arrowBox.arrow02 {
+        right: 74px;
+    }
+    .img_wrap > .greenCo2 .arrowBox.arrow02 {
+        right: 70px;
+    }
+    .img_wrap > .Co2 .arrowBox.arrow03 {
+        left: 70px;
+    }
+    li.textBox {
+        padding: 10px;
+        font-size: 15px;
+        line-height: 27px;
     }
 }
