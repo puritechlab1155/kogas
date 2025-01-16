@@ -20,20 +20,15 @@ body {
 }
 /*main*/
 /*배너*/
-h2{font-size: 60px;}
-.f_17{font-size: 17px;}
-.f_18{font-size: 18px;}
-.f_24{font-size: 24px;}
-
-/*배너*/
 .banner {
     width: 100%;
-    height: 1080px;
+    height: 120vh;
     overflow: hidden;
     padding-top: 120px;
     box-sizing: border-box;
     background: #68F394;
     text-align: center;
+    position: relative;
 }
 
 /* 1. 지구쪽 이미지 */
@@ -58,9 +53,7 @@ h2{font-size: 60px;}
 }
 /* earth_circle에 회전 애니메이션 적용 */
 .banner .bn-earth-box .line_container {
-    max-width: 767px;
     width: 100%;
-    height: 767px;
     margin: 0 auto;
     animation: rotate 20s linear infinite; 
     position: absolute;
@@ -121,42 +114,97 @@ h2{font-size: 60px;}
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, -50%);
     color: #fff;
+}
+
+
+
+
+.f_18{
+    font-size: 20px;
+}
+.f_24{
+    font-size: 24px;
 }
 .banner .text-overlay h2{
     padding: 50px 0 10px;
+    font-size: 60px;
 }
 .banner .bn-text-box .f_17{
     padding-top: 50px;
+    font-size: 22px;
+}
+@media (max-width: 1000px) {
+    .banner {
+        height: 120vw;
+    }
+    .f_18{
+        font-size: 1.8vw;
+    }
+    .f_24{
+        font-size: 2.5vw;
+    }
+    .banner .text-overlay h2{
+        padding: 10% 0 8%;
+        font-size: 5vw;
+    }
+    .banner .bn-text-box .f_17{
+        padding-top: 10%;
+        font-size: 2vw;
+    }
+    .banner .bn-circle-box{
+        
+        height: 85vw;
+        min-height: 100px !important; 
+    }
+    .banner .bn-circle-box ul.circle{
+        width: 16vw;
+    }
+    ul.cl_02 {
+        margin-right: 40px;
+    }
+    ul.cl_04 {
+        margin-left: 40px;
+    }
+    .banner .bn-circle-box .circle li {
+        font-size: 2vw !important;
+        bottom: 3vw !important;
+    }
 }
 /* 3. 4개 동그라미 */
 .banner .bn-circle-box {
     width: 100%;
-    max-width: 919px;
-    height: 908px;
+    max-width: 810px;
+    min-height: 869px; 
     box-sizing: border-box;
     position: absolute;
-    top: 50%;
+    top: 51.5%;
     left: 50%;
-    transform: translate(-50%, -42%);
+    transform: translate(-50%, -50%);
     z-index: 10;
 }
 .banner .bn-circle-box ul.circle{
-    width: 170px;
-    height: 170px;
-    background-color: #03C340;
+    max-width: 164px;
+    max-height: 164px;
     border-radius: 50%;
     text-align: center;
     position: absolute;
     cursor: pointer;
     transition: all 0.2s ease;
+    transition: opacity 0.5s ease;
+    position: absolute;
+}
+.circle.none {
+    opacity: 0;
+}
+.circle.visible {
+    opacity: 1; /* 보이게 설정 */
 }
 ul.cl_01 {
-    top: 0;
+    top:  0%;
     left: 50%;
     transform: translateX(-50%);
-    background: lightgreen;
 }
 ul.cl_02 {
     top: 50%;
@@ -164,7 +212,7 @@ ul.cl_02 {
     transform: translateY(-50%);
 }
 ul.cl_03 {
-    bottom: 0;
+    bottom: 0%;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -174,29 +222,18 @@ ul.cl_04 {
     transform: translateY(-50%);
 }
 ul.circle img{
-    width: auto;
-    padding-top: 30px;
+    width: 100%;
+    height: 100%;
     box-sizing: border-box;
-}
-ul.cl_01 img{
-    margin-left: 10px;
-}
-ul.cl_02 img{
-    margin-left: 20px;
-}
-ul.cl_03 img{
-    margin-left: -4px;
-}
-.banner .bn-circle-box .cl_03 img{
-    padding: 30px 39px 0;
-}
-.banner .bn-circle-box .cl_04 img{
-    padding: 30px 52px 0;
 }
 .shadow {
     box-shadow: 3px 3px 4px #00000044;
 }
 .banner .bn-circle-box .circle li{
+    position: absolute;
+    bottom: 12%;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
     padding-top: 7px;
     color: #fff;
@@ -259,7 +296,6 @@ article.detail01, article.detail02 {
 .graph_area svg path {
     fill: transparent;
     transition: fill 1.5s ease, transform 0.8s ease;
-    transform: translateX(-2000px);
 }
 svg.graph01 {
     bottom: 132px;
@@ -570,6 +606,15 @@ li.textBox {
 }
 
 
+
+
+
+
+
+
+
+
+
 /*반응형*/
 @media (max-width: 1254px) {
     section.detail_content {
@@ -614,456 +659,334 @@ li.textBox {
     }
 }
 @media (max-width: 985px) {
-    .banner {
-        width: 100%;
-        height: 800px;
-    }
-    .banner .bn-earth-box {
-        max-width: 720px;
-    }
-    .banner .bn-earth-box .line_container {
-        max-width: 562px;
-        height: 592px;
-    }
-    .banner .bn-earth-box .earth_container {
-        max-width: 404px;
-    }
-    .banner .bn-earth-box .earth_container img{
-        width: 100%;
-    }
-    .banner .bn-earth-box .line_container img {
-        object-fit: contain;
-    }
-    .banner .bn-earth-box .bn_item {
-        width: 109%;
-        height: 107%;
-        transform: translate(-50%, -56%);
-    }
-    .bn_item > svg {
-        height: 112%;
-    }
-    .banner .bn-circle-box ul.circle {
-        width: 100px;
-        height: 100px;
-    }
-    ul.circle img {
-        width: 32%;
-        padding-top: 15px;
-    }
-    .banner .bn-circle-box {
-        max-width: 630px;
-        height: 634px;
-        transform: translate(-50%, -60%);
-    }
-    ul.cl_01 img {
-        margin-left: 3px;
-    
-    }
-    ul.cl_02 img {
-        margin-left: 10px;
-    }
-    .banner .bn-circle-box .cl_03 img {
-        padding: 20px 0 0;
-    }
-    .banner .bn-circle-box .cl_04 img {
-        padding: 14px 0 4px;
-        /* padding-top: 20px; */
-    }
-    .banner .bn-text-box .text-overlay {
-        transform: translate(-50%, -80%);
-    }
-    h2 {
-        font-size: 28px;
-    }
-    .f_24 {
-        font-size: 16px;
-    }
-    .f_17 {
-        font-size: 14px;
-    }
-
-    section.detail_content {
-        max-width: 600px;
-    }
-    .deteil01_wrap > .txt_area h3 {
-        width: 100%;
-        float: none;
-        font-size: 30px;
-    }
-    .detail02_wrap > h3 {
-        font-size: 30px;
-    }
-    .detail02_wrap > h3 > span {
-        font-size: 22px;
-    }
-    .detail03_wrap > h3 {
-        font-size: 30px;
-    }
-    .deteil01_wrap > .txt_area h3 br.pc_space{
-        display: none;
-    }
-    .deteil01_wrap > .txt_area p {
-        width: 100%;
-        padding-top: 42px;
-        float: none;
-    }
-    .graph_area {
-        height: 340px;
-        margin-top: 37px;
-    }
-    svg.graph01 {
-        bottom: -13px;
-    }
-    svg.graph02 {
-        bottom: -28px;
-    }
-    svg.graph03 {
-        bottom: -44px;
-    }
-    svg.graph04 {
-        bottom: -37px;
-    }
-    svg.graph05 {
-        bottom: -12px;
-    }
-    .graphName > div {
-        padding: 4px 8px;
-        left: 158px;
-        font-size: 11px;
-    }
-    .graphName .name02 {
-        left: 255px;
-    }
-    .graphName .name03 {
-        top: 133px;
-        left: 132px;
-    }
-    .graphName .name04 {
-        top: 165px;
-        left: 124px;
-    }
-    .graphName .name05 {
-        top: 222px;
-        left: 148px;
-    }
-    .graphName .name06 {
-        top: 278px;
-        left: 144px;
-    }
-    .graphName .name07 {
-        top: 184px;
-        right: 64px;
-    }
-    .detail02_wrap {
-        padding-top: 150px;
-    }
-    .detail02_wrap .img_wrap {
-        display: block;
-        padding-top: 0px;
-    }
-    .img_wrap > .Co2 .img_title {
-        position: relative;
-        top: 15px;
-    }
-    .detail02_wrap .img_wrap > .Co2 {
-        width: 100%;
-        height: 364px;
-        margin-top: 42px;
-    }
-    .img_wrap > .Co2 > img {
-        width: 16em;
-        min-width: 256px;
-    }
-    .img_wrap .arrowBox {
-        width: 63px !important;
-        font-size: 12px;
-    }
-    .img_wrap > .Co2 .arrowBox {
-        bottom: 101px;
-    }
-    .img_wrap > .Co2 .arrowBox.arrow01 {
-        left: 24%;
-    }
-    .img_wrap > .grayCo2 .arrowBox.arrow02 {
-        right: 24%;
-    }
-    .img_wrap > .blueCo2 .arrowBox.arrow02 {
-        right: 25%;
-    }
-    .img_wrap > .greenCo2 .arrowBox.arrow02 {
-        right: 26%;
-    }
-    .img_wrap > .Co2 .arrowBox.arrow03 {
-        width: 100px !important;
-        left: 24%;
-        bottom: 156px;
-    }
-    .img_wrap > .Co2 .finishTxt {
-        padding: 4px 10px;
-        font-size: 14px;
-        bottom: 5px;
-    }
-    .Co2.grayCo2::after, .blueCo2::after {
-        content: none;
-    }
-    .detail03_wrap {
-        padding-top: 150px;
-        padding-bottom: 150px;
-    }
-    .puzzleBox_wrap .outBox {
-        width: 100%;
-        float: none;
-    }
-}
-@media (max-width: 648px) {
-    .banner {
-        height: 600px;
-    }
-    .banner .bn-earth-box .line_container {
-        width: 100%;
-        max-width: 447px;
-        height: 425px;
-    }
-    .banner .bn-earth-box .bn_item {
-        width: 104%;
-        height: 74%;
-    }
-    .banner .bn-earth-box .line_container img {
-        width: 101%;
-        min-width: 400px;
-    }
-    .banner .bn-earth-box .bn_item {
-        display: none;
-    }
-    .banner .bn-circle-box ul.circle {
-        width: 70px;
-        height: 70px;
-    }
-    .banner .bn-earth-box .earth_container img {
-        width: 100%;
-        min-width: 300px;
-    }
-    .banner .bn-circle-box {
-        max-width: 470px;
-    }
-    .banner .bn-circle-box {
-        height: 487px;
-        transform: translate(-50%, -83%);
-    }
-    ul.circle img {
-        display: none;
-    }
-    .banner .bn-circle-box .circle li {
-        padding-top: 26px;
-        font-size: 15px;
-    }
-    .banner .bn-text-box .text-overlay {
-        transform: translate(-50%, -125%);
-    }
-    h2 {
-        font-size: 22px;
-    }
-    .f_24 {
-        font-size: 14px;
-    }
-    .f_17 {
-        font-size: 11px;
-    }
-
-
-    section.detail_content {
-        max-width: 600px;
-        padding: 0 20px;
-        box-sizing: border-box;
-    } 
-    .deteil01_wrap > .txt_area h3 {
-        font-size: 26px;
-    }
-    .detail02_wrap > h3 {
-        font-size: 26px;
-    }
-    .detail02_wrap > h3 > span {
-        font-size: 18px;
-        line-height: 34px;
-    }
-    .detail03_wrap > h3 {
-        font-size: 26px;
-    }
-    .graph_area {
-        max-width: 480px;
-        min-width: 458px;
-        margin: 0 auto;
-    }
-    svg.graph05 {
-        bottom: -11px;
-    }
-    svg.dashLine {
-        left: -42px;
-    }
-    .img_wrap .arrowBox {
-        width: 50px !important;
-    }
-    article.detail03 {
-        width: 100%;
-    }
-    .puzzleBox_wrap .outBox {
-        height: 196px;
-    }
-    .outBox .colorBox {
-        font-size: 18px;
-        line-height: 30px;
-    }
-    .imgBox {
-        border: none !important;;
-        border-top: 3px solid #fff !important;
-        border-right: 3px solid #fff !important;
-    }
-    .imgBox img {
-        width: 100%;
-        height: 100%;
-    }
-    li.textBox {
-        border-right: 3px solid #fff !important;
-        font-size: 16px;
-        line-height: 28px;
-    }    
-    svg.graph01 {
-        bottom: -45px;
-    }
-    svg.graph02 {
-        bottom: -54px;
-    }
-    svg.graph03 {
-        bottom: -67px;
-    }
-    svg.graph04 {
-        bottom: -54px;
-    }
-    svg.graph05 {
-        bottom: -21px;
-    }
-    .graphName > div {
-        left: 133px;
-    }
-    .graphName .name02 {
-        left: 243px;
-    }
-    .graphName .name03 {
-        top: 170px;
-    }
-    .graphName .name04 {
-        top: 199px;
-    }
-    .graphName .name05 {
-        top: 241px;
-    }
-    .graphName .name06 {
-        top: 290px;
-    }
-    .graphName .name07 {
-        top: 209px;
-    }
-    svg.dashLine {
-        bottom: 14px;
-        left: -10px;
-    }
-}
-@media (max-width: 491px) {
-    section.detail_content {
-        padding: 0 10px;
-    }
-    .deteil01_wrap > .txt_area h3 {
-        font-size: 22px;
-    }
-    .detail02_wrap > h3 {
-        font-size: 22px;
-    }
-    .detail02_wrap > h3 > span {
-        font-size: 15px;
-        line-height: 19px;
-    }
-    .detail03_wrap > h3 {
-        font-size: 22px;
-        line-height: 34px;
-    }
-    .deteil01_wrap > .txt_area p {
-        padding-top: 9px;
-        font-size: 16px;
-        line-height: 30px;
-    }
-    .graph_area {
-        max-width: 400px;
-        height: 254px;
-    }
-    svg.graph01 {
-        bottom: -65px;
-    }
-    svg.graph02 {
-        bottom: -70px;
-    }
-    svg.graph03 {
-        bottom: -82px;
-    }
-    svg.graph04 {
-        bottom: -65px;
-    }
-    svg.graph05 {
-        bottom: -28px;
-    }
-    .graphName > div {
-        font-size: 9px;
-        left: 110px;
-    }
-    .graphName .name02 {
-        left: 198px;
-    }
-    .graphName .name03 {
-        top: 118px;
-        left: 113px;
-    }
-    .graphName .name04 {
-        top: 144px;
-        left: 107px;
-    }
-    .graphName .name05 {
-        top: 178px;
-        left: 126px;
-    }
-    .graphName .name06 {
-        top: 215px;
-        left: 122px;
-    }
-    .graphName .name07 {
-        top: 145px;
-    }
-    svg.dashLine {
-        bottom: 14px;
-        left: -10px;
-    }
-    .detail02_wrap .img_wrap > .Co2 {
-        max-width: 390px;
-        min-width: 390px;
-        margin: 0 auto;
-        margin-top: 42px;
-    }
-    .img_wrap > .Co2 .arrowBox.arrow01 {
-        left: 60px;
-    }
-    .img_wrap > .grayCo2 .arrowBox.arrow02 {
-        right: 60px;
-    }
-    .img_wrap > .blueCo2 .arrowBox.arrow02 {
-        right: 74px;
-    }
-    .img_wrap > .greenCo2 .arrowBox.arrow02 {
-        right: 70px;
-    }
-    .img_wrap > .Co2 .arrowBox.arrow03 {
-        left: 70px;
-    }
-    li.textBox {
-        padding: 10px;
-        font-size: 15px;
-        line-height: 27px;
-    }
+        section.detail_content {
+            max-width: 600px;
+        }
+        .deteil01_wrap > .txt_area h3 {
+            width: 100%;
+            float: none;
+            font-size: 30px;
+        }
+        .detail02_wrap > h3 {
+            font-size: 30px;
+        }
+        .detail02_wrap > h3 > span {
+            font-size: 22px;
+        }
+        .detail03_wrap > h3 {
+            font-size: 30px;
+        }
+        .deteil01_wrap > .txt_area h3 br.pc_space{
+            display: none;
+        }
+        .deteil01_wrap > .txt_area p {
+            width: 100%;
+            padding-top: 42px;
+            float: none;
+        }
+        .graph_area {
+            height: 340px;
+            margin-top: 37px;
+        }
+        svg.graph01 {
+            bottom: -13px;
+        }
+        svg.graph02 {
+            bottom: -28px;
+        }
+        svg.graph03 {
+            bottom: -44px;
+        }
+        svg.graph04 {
+            bottom: -37px;
+        }
+        svg.graph05 {
+            bottom: -12px;
+        }
+        .graphName > div {
+            padding: 4px 8px;
+            left: 158px;
+            font-size: 11px;
+        }
+        .graphName .name02 {
+            left: 255px;
+        }
+        .graphName .name03 {
+            top: 133px;
+            left: 132px;
+        }
+        .graphName .name04 {
+            top: 165px;
+            left: 124px;
+        }
+        .graphName .name05 {
+            top: 222px;
+            left: 148px;
+        }
+        .graphName .name06 {
+            top: 278px;
+            left: 144px;
+        }
+        .graphName .name07 {
+            top: 184px;
+            right: 64px;
+        }
+        .detail02_wrap {
+            padding-top: 150px;
+        }
+        .detail02_wrap .img_wrap {
+            display: block;
+            padding-top: 0px;
+        }
+        .img_wrap > .Co2 .img_title {
+            position: relative;
+            top: 15px;
+        }
+        .detail02_wrap .img_wrap > .Co2 {
+            width: 100%;
+            height: 364px;
+            margin-top: 42px;
+        }
+        .img_wrap > .Co2 > img {
+            width: 16em;
+            min-width: 256px;
+        }
+        .img_wrap .arrowBox {
+            width: 63px !important;
+            font-size: 12px;
+        }
+        .img_wrap > .Co2 .arrowBox {
+            bottom: 101px;
+        }
+        .img_wrap > .Co2 .arrowBox.arrow01 {
+            left: 24%;
+        }
+        .img_wrap > .grayCo2 .arrowBox.arrow02 {
+            right: 24%;
+        }
+        .img_wrap > .blueCo2 .arrowBox.arrow02 {
+            right: 25%;
+        }
+        .img_wrap > .greenCo2 .arrowBox.arrow02 {
+            right: 26%;
+        }
+        .img_wrap > .Co2 .arrowBox.arrow03 {
+            width: 100px !important;
+            left: 24%;
+            bottom: 156px;
+        }
+        .img_wrap > .Co2 .finishTxt {
+            padding: 4px 10px;
+            font-size: 14px;
+            bottom: 5px;
+        }
+        .Co2.grayCo2::after, .blueCo2::after {
+            content: none;
+        }
+        .detail03_wrap {
+            padding-top: 150px;
+            padding-bottom: 150px;
+        }
+        .puzzleBox_wrap .outBox {
+            width: 100%;
+            float: none;
+        }
+    }
+    @media (max-width: 648px) {
+        section.detail_content {
+            max-width: 600px;
+            padding: 0 20px;
+            box-sizing: border-box;
+        } 
+        .deteil01_wrap > .txt_area h3 {
+            font-size: 26px;
+        }
+        .detail02_wrap > h3 {
+            font-size: 26px;
+        }
+        .detail02_wrap > h3 > span {
+            font-size: 18px;
+            line-height: 34px;
+        }
+        .detail03_wrap > h3 {
+            font-size: 26px;
+        }
+        .graph_area {
+            max-width: 480px;
+            min-width: 458px;
+            margin: 0 auto;
+        }
+        svg.graph05 {
+            bottom: -11px;
+        }
+        svg.dashLine {
+            left: -42px;
+        }
+        .img_wrap .arrowBox {
+            width: 50px !important;
+        }
+        article.detail03 {
+            width: 100%;
+        }
+        .puzzleBox_wrap .outBox {
+            height: 196px;
+        }
+        .outBox .colorBox {
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .imgBox {
+            border: none !important;;
+            border-top: 3px solid #fff !important;
+            border-right: 3px solid #fff !important;
+        }
+        .imgBox img {
+            width: 100%;
+            height: 100%;
+        }
+        li.textBox {
+            border-right: 3px solid #fff !important;
+            font-size: 16px;
+            line-height: 28px;
+        }    
+        svg.graph01 {
+            bottom: -45px;
+        }
+        svg.graph02 {
+            bottom: -54px;
+        }
+        svg.graph03 {
+            bottom: -67px;
+        }
+        svg.graph04 {
+            bottom: -54px;
+        }
+        svg.graph05 {
+            bottom: -21px;
+        }
+        .graphName > div {
+            left: 133px;
+        }
+        .graphName .name02 {
+            left: 243px;
+        }
+        .graphName .name03 {
+            top: 170px;
+        }
+        .graphName .name04 {
+            top: 199px;
+        }
+        .graphName .name05 {
+            top: 241px;
+        }
+        .graphName .name06 {
+            top: 290px;
+        }
+        .graphName .name07 {
+            top: 209px;
+        }
+        svg.dashLine {
+            bottom: 14px;
+            left: -10px;
+        }
+    }
+    @media (max-width: 491px) {
+        section.detail_content {
+            padding: 0 10px;
+        }
+        .deteil01_wrap > .txt_area h3 {
+            font-size: 22px;
+        }
+        .detail02_wrap > h3 {
+            font-size: 22px;
+        }
+        .detail02_wrap > h3 > span {
+            font-size: 15px;
+            line-height: 19px;
+        }
+        .detail03_wrap > h3 {
+            font-size: 22px;
+            line-height: 34px;
+        }
+        .deteil01_wrap > .txt_area p {
+            padding-top: 9px;
+            font-size: 16px;
+            line-height: 30px;
+        }
+        .graph_area {
+            max-width: 400px;
+            min-width: 1vw;
+            height: 254px;
+        }
+        svg.graph01 {
+            bottom: -65px;
+        }
+        svg.graph02 {
+            bottom: -70px;
+        }
+        svg.graph03 {
+            bottom: -82px;
+        }
+        svg.graph04 {
+            bottom: -65px;
+        }
+        svg.graph05 {
+            bottom: -28px;
+        }
+        .graphName > div {
+            font-size: 9px;
+            left: 110px;
+        }
+        .graphName .name02 {
+            left: 198px;
+        }
+        .graphName .name03 {
+            top: 118px;
+            left: 113px;
+        }
+        .graphName .name04 {
+            top: 144px;
+            left: 107px;
+        }
+        .graphName .name05 {
+            top: 178px;
+            left: 126px;
+        }
+        .graphName .name06 {
+            top: 215px;
+            left: 122px;
+        }
+        .graphName .name07 {
+            top: 145px;
+        }
+        svg.dashLine {
+            bottom: 14px;
+            left: -10px;
+        }
+        .detail02_wrap .img_wrap > .Co2 {
+            max-width: 390px;
+            min-width: 390px;
+            margin: 0 auto;
+            margin-top: 42px;
+        }
+        .img_wrap > .Co2 .arrowBox.arrow01 {
+            left: 60px;
+        }
+        .img_wrap > .grayCo2 .arrowBox.arrow02 {
+            right: 60px;
+        }
+        .img_wrap > .blueCo2 .arrowBox.arrow02 {
+            right: 74px;
+        }
+        .img_wrap > .greenCo2 .arrowBox.arrow02 {
+            right: 70px;
+        }
+        .img_wrap > .Co2 .arrowBox.arrow03 {
+            left: 70px;
+        }
+        li.textBox {
+            padding: 10px;
+            font-size: 15px;
+            line-height: 27px;
+        }
 }
