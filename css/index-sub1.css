@@ -266,6 +266,7 @@ svg.dashLine {
 /*탄소중립연료 E-Fuel 수송용 연료의 미래*/
 article.detail03 {
     width: calc(100% + 12px);
+    padding-bottom: 220px;
     box-sizing: border-box;
 }
 .detail03_wrap {
@@ -356,12 +357,15 @@ li.textBox {
     position: relative;
     transition: opacity 0.2s;
 }
+.imgBox:hover .beforHover{
+    opacity: 0;
+}
 /*호버 전 박스*/
 .beforHover {
     display: block;
     width: 100%;
     height: 100%;
-    background: #24242413;
+    background: #24242426;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -369,9 +373,6 @@ li.textBox {
     left: 0;
     cursor: pointer;
     z-index: 20;
-}
-.imgBox:hover .beforHover{
-    opacity: 0;
 }
 
 
@@ -416,5 +417,116 @@ li.textBox {
     .outBox .colorBox {
         font-size: 20px;
         line-height: 32px;
+    }
+}
+@media (max-width: 985px) {
+    section.detail_content {
+        max-width: 600px;
+    }
+    .deteil01_wrap > .txt_area h3 {
+        width: 100%;
+        float: none;
+    }
+    .deteil01_wrap > .txt_area h3 br.pc_space{
+        display: none;
+    }
+    .deteil01_wrap > .txt_area p {
+        width: 100%;
+        padding-top: 42px;
+        float: none;
+    }
+    .graph_area {
+        height: 340px;
+        margin-top: 37px;
+    }
+    svg.graph01 {
+        bottom: -13px;
+    }
+    svg.graph02 {
+        bottom: -28px;
+    }
+    svg.graph03 {
+        bottom: -44px;
+    }
+    svg.graph04 {
+        bottom: -37px;
+    }
+    svg.graph05 {
+        bottom: -12px;
+    }
+    .graphName > div {
+        padding: 4px 8px;
+        left: 158px;
+        font-size: 11px;
+    }
+    .graphName .name02 {
+        left: 255px;
+    }
+    .graphName .name03 {
+        top: 133px;
+        left: 132px;
+    }
+    .graphName .name04 {
+        top: 165px;
+        left: 124px;
+    }
+    .graphName .name05 {
+        top: 222px;
+        left: 148px;
+    }
+    .graphName .name06 {
+        top: 278px;
+        left: 144px;
+    }
+    .graphName .name07 {
+        top: 184px;
+        right: 64px;
+    }
+    .detail02_wrap {
+        padding-top: 150px;
+    }
+    .detail02_wrap .img_wrap {
+        display: block;
+        padding-top: 0px;
+    }
+    .detail02_wrap .img_wrap > .Co2 {
+        width: 100%;
+        height: 323px;
+        margin-top: 42px;
+    }
+    .img_wrap > .Co2 > img {
+        width: 40%;
+    }
+    .img_wrap .arrowBox {
+        width: 63px !important;
+        font-size: 12px;
+    }
+    .img_wrap > .Co2 .arrowBox {
+        bottom: 101px;
+    }
+    .img_wrap > .Co2 .arrowBox.arrow01 {
+        left: 150px;
+    }
+    .img_wrap > .grayCo2 .arrowBox.arrow02 {
+        right: 154px;
+    }
+    .img_wrap > .blueCo2 .arrowBox.arrow02 {
+        right: 154px;
+    }
+    .img_wrap > .greenCo2 .arrowBox.arrow02 {
+        right: 143px;
+    }
+    .img_wrap > .Co2 .arrowBox.arrow03 {
+        width: 100px !important;
+        left: 149px;
+        bottom: 156px;
+    }
+    .img_wrap > .Co2 .finishTxt {
+        padding: 4px 10px;
+        font-size: 14px;
+        bottom: 5px;
+    }
+    svg.dashLine {
+        display: none;
     }
 }
