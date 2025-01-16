@@ -267,7 +267,7 @@ br.pc_space{
     height: 23px;
     margin: 0 auto;
     margin-bottom: 30px;
-    background: url(img_sub2/quotes-left.svg) no-repeat;
+    background: url(../img_sub2/quotes-left.svg) no-repeat;
     background-size: contain;
     background-position: center;
 }
@@ -278,7 +278,7 @@ br.pc_space{
     height: 23px;
     margin: 0 auto;
     margin-top: 30px;
-    background: url(img_sub2/quotes-right.svg) no-repeat;
+    background: url(../img_sub2/quotes-right.svg) no-repeat;
     background-size: contain;
     background-position: center;
 }
@@ -399,7 +399,7 @@ br.pc_space{
     text-align: center;
 }
 #section07 .applicat_wrap .applicat_img img{
-    width: 100%;
+    max-width: 350px;
     margin: 0 auto;
 }
 #section07 .applicat_wrap p{
@@ -563,6 +563,9 @@ br.pc_space{
     }
     #section02 .text_wrap .Introduct_box .Introduct_text {
         text-align: left;
+    }
+    .section03 .slide-wrap,  .section03 .slide-list {
+        height: 80px !important;
     }
     br.mob_space{
         display: block;

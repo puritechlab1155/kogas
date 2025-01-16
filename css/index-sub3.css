@@ -39,6 +39,7 @@ span.br{
     text-align: center;
 }
 .image-container .text-overlay {
+    width: 80%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -56,10 +57,10 @@ span.br{
 .flex_box{
     display: flex;
     justify-content: space-around;
-    gap: 100px;
+    gap: 80px;
 }
 .flex_box .flex_l{
-    width: 24%;
+    width: 28%;
 }
 .flex_box .flex_r{
     width: 70%;
@@ -85,6 +86,7 @@ span.br{
 .jello-horizontal{
     -webkit-animation:jello-horizontal .9s infinite; 
     animation:jello-horizontal .9s infinite;
+    padding-left: 80px;
 }
 @keyframes jello-horizontal {
     0% {
@@ -300,8 +302,8 @@ span.br{
     .jello-horizontal, .fade-in-left{
         width: 50px;
         position: absolute;
-        top: 0;
-        left: 0px;
+        top: 80%;
+        left: -10%;
         padding: 0 !important;
     }
     .fade-in-left{
@@ -434,6 +436,9 @@ span.br{
     }
 }
 @media (max-width: 575px) {
+    main h2>span.m_br {
+        display: block;
+    }
     .graph_02_box>img, .graph_box>img {
         width: 400px;
     }
