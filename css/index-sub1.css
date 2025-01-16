@@ -72,6 +72,11 @@ article.detail01, article.detail02 {
     position: absolute;
     right: 0;
 }
+.graph_area svg path {
+    fill: transparent;
+    transition: fill 1.5s ease, transform 0.8s ease;
+    transform: translateX(-2000px);
+}
 svg.graph01 {
     bottom: 132px;
 }
