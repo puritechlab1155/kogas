@@ -1,0 +1,78 @@
+h2{font-size: 60px;}
+.f_17{font-size: 17px;}
+.f_18{font-size: 18px;}
+.f_24{font-size: 24px;}
+
+/*배너*/
+.banner {
+    width: 100%;
+    height: 100vh;
+    background: #68F394;
+    text-align: center;
+}
+
+/* 1. 지구쪽 이미지 */
+.banner .bn-earth-box{
+    position: relative;
+}
+.banner .bn-earth-box .earth_circle{
+    /* max-width: 792px; */
+    max-width: 1050px;
+    width: 100%;
+
+}
+.banner .bn-earth-box .earth{
+    max-width: 498px;
+    width: 100%;
+    position: absolute;
+    top: 23%;
+    left: 37%;
+}
+/* 2. 텍스트 */
+.banner .bn-text-box .text-overlay{
+    position: absolute;
+    top: 34%;
+    left: 41%;
+    color: #fff;
+}
+.banner .text-overlay h2{
+    padding: 50px 0 10px;
+}
+.banner .bn-text-box .f_17{
+    padding-top: 50px;
+}
+/* 3. 4개 동그라미 */
+.banner .bn-circle-box {
+    width: 792px;
+    height: 792px;
+    background-color: yellow;
+    display: flex;
+}
+.banner .bn-circle-box .circle{
+    max-width: 933px;
+    /* width: 100%; */
+    width: 170px;
+    height: 170px;
+    margin-top: 50px;
+    background-color: #03C340;
+    border-radius: 50%;
+
+
+
+}
+
+.banner .bn-circle-box .circle img{
+    padding: 30px 58px 0;
+}
+.banner .bn-circle-box .circle:nth-child(3) img{
+    padding: 30px 39px 0;
+}
+.banner .bn-circle-box .circle:nth-child(4) img{
+    padding: 30px 52px 0;
+}
+.banner .bn-circle-box .circle li{
+    text-align: center;
+    padding-top: 7px;
+    color: #fff;
+    font-size: 17px;
+}
