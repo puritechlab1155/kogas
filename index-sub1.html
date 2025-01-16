@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kogas-sub1</title>
 
-    <!-- jQuery CDN 연결 -->
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
 
-    <!--Lottie CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.6/lottie.min.js"></script>
 
-    <!--css 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/index-sub1.css">
 
@@ -231,44 +233,44 @@
                         </h3>
                         <!--이미지 부분-->
                         <div class="img_wrap">
-                            <div class="grayCo2 Co2">
+                            <div class="grayCo2 Co2" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="800" data-aos-delay="300">
                                 <div class="img_title gray">그레이수소</div> <!--absolute-->
                                 <img src="img_sub1/grayCo2.svg" alt="그레이 수소">
-                                <div class="arrow01 arrowBox"> <!--absolute-->
+                                <div class="arrow01 arrowBox animate__delay-1s"> <!--absolute-->
                                     <span>화석연료</span>
                                     <img src="img_sub1/arrow-green.svg" alt="초록색 화살표">
                                 </div>
-                                <div class="arrow02 arrowBox"> <!--absolute-->
+                                <div class="arrow02 arrowBox animate__delay-1s"> <!--absolute-->
                                     <span>수소</span>
                                     <img src="img_sub1/arrow-blue.svg" alt="파란색 화살표">
                                 </div>
                             </div>
-                            <div class="blueCo2 Co2">
+                            <div class="blueCo2 Co2" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="800" data-aos-delay="800">
                                 <div class="img_title bule">블루수소</div> <!--absolute-->
                                 <img src="img_sub1/blueCo2.svg" alt="그레이 수소">
-                                <div class="arrow01 arrowBox"> <!--absolute-->
+                                <div class="arrow01 arrowBox animate__delay-2s"> <!--absolute-->
                                     <span>화석연료</span>
                                     <img src="img_sub1/arrow-green.svg" alt="초록색 화살표">
                                 </div>
-                                <div class="arrow02 arrowBox"> <!--absolute-->
+                                <div class="arrow02 arrowBox animate__delay-2s"> <!--absolute-->
                                     <span>수소</span>
                                     <img src="img_sub1/arrow-blue.svg" alt="파란색 화살표">
                                 </div>
                             </div>
-                            <div class="greenCo2 Co2">
+                            <div class="greenCo2 Co2" data-aos="fade-up" data-aos-easing="ease-out" data-aos-duration="800" data-aos-delay="1600">
                                 <div class="img_title green">그린수소</div> <!--absolute-->
                                 <img src="img_sub1/greenCo2.svg" alt="그레이 수소">
-                                <div class="arrow01 arrowBox"> <!--absolute-->
+                                <div class="arrow01 arrowBox animate__delay-3s"> <!--absolute-->
                                     <span>물</span>
                                     <img src="img_sub1/arrow-Lblue.svg" alt="하늘색 화살표">
                                 </div>
-                                <div class="arrow02 arrowBox"> <!--absolute-->
-                                    <span>수소 </span>
-                                    <img src="img_sub1/arrow-blue.svg" alt="파란색 화살표">
-                                </div>
-                                <div class="arrow03 arrowBox"> <!--absolute-->
+                                <div class="arrow03 arrowBox animate__delay-3s"> <!--absolute-->
                                     <span>재생에너지</span>
                                     <img src="img_sub1/arrow-long-green.svg" alt="초록색 롱 화살표">
+                                </div>
+                                <div class="arrow02 arrowBox animate__delay-3s"> <!--absolute-->
+                                    <span>수소 </span>
+                                    <img src="img_sub1/arrow-blue.svg" alt="파란색 화살표">
                                 </div>
                                 <div class="finishTxt">궁극적인 지향점</div> <!--absolute-->
                             </div>
@@ -454,23 +456,52 @@
             });
 
             // SVG 그래프 효과
-            var $paths = $("svg path");
-            var totalPaths = $paths.length;
+            let section01Animated = false; // 첫 번째 섹션 애니메이션 실행 여부
+            let section02Animated = false; // 두 번째 섹션 애니메이션 실행 여부
 
-            // 오른쪽에서 왼쪽으로 순차적으로 애니메이션 (반대 순서)
-            for (let index = totalPaths - 1; index >= 0; index--) {
-                let $this = $($paths[index]);
+            $(window).on('scroll', function() {
+                var scrollTop = $(this).scrollTop(); 
+                var section01Top = $('.deteil01_wrap').offset().top;
+                
+                // 첫 번째 섹션 애니메이션
+                if (scrollTop >= section01Top && !section01Animated) {
+                    section01Animated = true; // 애니메이션 실행 플래그 설정
+                    var $paths = $("svg path");
+                    var totalPaths = $paths.length;
 
-                setTimeout(function() {
-                    // 원래 위치로 이동 및 색상 채우기
-                    $this.css({
-                        "transform": "translateX(0)", 
-                        "fill": $this.attr("fill") 
+                    for (let index = totalPaths - 1; index >= 0; index--) {
+                        let $this = $($paths[index]);
+
+                        setTimeout(function() {
+                            $this.css({
+                                "transform": "translateX(0)", 
+                                "fill": $this.attr("fill") 
+                            });
+                        }, (totalPaths - 1 - index) * 500); 
+                    }
+                }
+
+                // 두 번째 섹션 애니메이션
+                var detail02Top = $('.detail02').offset().top;
+                var arrowBox = $('.arrowBox');
+
+                if (scrollTop >= detail02Top && !section02Animated) {
+                    section02Animated = true; // 애니메이션 실행 플래그 설정
+                    arrowBox.each(function(index) {
+                        var $this = $(this);
+
+                        setTimeout(function() {
+                            $this.css('opacity', 1);
+                        }, 1000 + index * 500);
                     });
-                }, (totalPaths - 1 - index) * 500); 
-            }
+                }
+            });
 
         });
+    </script>
+
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
