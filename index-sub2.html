@@ -112,7 +112,7 @@
             padding-bottom: 0;
         }
 
-        #section02 .text_wrap .Introduct_box .Introduct_text {
+        #section02 .text_wrap .introduct_box .introduct_text {
             font-size: 17px;
             line-height: 31px;
             padding-top: 48px;
@@ -334,8 +334,9 @@
             <section id="section02">
                 <!--text box-->
                 <article class="text_wrap">
-                    <div class="Introduct_box"> 
-                        <div class="Introduct_text">
+                    <div class="introduct_box"> 
+                        <div class="introduct_text">
+                            <img src="img_sub2/blue-textBox.png" alt="설명글 박스">
                             한국가스공사에서는 <br class="mob_space"> 어떤 사람들이 어떤 일을 하고 있을까? <br>
                             <span class="mob_empty">
                                 KOGAS 온 더 블록이 <br class="mob_space"> 얄궂은 아이템부터 탐나는 선물을 <br class="mob_space">
@@ -704,8 +705,6 @@
             $(window).scroll(function() {
                 let scrollTop = $(this).scrollTop();
 
-                console.log(scrollTop);
-
                 // 스크롤 위치가 1300px 이상일 때
                 if (scrollTop >= 1300) {
                     // 각 아이콘에 대해 애니메이션 클래스를 추가
@@ -722,23 +721,12 @@
 
             //배경이미지 경로 변경
             function updateBackground() {
-                let $IntroductBox = $('.Introduct_box');
+                let $introductImg = $('.introduct_text > img');
 
                 if($(window).innerWidth() <= 824){
-                    $IntroductBox.css('background', 'none');
-                    $IntroductBox.css({
-                        'background' : 'url(../img_sub2/blue-textBox-mob.png)',
-                        'background-size' : '100% 100%',
-                        'background-repeat' : 'no-repeat',
-                        'background-position' : 'bottom center'
-                    });
+                    $introductImg.attr('src', 'img_sub2/blue-textBox-mob.png');
                 } else {
-                    $IntroductBox.css({
-                        'background' : 'url(../img_sub2/blue-textBox.png)',
-                        'background-size' : '100%',
-                        'background-repeat' : 'no-repeat',
-                        'background-position' : 'center'
-                    });
+                    $introductImg.attr('src', 'img_sub2/blue-textBox.png');
                 }
             }
 
