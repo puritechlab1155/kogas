@@ -1,6 +1,6 @@
 /*
 이동과 회전을 동시에 적용
-transform-origin: 50% 50%;*/
+*/
 
 @font-face {
     font-family: 'Pretendard-Regular';
@@ -28,8 +28,10 @@ h2{font-size: 60px;}
 /*배너*/
 .banner {
     width: 100%;
-    height: 100vh;
-    max-height: 1080px;
+    height: 1080px;
+    overflow: hidden;
+    padding-top: 120px;
+    box-sizing: border-box;
     background: #68F394;
     text-align: center;
 }
@@ -39,47 +41,76 @@ h2{font-size: 60px;}
 /* 360도 회전 */
 @keyframes rotate {
     0% {
-        transform: rotate(0deg);
+        transform: translate(-50%, -50%) rotate(0deg);
     }
     100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg) ;
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 .banner .bn-earth-box {
     position: relative;
-    max-width: 1100px;
+    max-width: 1000px;
     width: 100%;
     height: 100%;
-    background: rgba(255, 0, 0, 0.287);
-    margin: 0 auto;
+    /* padding: 100px; */
+    box-sizing: border-box;
+    margin: -40px auto;
 }
 /* earth_circle에 회전 애니메이션 적용 */
-.banner .bn-earth-box .earth_circle {
-    max-width: 1050px;
+.banner .bn-earth-box .line_container {
+    max-width: 767px;
     width: 100%;
-    height: 100%;
-    height: 100%;
+    height: 767px;
+    margin: 0 auto;
     animation: rotate 20s linear infinite; 
-    background: lightblue;
-    position: relative;
-}
-/* earth에 회전 애니메이션 적용 */
-.banner .bn-earth-box .earth_container {
-    max-width: 498px;
-    background: rgba(240, 128, 128, 0.625);
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+.banner .bn-earth-box .line_container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*배너 아이템 회전 애니메이션 적용*/
+.banner .bn-earth-box .bn_item {
+    width: 200%;
+    max-width: 1060px;
+    height: 1064px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.bn_item  > svg {
+    width: 100%;
+    height: 100%;
+}
+.itemrotate {
+    animation: itemrotate 20s linear infinite; /* 20초 동안 회전하는 애니메이션 */
+    transform-origin: center; /* SVG의 중앙에서 회전 */
+}
+
+@keyframes itemrotate {
+    0% {
+        transform: rotate(0deg); /* 회전 시작 */
+    }
+    100% {
+        transform: rotate(360deg); /* 360도 회전 */
+    }
+}
+
+/* earth에 회전 애니메이션 적용 */
+.banner .bn-earth-box .earth_container {
+    max-width: 498px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite; 
 }
 .banner .bn-earth-box .earth_container img {
     float: left;
@@ -90,7 +121,7 @@ h2{font-size: 60px;}
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -30%);
     color: #fff;
 }
 .banner .text-overlay h2{
@@ -102,12 +133,14 @@ h2{font-size: 60px;}
 /* 3. 4개 동그라미 */
 .banner .bn-circle-box {
     width: 100%;
-    max-width: 800px;
-    height: 792px;
+    max-width: 919px;
+    height: 908px;
+    box-sizing: border-box;
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -42%);
+    z-index: 10;
 }
 .banner .bn-circle-box ul.circle{
     width: 170px;
@@ -116,11 +149,10 @@ h2{font-size: 60px;}
     border-radius: 50%;
     text-align: center;
     position: absolute;
-    
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 ul.cl_01 {
-    width: auto;
-    position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -160,6 +192,9 @@ ul.cl_03 img{
 }
 .banner .bn-circle-box .cl_04 img{
     padding: 30px 52px 0;
+}
+.shadow {
+    box-shadow: 3px 3px 4px #00000044;
 }
 .banner .bn-circle-box .circle li{
     text-align: center;
@@ -579,6 +614,74 @@ li.textBox {
     }
 }
 @media (max-width: 985px) {
+    .banner {
+        width: 100%;
+        height: 800px;
+    }
+    .banner .bn-earth-box {
+        max-width: 720px;
+    }
+    .banner .bn-earth-box .line_container {
+        max-width: 562px;
+        height: 592px;
+    }
+    .banner .bn-earth-box .earth_container {
+        max-width: 404px;
+    }
+    .banner .bn-earth-box .earth_container img{
+        width: 100%;
+    }
+    .banner .bn-earth-box .line_container img {
+        object-fit: contain;
+    }
+    .banner .bn-earth-box .bn_item {
+        width: 109%;
+        height: 107%;
+        transform: translate(-50%, -56%);
+    }
+    .bn_item > svg {
+        height: 112%;
+    }
+    .banner .bn-circle-box ul.circle {
+        width: 100px;
+        height: 100px;
+    }
+    ul.circle img {
+        width: 32%;
+        padding-top: 15px;
+    }
+    .banner .bn-circle-box {
+        max-width: 630px;
+        height: 634px;
+        transform: translate(-50%, -60%);
+    }
+    ul.cl_01 img {
+        margin-left: 3px;
+    
+    }
+    ul.cl_02 img {
+        margin-left: 10px;
+    }
+    .banner .bn-circle-box .cl_03 img {
+        padding: 20px 0 0;
+    }
+    .banner .bn-circle-box .cl_04 img {
+        padding: 14px 0 4px;
+        /* padding-top: 20px; */
+    }
+    .banner .bn-text-box .text-overlay {
+        transform: translate(-50%, -80%);
+    }
+    h2 {
+        font-size: 28px;
+    }
+    .f_24 {
+        font-size: 16px;
+    }
+    .f_17 {
+        font-size: 14px;
+    }
+
     section.detail_content {
         max-width: 600px;
     }
@@ -713,6 +816,61 @@ li.textBox {
     }
 }
 @media (max-width: 648px) {
+    .banner {
+        height: 600px;
+    }
+    .banner .bn-earth-box .line_container {
+        width: 100%;
+        max-width: 447px;
+        height: 425px;
+    }
+    .banner .bn-earth-box .bn_item {
+        width: 104%;
+        height: 74%;
+    }
+    .banner .bn-earth-box .line_container img {
+        width: 101%;
+        min-width: 400px;
+    }
+    .banner .bn-earth-box .bn_item {
+        display: none;
+    }
+    .banner .bn-circle-box ul.circle {
+        width: 70px;
+        height: 70px;
+    }
+    .banner .bn-earth-box .earth_container img {
+        width: 100%;
+        min-width: 300px;
+    }
+    .banner .bn-circle-box {
+        max-width: 470px;
+    }
+    .banner .bn-circle-box {
+        height: 487px;
+        transform: translate(-50%, -83%);
+    }
+    ul.circle img {
+        display: none;
+    }
+    .banner .bn-circle-box .circle li {
+        padding-top: 26px;
+        font-size: 15px;
+    }
+    .banner .bn-text-box .text-overlay {
+        transform: translate(-50%, -125%);
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .f_24 {
+        font-size: 14px;
+    }
+    .f_17 {
+        font-size: 11px;
+    }
+
+
     section.detail_content {
         max-width: 600px;
         padding: 0 20px;
@@ -727,7 +885,7 @@ li.textBox {
     .detail02_wrap > h3 > span {
         font-size: 18px;
         line-height: 34px;
-    }ㅋ
+    }
     .detail03_wrap > h3 {
         font-size: 26px;
     }
