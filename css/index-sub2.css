@@ -124,6 +124,7 @@ br.pc_space{
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center;
+    background-color: #3102DB;
 }
 #section02 .text_wrap .Introduct_box .Introduct_text{
     width: 90%;
@@ -691,5 +692,20 @@ br.pc_space{
     }
     #main .section06 .profile_wrap .person03 .imgBox .nameplate {
         bottom: -40px !important;
+    }
+}
+
+@media (max-width: 430px) {
+    span.br {
+        display: block !important;
+    }
+    .quizeTime p{
+        width: 85%;
+    }
+    #section07 .applicat_img img{
+        width: 90%;
+    }
+    #main .banner_top .mainImg {
+        width: 100%;
     }
 }

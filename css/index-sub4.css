@@ -404,4 +404,12 @@ article .border{
         }
 }
 
+@media (max-width: 430px) {
+        span.m_br{
+                display: block;
+        }
+        article {
+                margin-top: 230px;
+            }
+}
 

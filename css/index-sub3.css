@@ -471,3 +471,29 @@ span.br{
         top: 30%;
     }
 }
+
+
+
+@media (max-width: 575px) {
+    span.m_br{
+        display: block;
+    }
+    .graph_box h4, p.source{
+        width: 100% !important;
+        height: auto;
+        line-height: 1.3;
+    }
+    .graph_box>img, .graph_box .graph_02_box>img{
+        width: 100%;
+    }
+    .graph_ani img {
+        width: 20px;
+    }
+    .graph_ani img:nth-child(1) {
+        top: 20%;
+    }
+    .graph_ani img:nth-child(3) {
+        top: 11%;
+    }
+}
+
