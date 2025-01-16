@@ -12,22 +12,59 @@ h2{font-size: 60px;}
 }
 
 /* 1. 지구쪽 이미지 */
-.banner .bn-earth-box{
-    position: relative;
-}
-.banner .bn-earth-box .earth_circle{
-    /* max-width: 792px; */
-    max-width: 1050px;
-    width: 100%;
 
+
+
+
+
+
+
+
+/* 360도 회전 */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
-.banner .bn-earth-box .earth{
+.banner .bn-earth-box {
+    position: relative;
+    max-width: 1100px;
+    width: 100%;
+    background: red;
+    margin: auto;
+}
+.bn-earth-box div{
     max-width: 498px;
     width: 100%;
     position: absolute;
     top: 23%;
     left: 37%;
+    animation: rotate 10s linear infinite;
+    transform: translate(-50%,-50%);
+
+    
 }
+/* earth_circle에 회전 애니메이션 적용 */
+.banner .bn-earth-box .earth_circle {
+    max-width: 1050px;
+    width: 100%;
+    animation: rotate 20s linear infinite; /* 20초에 한 번 회전, 무한 반복 */
+}
+/* earth에 회전 애니메이션 적용 */
+.banner .bn-earth-box .earth {
+}
+
+
+
+
+
+
+
+
+
 /* 2. 텍스트 */
 .banner .bn-text-box .text-overlay{
     position: absolute;
@@ -43,22 +80,30 @@ h2{font-size: 60px;}
 }
 /* 3. 4개 동그라미 */
 .banner .bn-circle-box {
-    width: 792px;
+    max-width: 800px;
     height: 792px;
     background-color: yellow;
     display: flex;
+    flex-wrap: wrap;
+    gap: 370px;
+
+
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    
 }
-.banner .bn-circle-box .circle{
-    max-width: 933px;
-    /* width: 100%; */
+.banner .bn-circle-box ul.circle{
     width: 170px;
     height: 170px;
     margin-top: 50px;
     background-color: #03C340;
     border-radius: 50%;
-
-
-
+    
 }
 
 .banner .bn-circle-box .circle img{
