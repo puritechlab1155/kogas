@@ -73,13 +73,13 @@ br.mob_space {
 }
 .bn_textL{
     width: auto;
-    font-weight: 400;
+    font-weight: 600;
     left: 0;
 }
 .bn_textR {
     width: auto;
     text-align: right;
-    font-weight: 700;
+    font-weight: 800;
     right: 0;
 }
 
