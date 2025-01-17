@@ -1009,3 +1009,53 @@ li.textBox {
             line-height: 27px;
         }
 }
+@media (max-width: 422px) {
+    .graph_area {
+        max-width: 350px;
+        height: 237px;
+    }
+    svg.graph01 {
+        bottom: -82px;
+    }
+    svg.graph02 {
+        bottom: -85px;
+    }
+    svg.graph03 {
+        bottom: -95px;
+    }
+    svg.graph04 {
+        bottom: -74px;
+    }
+    svg.graph05 {
+        bottom: -32px;
+    }
+    .graphName > div {
+        left: 99px;
+    }
+    .graphName .name02 {
+        left: 175px;
+    }
+    .graphName .name03 {
+        top: 118px;
+        left: 105px;
+    }
+    .graphName .name04 {
+        top: 141px;
+        left: 99px;
+    }
+    .graphName .name05 {
+        top: 171px;
+        left: 118px;
+    }
+    .graphName .name06 {
+        top: 206px;
+        left: 114px;
+    }
+    .graphName .name07 {
+        top: 140px;
+    }
+    svg.dashLine {
+        bottom: 14px;
+        left: -4px;
+    }
+}
