@@ -28,6 +28,7 @@ br.pc_space{
 #main {
     font-family: 'Pretendard-Regular';
 }
+.mt_0{margin-top: 0 !important;}
 /*banner // section02*/
 #main .bannerWrap {
     width: 100%;
