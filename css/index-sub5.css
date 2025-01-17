@@ -364,6 +364,13 @@ ul.input_container {
 ul.input_container li {
     flex: 1 1 calc(48.9% - 24px);
 }
+ul.input_container li.employee {
+    padding: 30px 18px;
+    border-radius: 18px;
+    background: #E1E1E1;
+    font-size: 18px;
+    font-weight: bold;
+}
 ul.input_container li input {
     width: 100%;
     padding: 30px 18px;
@@ -488,6 +495,9 @@ input::placeholder {
         font-weight: bold;
         color: #000; 
     }
+    ul.input_container li.employee {
+        font-size: 13px;
+    }
     .applyBtn > button {
         font-size: 28px;
     }
@@ -521,6 +531,7 @@ input::placeholder {
     /*이벤트 참여*/
     article.participant_write_wrap {
         padding-top: 35px;
+        padding-bottom: 50px;
     }
     .event_participate_inner {
         max-width: 600px;
@@ -553,6 +564,9 @@ input::placeholder {
     }
     ul.input_container li {
         margin-bottom: 24px;
+    }
+    ul.input_container li.employee {
+        padding: 20px 18px;
     }
     ul.input_container li input {
         padding: 20px 18px;
@@ -706,6 +720,9 @@ input::placeholder {
         font-size: 15px;
     }
     input::placeholder {
+        font-size: 0.8em;
+    }
+    ul.input_container li.employee {
         font-size: 0.8em;
     }
 }
