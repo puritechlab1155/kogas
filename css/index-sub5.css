@@ -1,31 +1,4 @@
-@font-face {
-    font-family: "Pretendard-Regular";
-    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
-    format("woff");
-    font-weight: 400;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Pretendard-SemiBold";
-    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff")
-    format("woff");
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Pretendard-Bold";
-    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-    font-weight: 700;
-    font-style: normal;
-}
-@font-face {
-    font-family: "Pretendard-ExtraBold";
-    src: url("https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff")
-    format("woff");
-    font-weight: 800;
-    font-style: normal;
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
 *{
     padding: 0;
     margin: 0;
@@ -34,13 +7,13 @@ li {
     list-style: none;
 }
 body {
-    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
+    font-family: 'Pretendard Variable';
 }
 button {
-    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
+    font-family: 'Pretendard Variable';
 }
 input {
-    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
+    font-family: 'Pretendard Variable';
 }
 br.mob_space {
     display: none;
