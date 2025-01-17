@@ -8,6 +8,10 @@
 
     <title>kogas-sub1</title>
 
+     <!-- AOS 라이브러리 불러오기-->
+     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
+     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> 
+
     <script src="https://code.jquery.com/jquery-3.7.1.slim.js" integrity="sha256-UgvvN8vBkgO0luPSUl2s8TIlOSYRoGFAX4jlCIm9Adc=" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css"> 
@@ -211,7 +215,7 @@
             <!--내용-->
             <section class="detail_content">
                 <!--세계 에너지원의 변화-->
-                <article class="detail01">
+                <article class="detail01" data-aos="fade-up" data-aos-offset="500" data-aos-duration="1000" data-aos-easing="linear">
                     <div class="deteil01_wrap">
                         <!--텍스트 영역-->
                         <div class="txt_area">
@@ -265,7 +269,7 @@
                     </div>
                 </article>
                 <!--탄소 사회에서 수소사회로-->
-                <article class="detail02">
+                <article class="detail02" data-aos="fade-up" data-aos-offset="500" data-aos-duration="1000" data-aos-delay="100" data-aos-easing="linear">
                     <div class="detail02_wrap">
                         <h3>
                             탄소사회에서 수소사회로 <span>생산 방법에 따른 수소의 색깔</span>
@@ -317,7 +321,7 @@
                     </div>
                 </article>
                 <!--탄소중립연료 E-Fuel 수송용 연료의 미래-->
-                <article class="detail03">
+                <article class="detail03" data-aos="fade-up" data-aos-offset="500" data-aos-duration="1000" data-aos-delay="200" data-aos-easing="linear">
                     <div class="detail03_wrap">
                         <h3>
                             탄소중립연료 E-Fuel <br>
@@ -567,6 +571,8 @@
                 });
             });
         });
+
+        AOS.init();
     </script>
 
     <script>
