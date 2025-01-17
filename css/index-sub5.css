@@ -34,13 +34,13 @@ li {
     list-style: none;
 }
 body {
-    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold';
+    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
 }
 button {
-    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold';
+    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
 }
 input {
-    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold';
+    font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
 }
 br.mob_space {
     display: none;
