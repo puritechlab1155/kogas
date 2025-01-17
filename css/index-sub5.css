@@ -72,7 +72,7 @@ br.mob_space {
 .bn_textR {
     width: auto;
     text-align: right;
-    font-weight: 800;
+    font-weight: 700;
     right: 0;
 }
 
@@ -129,7 +129,7 @@ section.puzzle_wrap{
     background: #68F394;
     border: none;
     font-size: 32px;
-    font-weight: 800;
+    font-weight: 700;
 }
 .puzzle_contetns .love_img {
     width: 20%;
@@ -199,7 +199,7 @@ ul.listBox li .list_text_container span{
     display: inline-block;
     vertical-align: middle;
     font-size: 19px;
-    font-weight: 500;
+    font-weight: 400;
     line-height: 30px;
     text-align: left;
     color: #363636;
@@ -412,7 +412,7 @@ input::placeholder {
 }
 .agree_container label > span {
     font-size: 18px;
-    font-weight: 500;
+    font-weight: 400;
 }
 .bt_apply {
     text-align: center;
