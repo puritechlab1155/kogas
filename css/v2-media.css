@@ -27,7 +27,7 @@
   font-style: normal;
 }
 body {
-  font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold';
+  font-family: 'Pretendard-Regular Pretendard-SemiBold Pretendard-Bold Pretendard-ExtraBold !important';
 }
 /*section03*/
 .section03 {
