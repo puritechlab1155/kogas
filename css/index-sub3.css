@@ -1,9 +1,4 @@
-@font-face {
-    font-family: 'Pretendard-Regular';
-    src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-    font-weight: 400;
-    font-style: normal;
-}
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/variable/pretendardvariable.css");
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .f_poppins{
     font-family: "Poppins", serif !important;
@@ -82,6 +77,9 @@ span.br{
     color: #4627E2;
     font-weight: 500;
 }
+.graph p{
+    height: 100%;
+}
 /* 별모양 애니메이션 */
 .jello-horizontal{
     -webkit-animation:jello-horizontal .9s infinite; 
@@ -130,6 +128,7 @@ span.br{
     height: 36px;
     line-height: 1;
     box-shadow: 1px 7px 15px gray;
+    height: 100%;
 }
 .graph_box h4 img{
     margin-top: 16px;
@@ -324,7 +323,7 @@ span.br{
         width: 500px !important;
     }
     .graph p{
-        height: 70px !important;
+        /* height: 70px !important; */
     }
     .graph_box img{
         width: 80%;
@@ -389,7 +388,7 @@ span.br{
     }
     
     .graph p {
-        height: 98px !important;
+        /* height: 98px !important; */
         width: 400px !important;
         /* line-height: 1.7; */
         padding: 14px 36px;
@@ -494,6 +493,18 @@ span.br{
     }
     .graph_ani img:nth-child(3) {
         top: 11%;
+    }
+    @media (max-width: 411px){
+        span.m_br_s{
+            display: block;
+        }
+        .graph p {
+            /* height: 139px !important; */
+
+        }
+        .image-container img {
+            min-height: 600px;
+        }
     }
 }
 
