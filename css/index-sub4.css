@@ -13,11 +13,17 @@ h3{ font-size: 40px; }
         height: 100%;
     }
 @font-face {
-font-family: 'Pretendard-Regular';
-src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
-font-weight: 300;
-font-style: normal;
+        font-family: 'Pretendard-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 300;
+        font-style: normal;
 }
+@font-face {
+        font-family: 'Pretendard-Regular';
+        src: url('https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+        font-weight: 400;
+        font-style: normal;
+    }
 /* animista.css 테스트 */
 .kenburns-right {
 	-webkit-animation: kenburns-right 2s ease-out both;
