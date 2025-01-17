@@ -412,7 +412,7 @@
                                         <li>
                                             <input type="text" placeholder="*직급"/>
                                         </li>
-                                        <li>
+                                        <li class="last">
                                             <input type="text" placeholder="거주 도시(임직원이 아닐 경우 기입해 주시기 바랍니다.)"/>
                                         </li>
                                     </ul>
@@ -442,7 +442,7 @@
                                         <li>
                                             <input type="text" placeholder="*직급"/>
                                         </li>
-                                        <li>
+                                        <li class="last">
                                             <input type="text" placeholder="거주 도시(임직원이 아닐 경우 기입해 주시기 바랍니다.)"/>
                                         </li>
                                     </ul>
@@ -472,8 +472,8 @@
                                         <li>
                                             <input type="text" placeholder="*직급"/>
                                         </li>
-                                        <li>
-                                            <input type="text" placeholder="거주 도시(임직원이 아닐 경우 기입해 주시기 바랍니다.)"/>
+                                        <li class="employee">
+                                            * 직원 대상 이벤트 입니다.
                                         </li>
                                     </ul>
                                 </div>
@@ -548,57 +548,70 @@
 
     <script>
         $(document).ready(function() {
-            //노드 저장
+            // 노드 저장
             let $contentBox = $('.content_img_wrap');
             let $progressBox = $('.progress_wrap');
+            let $writeBox = $('.write_box');
             let $writeItem = $('.write_item');
 
             // 초기값 설정
             $writeItem.addClass('writeNone');
             $writeItem.eq(0).addClass('writrShow');
 
-            $contentBox.click(function() {
-                focus($(this)); //기능 호춯
+            // 클릭 이벤트 설정
+            $contentBox.each(function(index) {
+                $(this).on('click', function() {
+                    focus($(this), index); // 기능 호출
+                });
             });
 
-            //기능 설정
-            function focus(element) {
+            // 기능 설정
+            function focus(element, index) {
                 $contentBox.removeClass('focusBorder');
-                $progressBox.find('.level')
-                    .removeClass('focus_Bgcolor')
-                    .addClass('nonfoucus_bg');
-                $progressBox.find('.progress')
-                    .removeClass('focus_color');
+                $progressBox.find('.level').removeClass('focus_Bgcolor').addClass('nonfoucus_bg');
+                $progressBox.find('.progress').removeClass('focus_color');
 
                 element.addClass('focusBorder');
-                element.siblings('.progress_wrap').find('.level')
-                    .removeClass('nonfoucus_bg')
-                    .addClass('focus_Bgcolor');
-                element.siblings('.progress_wrap').find('.progress')
-                    .addClass('focus_color');
+                element.siblings('.progress_wrap').find('.level').removeClass('nonfoucus_bg').addClass('focus_Bgcolor');
+                element.siblings('.progress_wrap').find('.progress').addClass('focus_color');
 
                 $writeItem.addClass('writeNone'); 
 
-                let index = $contentBox.index(element);
-
                 $writeItem.removeClass('writrShow');
-                $writeItem.eq(index).removeClass('writeNone').addClass('writrShow'); 
+                $writeItem.eq(index).removeClass('writeNone').addClass('writrShow');
+
+                // 부모 박스의 높이를 조정하는 부분
+                if (index === 0 || index === 3) {
+                    $writeBox.css({'height': '724px'});
+                } else if (index === 1 || index === 2) {
+                    $writeBox.css({'height': '694px'});
+                }
             }
 
-            //스크롤시 애니메이션
+            // $writeItem에 대한 클릭 이벤트 설정
+            $writeItem.each(function(index) {
+                $(this).on('click', function() {
+                    focus($(this), index);
+                });
+            });
+
+
+                //스크롤시 애니메이션
             $(window).scroll(function() {
-            let scrollTop = $(this).scrollTop();
+                let scrollTop = $(this).scrollTop();
 
-            console.log(scrollTop);
+                // console.log(scrollTop);
 
-            if (scrollTop > 0) {
-                // 각 아이콘에 대해 애니메이션 클래스를 추가
-                $('.title_img').addClass('animate__animated animate__jackInTheBox animate__delay-0.8s');
-            } else {
-                // 스크롤 위치가 1300px 이하일 때 애니메이션 클래스 제거
-                $('.title_img').removeClass('animate__animated animate__jackInTheBox animate__delay-0.8s');
-            }
-        });
+                if (scrollTop > 0) {
+                    // 각 아이콘에 대해 애니메이션 클래스를 추가
+                    $('.title_img').addClass('animate__animated animate__jackInTheBox animate__delay-0.8s');
+                } else {
+                    // 스크롤 위치가 1300px 이하일 때 애니메이션 클래스 제거
+                    $('.title_img').removeClass('animate__animated animate__jackInTheBox animate__delay-0.8s');
+                }
+
+            
+            });
         });
     </script>
 </body>

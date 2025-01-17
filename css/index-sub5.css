@@ -360,9 +360,11 @@ ul.input_container {
     flex-wrap: wrap; 
     border-radius: 8px; 
 }
-
-ul.input_container li {
+ul.input_container li{
     flex: 1 1 calc(48.9% - 24px);
+}
+ul.input_container li.last {
+    visibility: hidden;
 }
 ul.input_container li.employee {
     padding: 30px 18px;
