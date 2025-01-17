@@ -12,13 +12,13 @@ li {
     list-style: none;
 }
 body {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
 }
 button {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
 }
 input {
-    font-family: 'Pretendard';
+    font-family: 'Pretendard-Regular';
 }
 br.mob_space {
     display: none;
