@@ -823,8 +823,8 @@ li.textBox {
             height: 196px;
         }
         .outBox .colorBox {
-            font-size: 18px;
-            line-height: 30px;
+            font-size: 4vw;
+            line-height: 5.5vw;
         }
         .imgBox {
             border: none !important;;
@@ -956,8 +956,8 @@ li.textBox {
             left: -10px;
         }
         .detail02_wrap .img_wrap > .Co2 {
-            max-width: 390px;
-            min-width: 390px;
+            max-width: 350px;
+            min-width: 200px;
             margin: 0 auto;
             margin-top: 42px;
         }
