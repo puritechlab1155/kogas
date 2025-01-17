@@ -345,7 +345,7 @@ article.participant_write_wrap {
     border-radius: 20px;
     resize: none;
     border: none;
-    font-family: 'Pretendard';
+    font-family: 'Pretendard Variable';
 }
 textarea:focus {
     outline: none; 
@@ -387,6 +387,9 @@ input::placeholder {
     font-size: 18px;
     font-weight: bold;
     color: #000; 
+}
+textarea::placeholder {
+    font-size: 18px;
 }
 /*동의 부분*/
 .agree_container {
@@ -496,6 +499,9 @@ input::placeholder {
         font-size: 13px;
         font-weight: bold;
         color: #000; 
+    }
+    textarea::placeholder {
+        font-size: 13px;
     }
     ul.input_container li.employee {
         font-size: 13px;
@@ -724,8 +730,11 @@ input::placeholder {
     input::placeholder {
         font-size: 0.8em;
     }
-    ul.input_container li.employee {
+    textarea::placeholder {
         font-size: 0.8em;
+    }
+    ul.input_container li.employee {
+        font-size: 0.6em;
     }
 }
 @media (max-width: 417px) { 
