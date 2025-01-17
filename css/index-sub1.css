@@ -9,6 +9,9 @@ li {
 body {
     font-family: 'Pretendard Variable';
 }
+.mob_space {
+    display: none;
+}
 /*main*/
 /*배너*/
 .banner {
@@ -36,6 +39,7 @@ body {
 .banner .bn-earth-box {
     position: relative;
     max-width: 1000px;
+    margin: 0 auto;
     width: 100%;
     height: 100%;
     /* padding: 100px; */
@@ -125,43 +129,6 @@ body {
 .banner .bn-text-box .f_17{
     padding-top: 50px;
     font-size: 22px;
-}
-@media (max-width: 1000px) {
-    .banner {
-        /* height: 120vw; */
-    }
-    .f_18{
-        font-size: 1.8vw;
-    }
-    .f_24{
-        font-size: 2.5vw;
-    }
-    .banner .text-overlay h2{
-        padding: 10% 0 8%;
-        font-size: 5vw;
-    }
-    .banner .bn-text-box .f_17{
-        padding-top: 10%;
-        font-size: 2vw;
-    }
-    .banner .bn-circle-box{
-        
-        height: 85vw;
-        min-height: 100px !important; 
-    }
-    .banner .bn-circle-box ul.circle{
-        width: 16vw;
-    }
-    ul.cl_02 {
-        margin-right: 40px;
-    }
-    ul.cl_04 {
-        margin-left: 40px;
-    }
-    .banner .bn-circle-box .circle li {
-        font-size: 2vw !important;
-        bottom: 3vw !important;
-    }
 }
 /* 3. 4개 동그라미 */
 .banner .bn-circle-box {
@@ -649,6 +616,43 @@ li.textBox {
         line-height: 32px;
     }
 }
+@media (max-width: 1000px) {
+    .mob_space {
+        display: block;
+    }
+    .f_18{
+        font-size: 1.8vw;
+    }
+    .f_24{
+        font-size: 2.5vw;
+    }
+    .banner .text-overlay h2{
+        padding: 10% 0 8%;
+        font-size: 5vw;
+    }
+    .banner .bn-text-box .f_17{
+        padding-top: 10%;
+        font-size: 2vw;
+    }
+    .banner .bn-circle-box{
+        height: 85vw;
+        min-width: 426px;
+        min-height: 100px !important; 
+    }
+    .banner .bn-circle-box ul.circle{
+        width: 16vw;
+    }
+    ul.cl_02 {
+        margin-right: 40px;
+    }
+    ul.cl_04 {
+        margin-left: 40px;
+    }
+    .banner .bn-circle-box .circle li {
+        font-size: 2vw !important;
+        bottom: 3vw !important;
+    }
+}
 @media (max-width: 985px) {
         section.detail_content {
             max-width: 600px;
@@ -886,6 +890,28 @@ li.textBox {
         section.detail_content {
             padding: 0 10px;
         }
+        .banner .bn-earth-box .line_container {
+            min-width: 420px;
+        }
+        .banner .bn-text-box .text-overlay{
+            top: 52%;
+        }
+        .banner .text-overlay h2{
+            font-size: 21px;
+        }
+        .f_18 {
+            font-size: 10px;
+        }
+        .f_24 {
+            font-size: 13px;
+        }
+        .banner .bn-text-box .f_17 {
+            font-size: 8px;
+        }
+        .banner .bn-circle-box ul.circle {
+            width: 70px;
+            height: 74px;
+        }
         .deteil01_wrap > .txt_area h3 {
             font-size: 22px;
         }
@@ -981,6 +1007,12 @@ li.textBox {
             font-size: 15px;
             line-height: 27px;
         }
+}
+@media (max-width: 425px) {
+    .banner .bn-circle-box{
+        top: 52.5%;
+        height: 374px !important;
+    }
 }
 @media (max-width: 422px) {
     .graph_area {
